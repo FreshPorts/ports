@@ -1,1 +1,1 @@
-freshports:*:10001:10001::0:0:FreshPorts user:non-existent:/usr/sbin/nologin
+freshports:*:10001:10001::0:0:FreshPorts user:/var/db/freshports:/usr/sbin/nologin
