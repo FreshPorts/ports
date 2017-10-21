@@ -383,7 +383,7 @@
 
 @dir(freshports,freshports,755) %%FP_DATADIR%%
 @dir(freshports,freshports,755) %%FP_DATADIR%%/cache
-@dir(freshports,freshports,755) %%FP_DATADIR%%/cache/daily
+@dir(www,freshports,775) %%FP_DATADIR%%/cache/daily
 @dir(freshports,freshports,755) %%FP_DATADIR%%/cache/html
 @dir(www,freshports,755)        %%FP_DATADIR%%/cache/news
 @dir(www,freshports,775)        %%FP_DATADIR%%/cache/ports
