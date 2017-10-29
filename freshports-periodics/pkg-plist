@@ -1,1 +1,10 @@
 etc/periodic/daily/100.fp_archive_messages
+etc/periodic/daily/160.fp_ports_tree_file_count
+etc/periodic/daily/200.fp_stats_daily
+etc/periodic/daily/210.fp_purge_old_password_tokens
+etc/periodic/daily/220.fp_daily_rendering_times
+etc/periodic/daily/260.fp_newusers
+etc/periodic/hourly/120.fp_test_master_port_make
+etc/periodic/hourly/140.fp_test_master_port_db
+etc/periodic/hourly/180.fp_stats_hourly
+etc/periodic/hourly/240.fp_missing_port_categories

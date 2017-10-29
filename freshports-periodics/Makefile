@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-periodics
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.4
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
@@ -24,9 +24,11 @@ GROUPS=	${USERS}
 do-install:
 	@${ECHO} "Installing in ${PREFIX}/libexec/freshports"
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/hourly
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/daily
 
-	# install the maildrop bits
-	${INSTALL_SCRIPT} ${WRKSRC}/100.fp_archive_messages    ${STAGEDIR}${PREFIX}/etc/periodic/daily
+	# the master port testing scripts
+	(cd ${WRKSRC}/hourly && ${COPYTREE_BIN} . ${STAGEDIR}${PREFIX}/etc/periodic/hourly)
+	(cd ${WRKSRC}/daily  && ${COPYTREE_BIN} . ${STAGEDIR}${PREFIX}/etc/periodic/daily)
 
 .include <bsd.port.post.mk>
