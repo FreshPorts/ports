@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	1.0.9
+PORTVERSION=	1.0.10
 PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
@@ -22,10 +22,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	FreshPorts
 
 NO_BUILD=	YES
-
-#BUILD_DEPENDS=
-
-#RUN_DEPENDS+=	maildrop>0:mail/maildrop
 
 WANT_PGSQL=	client
 
@@ -55,6 +51,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/daily
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/html
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/news
+	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/pages
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/ports
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/spooling
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/signals

@@ -386,6 +386,7 @@
 @dir(www,freshports,775) %%FP_DATADIR%%/cache/daily
 @dir(freshports,freshports,755) %%FP_DATADIR%%/cache/html
 @dir(www,freshports,755)        %%FP_DATADIR%%/cache/news
+@dir(www,freshports,755)        %%FP_DATADIR%%/cache/pages
 @dir(www,freshports,775)        %%FP_DATADIR%%/cache/ports
 @dir(freshports,freshports,755) %%FP_DATADIR%%/cache/spooling
 @dir(freshports,freshports,755) %%FP_DATADIR%%/signals
