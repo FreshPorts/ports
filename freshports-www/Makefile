@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports
 PORTVERSION=	1.0.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
@@ -40,6 +40,7 @@ SUB_FILES=	freshports-www.conf.newsyslog.conf freshports-www.conf.syslog.conf
 # symlinks to the real file
 CONF_FILES=	database.php freshports.conf.php robots.txt status-config.php vhosts.conf virtualhost-common.conf
 INC_FILES=	common.php constants.local.php
+NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php rss1.0.php rss2.0.php
 
 .include <bsd.port.pre.mk>
 
@@ -69,9 +70,14 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/configuration/${_conf}.sample ${STAGEDIR}${ETCDIR}
 	${LN} -sf ${ETCDIR}/${_conf} ${STAGEDIR}${WWWDIR}/configuration/${_conf}
 .endfor
+
 .for _inc in ${INC_FILES}
 	${INSTALL_SCRIPT} ${WRKSRC}/include/${_inc}.sample ${STAGEDIR}${ETCDIR}
 	${LN} -sf ${ETCDIR}/${_inc} ${STAGEDIR}${WWWDIR}/include/${_inc}
+.endfor
+
+.for _news in ${NEWS_FILES}
+	(${CD} ${STAGEDIR}${WWWDIR}/www/backend && ${LN} -sf ${_news} news.php)
 .endfor
 
 	# robots.txt link
