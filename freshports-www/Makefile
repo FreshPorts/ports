@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	1.0.10
-PORTREVISION=	2
+PORTVERSION=	1.0.12
+PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
@@ -77,7 +77,7 @@ do-install:
 .endfor
 
 .for _news in ${NEWS_FILES}
-	(${CD} ${STAGEDIR}${WWWDIR}/www/backend && ${LN} -sf ${_news} news.php)
+	(cd ${STAGEDIR}${WWWDIR}/www/backend && ${LN} -sf news.php ${_news})
 .endfor
 
 	# robots.txt link

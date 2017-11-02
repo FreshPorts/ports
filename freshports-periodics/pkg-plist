@@ -8,3 +8,4 @@ etc/periodic/hourly/120.fp_test_master_port_make
 etc/periodic/hourly/140.fp_test_master_port_db
 etc/periodic/hourly/180.fp_stats_hourly
 etc/periodic/hourly/240.fp_missing_port_categories
+etc/periodic/hourly/260.fp_refresh_various_cache_items
