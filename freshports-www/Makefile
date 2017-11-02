@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	1.0.12
+PORTVERSION=	1.0.15
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
@@ -24,6 +24,7 @@ GH_ACCOUNT=	FreshPorts
 NO_BUILD=	YES
 
 WANT_PGSQL=	client
+USES=		perl5 php python
 
 FP_DATADIR=	/var/db/freshports
 FP_LOGDIR=	/var/log/freshports
@@ -41,6 +42,8 @@ SUB_FILES=	freshports-www.conf.newsyslog.conf freshports-www.conf.syslog.conf
 CONF_FILES=	database.php freshports.conf.php robots.txt status-config.php vhosts.conf virtualhost-common.conf
 INC_FILES=	common.php constants.local.php
 NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php rss1.0.php rss2.0.php
+
+RUN_DEPENDS=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 
 .include <bsd.port.pre.mk>
 
