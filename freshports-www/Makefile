@@ -43,7 +43,8 @@ CONF_FILES=	database.php freshports.conf.php robots.txt status-config.php vhosts
 INC_FILES=	common.php constants.local.php
 NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php rss1.0.php rss2.0.php
 
-RUN_DEPENDS=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
+RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
+RUN_DEPENDS+=	nginx:www/nginx
 
 .include <bsd.port.pre.mk>
 
