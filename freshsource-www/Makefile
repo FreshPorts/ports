@@ -10,7 +10,7 @@
 
 PORTNAME=	freshsource
 PORTVERSION=	0.0.5
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
@@ -50,16 +50,21 @@ do-install:
 	${LN} -sf ${ETCDIR}/${_conf} ${STAGEDIR}${WWWDIR}/configuration/${_conf}
 .endfor
 
-	${MV} ${STAGEDIR}${WWWDIR}/configuration/robots.txt.sample ${STAGEDIR}${ETCDIR}
-
 .for _inc in ${INC_FILES}
 	${MV} ${STAGEDIR}${WWWDIR}/www/include/${_inc}.sample ${STAGEDIR}${ETCDIR}
 	${LN} -sf ${ETCDIR}/${_inc} ${STAGEDIR}${WWWDIR}/www/include/${_inc}
 .endfor
 
 	# robots.txt link
+	${MV} ${STAGEDIR}${WWWDIR}/configuration/robots.txt.sample ${STAGEDIR}${ETCDIR}
 	${LN} -sf ${ETCDIR}/robots.txt ${STAGEDIR}${WWWDIR}/www/robots.txt
 
+	# phorum link
+	${LN} -sf ${PREFIX}/www/phorum ${STAGEDIR}${WWWDIR}/www/phorum
+	${LN} -sf ${ETCDIR}/forums.php ${STAGEDIR}${WWWDIR}/configuration/phorum/forums.php
+	${LN} -sf ${ETCDIR}/1.php      ${STAGEDIR}${WWWDIR}/configuration/phorum/1.php
+	${LN} -sf ${ETCDIR}/2.php      ${STAGEDIR}${WWWDIR}/configuration/phorum/2.php
+	
 	# vhosts.conf
 	${MV} ${STAGEDIR}${WWWDIR}/configuration/vhosts.conf.sample ${STAGEDIR}${ETCDIR}
 

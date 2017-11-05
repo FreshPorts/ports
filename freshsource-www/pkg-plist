@@ -5,8 +5,12 @@
 @sample %%ETCDIR%%/vhosts.conf.sample
 @sample etc/newsyslog.conf.d/freshsource-www.conf.sample
 %%WWWDIR%%/configuration/database.php
+%%WWWDIR%%/configuration/phorum/1.php
+%%WWWDIR%%/configuration/phorum/2.php
 %%WWWDIR%%/configuration/phorum/footer.php
 %%WWWDIR%%/configuration/phorum/forums.bak.php
+%%WWWDIR%%/configuration/phorum/forums.php
+%%WWWDIR%%/www/phorum
 %%WWWDIR%%/configuration/phorum/functions.php
 %%WWWDIR%%/configuration/phorum/header.php
 %%WWWDIR%%/configuration/phorum/starting-points/1.php
