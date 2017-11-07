@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	freshsource
-PORTVERSION=	0.0.5
-PORTREVISION=	1
+PORTVERSION=	0.0.6
+PORTREVISION=	2
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
@@ -60,10 +60,10 @@ do-install:
 	${LN} -sf ${ETCDIR}/robots.txt ${STAGEDIR}${WWWDIR}/www/robots.txt
 
 	# phorum link
-	${LN} -sf ${PREFIX}/www/phorum ${STAGEDIR}${WWWDIR}/www/phorum
-	${LN} -sf ${ETCDIR}/forums.php ${STAGEDIR}${WWWDIR}/configuration/phorum/forums.php
-	${LN} -sf ${ETCDIR}/1.php      ${STAGEDIR}${WWWDIR}/configuration/phorum/1.php
-	${LN} -sf ${ETCDIR}/2.php      ${STAGEDIR}${WWWDIR}/configuration/phorum/2.php
+	${LN} -sf ${PREFIX}/www/phorum           ${STAGEDIR}${WWWDIR}/www/phorum
+	${LN} -sf ${ETCDIR}/cache_moderators.php ${STAGEDIR}${WWWDIR}/configuration/phorum/cache_moderators.php
+	${LN} -sf ${ETCDIR}/forums.php           ${STAGEDIR}${WWWDIR}/configuration/phorum/forums.php
+	${LN} -sf ${ETCDIR}/1.php                ${STAGEDIR}${WWWDIR}/configuration/phorum/1.php
 	
 	# vhosts.conf
 	${MV} ${STAGEDIR}${WWWDIR}/configuration/vhosts.conf.sample ${STAGEDIR}${ETCDIR}

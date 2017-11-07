@@ -6,7 +6,7 @@
 @sample etc/newsyslog.conf.d/freshsource-www.conf.sample
 %%WWWDIR%%/configuration/database.php
 %%WWWDIR%%/configuration/phorum/1.php
-%%WWWDIR%%/configuration/phorum/2.php
+%%WWWDIR%%/configuration/phorum/cache_moderators.php
 %%WWWDIR%%/configuration/phorum/footer.php
 %%WWWDIR%%/configuration/phorum/forums.bak.php
 %%WWWDIR%%/configuration/phorum/forums.php
