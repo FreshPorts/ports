@@ -95,7 +95,11 @@
 %%WWWDIR%%/configuration/mail-aliases.txt
 %%WWWDIR%%/configuration/permissions.txt
 %%WWWDIR%%/configuration/phorum-blocked-from-registration.inc
+%%WWWDIR%%/configuration/phorum/1.php
+%%WWWDIR%%/configuration/phorum/2.php
+%%WWWDIR%%/configuration/phorum/cache_moderators.php
 %%WWWDIR%%/configuration/phorum/footer.php
+%%WWWDIR%%/configuration/phorum/forums.php
 %%WWWDIR%%/configuration/phorum/functions.php
 %%WWWDIR%%/configuration/phorum/header.php
 %%WWWDIR%%/configuration/phorum/starting-points/1.php
@@ -342,6 +346,7 @@
 %%WWWDIR%%/www/other-copyrights.php
 %%WWWDIR%%/www/package.php
 %%WWWDIR%%/www/password-reset-via-token.php
+%%WWWDIR%%/www/phorum
 %%WWWDIR%%/www/phpPolls/.htaccess
 %%WWWDIR%%/www/phpPolls/index.php3
 %%WWWDIR%%/www/phpPolls/list.php3
@@ -390,12 +395,12 @@
 
 @dir(freshports,freshports,755) %%FP_DATADIR%%
 @dir(freshports,freshports,755) %%FP_DATADIR%%/cache
-@dir(www,freshports,775) %%FP_DATADIR%%/cache/daily
+@dir(www,freshports,775)        %%FP_DATADIR%%/cache/daily
 @dir(freshports,freshports,755) %%FP_DATADIR%%/cache/html
 @dir(www,freshports,755)        %%FP_DATADIR%%/cache/news
 @dir(www,freshports,755)        %%FP_DATADIR%%/cache/pages
 @dir(www,freshports,775)        %%FP_DATADIR%%/cache/ports
-@dir(freshports,freshports,755) %%FP_DATADIR%%/cache/spooling
+@dir(www,freshports,755)        %%FP_DATADIR%%/cache/spooling
 @dir(freshports,freshports,755) %%FP_DATADIR%%/signals
 @dir(freshports,freshports,755) %%FP_DATADIR%%/tmp
 @dir(freshports,freshports,755) %%FP_LOGDIR%%
