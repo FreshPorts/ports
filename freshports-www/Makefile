@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	1.0.19
-PORTREVISION=	4
+PORTVERSION=	1.0.22
+PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
@@ -57,6 +57,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/daily
+	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/general
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/html
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/news
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/pages

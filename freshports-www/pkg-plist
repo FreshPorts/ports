@@ -15,6 +15,7 @@
 %%WWWDIR%%/classes/announcements.php
 %%WWWDIR%%/classes/badges.php
 %%WWWDIR%%/classes/cache-file.php
+%%WWWDIR%%/classes/cache-general.php
 %%WWWDIR%%/classes/cache-port.php
 %%WWWDIR%%/classes/cache.php
 %%WWWDIR%%/classes/categories.php
@@ -400,6 +401,7 @@
 @dir(www,freshports,775)        %%FP_DATADIR%%/cache/news
 @dir(www,freshports,755)        %%FP_DATADIR%%/cache/pages
 @dir(www,freshports,775)        %%FP_DATADIR%%/cache/ports
+@dir(www,freshports,755)        %%FP_DATADIR%%/cache/general
 @dir(www,freshports,755)        %%FP_DATADIR%%/cache/spooling
 @dir(freshports,freshports,755) %%FP_DATADIR%%/signals
 @dir(freshports,freshports,755) %%FP_DATADIR%%/tmp
