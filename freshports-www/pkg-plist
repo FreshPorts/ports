@@ -118,6 +118,7 @@
 %%WWWDIR%%/configuration/vhosts.conf.nginx.sample
 %%WWWDIR%%/configuration/virtualhost-common.conf
 %%WWWDIR%%/configuration/virtualhost-common.conf.sample
+%%WWWDIR%%/configuration/virtualhost-common-ssl.conf.sample
 %%WWWDIR%%/include/ads-burst-media.php
 %%WWWDIR%%/include/ads-google-adsense.php
 %%WWWDIR%%/include/ads-phppgads.php
@@ -266,6 +267,7 @@
 %%WWWDIR%%/www/images/broken.gif
 %%WWWDIR%%/www/images/bug.gif
 %%WWWDIR%%/www/images/bug_report.gif
+%%WWWDIR%%/www/images/button-ipv6-big.png
 %%WWWDIR%%/www/images/captcha/captcha.jpg
 %%WWWDIR%%/www/images/captcha/captcha.php
 %%WWWDIR%%/www/images/commit-flagged-not.gif
