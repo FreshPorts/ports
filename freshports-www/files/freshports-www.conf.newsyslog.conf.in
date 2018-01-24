@@ -5,4 +5,4 @@
 #%%FP_LOGDIR%%/vuxml.log            %%FRESHPORTS_USER%%:%%FRESHPORTS_USER%% 640 14  *   $D0  B
 
 #/var/log/nginx/freshports.org-access.log       root:logcheck 640 14  *   $D0  B
-#/var/log/nginx/freshports.org-error.log        root:logcheck 640 14  *   $D0  B
+#/var/log/nginx/freshports.org-error.log        root:logcheck 640 14  *   $D0  B /var/run/nginx.pid 30
