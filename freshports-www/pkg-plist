@@ -4,8 +4,10 @@
 @sample(root,www,750) %%ETCDIR%%/freshports.conf.php.sample
 @sample(root,www,750) %%ETCDIR%%/robots.txt.sample
 @sample(root,www,750) %%ETCDIR%%/status-config.php.sample
+@sample(root,www,750) %%ETCDIR%%/vhosts.conf.nginx.sample
 @sample(root,www,750) %%ETCDIR%%/vhosts.conf.sample
 @sample(root,www,750) %%ETCDIR%%/virtualhost-common.conf.sample
+@sample(root,www,750) %%ETCDIR%%/virtualhost-common-ssl.conf.sample
 
 @sample etc/newsyslog.conf.d/freshports-www.conf.sample
 @sample etc/syslog.d/freshports-www.conf.sample
@@ -115,9 +117,11 @@
 %%WWWDIR%%/configuration/vhosts.conf.offline
 %%WWWDIR%%/configuration/vhosts.conf.online
 %%WWWDIR%%/configuration/vhosts.conf.sample
+%%WWWDIR%%/configuration/vhosts.conf.nginx
 %%WWWDIR%%/configuration/vhosts.conf.nginx.sample
 %%WWWDIR%%/configuration/virtualhost-common.conf
 %%WWWDIR%%/configuration/virtualhost-common.conf.sample
+%%WWWDIR%%/configuration/virtualhost-common-ssl.conf
 %%WWWDIR%%/configuration/virtualhost-common-ssl.conf.sample
 %%WWWDIR%%/include/ads-burst-media.php
 %%WWWDIR%%/include/ads-google-adsense.php
