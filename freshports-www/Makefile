@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports
 PORTVERSION=	1.0.28
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
@@ -33,6 +33,7 @@ PLIST_SUB+=	FP_DATADIR=${FP_DATADIR}
 PLIST_SUB+=	FP_LOGDIR=${FP_LOGDIR}
 
 SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR}
+SUB_LIST+=	FRESHPORTS_USER=freshports
 
 SUB_FILES=	freshports-www.conf.newsyslog.conf freshports-www.conf.syslog.conf
 
@@ -43,6 +44,7 @@ CONF_FILES=	database.php freshports.conf.php robots.txt status-config.php vhosts
 INC_FILES=	common.php constants.local.php
 NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php rss1.0.php rss2.0.php
 
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=0:dvl/py-freshports-fp-listen
 RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 RUN_DEPENDS+=	nginx:www/nginx
 RUN_DEPENDS+=	php56-extensions>0:lang/php56-extensions
