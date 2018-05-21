@@ -1,0 +1,4 @@
+# this is a file for syslog.conf
+# it should be installed to /usr/local/etc/syslog.d
+
+local3.*		%%FP_LOGDIR%%/freshports.log
