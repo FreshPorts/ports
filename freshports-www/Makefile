@@ -101,7 +101,7 @@ do-install:
 	${LN} -sf ${ETCDIR}/2.php                ${STAGEDIR}${WWWDIR}/configuration/phorum/2.php
 
 	# nginx link
-	${LN} -sf ${PREFIX}/nginx/includes/freshports.org.conf ${STAGEDIR}${ETCDIR}/vhosts.conf
+	${LN} -sf ${PREFIX}/etc/nginx/includes/freshports.org.conf ${STAGEDIR}${ETCDIR}/vhosts.conf
 
 	# logs
 	${MKDIR} ${STAGEDIR}${FP_LOGDIR}
