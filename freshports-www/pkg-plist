@@ -338,6 +338,7 @@
 %%WWWDIR%%/www/images/watch-remove.jpg
 %%WWWDIR%%/www/images/watch-remove.xcf
 %%WWWDIR%%/www/images/watch.jpg
+%%WWWDIR%%/www/images/work-in-progress.jpg
 %%WWWDIR%%/www/index.html
 %%WWWDIR%%/www/index.php
 %%WWWDIR%%/www/inthenews.php
@@ -351,6 +352,7 @@
 %%WWWDIR%%/www/my-flagged-commits.php
 %%WWWDIR%%/www/new-user.php
 %%WWWDIR%%/www/news.php
+%%WWWDIR%%/www/now-in-maintenance-mode.php
 %%WWWDIR%%/www/other-copyrights.php
 %%WWWDIR%%/www/package.php
 %%WWWDIR%%/www/password-reset-via-token.php
