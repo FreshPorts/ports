@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports-fp-listen
 PORTVERSION=	1.0.10
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
@@ -34,7 +34,7 @@ USERS=	freshports
 GROUPS=	${USERS}
 
 ETCDIR=		etc/freshports
-SERVICE_DIR=	/var/service
+SERVICE_DIR=	${PREFIX}/libexec/freshports-service
 
 
 PLIST_SUB+=	SERVICE_DIR=${SERVICE_DIR}
