@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports
 PORTVERSION=	1.0.35
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
@@ -47,9 +47,9 @@ NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=0:dvl/py-freshports-fp-listen
 RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 RUN_DEPENDS+=	nginx:www/nginx
-RUN_DEPENDS+=	php56-extensions>0:lang/php56-extensions
-RUN_DEPENDS+=	php56-pear-HTML_Page2>0:devel/pear-HTML_Page2
-RUN_DEPENDS+=	php56-pear-Pager>0:devel/pear-Pager
+RUN_DEPENDS+=	php${PHP_VER}-extensions>0:lang/php${PHP_VER}-extensions
+RUN_DEPENDS+=	php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2
+RUN_DEPENDS+=	php${PHP_VER}-pear-Pager>0:devel/pear-Pager
 
 .include <bsd.port.pre.mk>
 

@@ -411,7 +411,7 @@
 @dir(www,freshports,755)        %%FP_DATADIR%%/cache/pages
 @dir(www,freshports,775)        %%FP_DATADIR%%/cache/ports
 @dir(www,freshports,755)        %%FP_DATADIR%%/cache/general
-@dir(www,freshports,755)        %%FP_DATADIR%%/cache/spooling
+@dir(www,freshports,775)        %%FP_DATADIR%%/cache/spooling
 @dir(freshports,freshports,755) %%FP_DATADIR%%/signals
 @dir(freshports,freshports,755) %%FP_DATADIR%%/tmp
 @dir(freshports,freshports,755) %%FP_LOGDIR%%
