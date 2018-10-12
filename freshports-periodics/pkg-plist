@@ -4,8 +4,17 @@ etc/periodic/daily/200.fp_stats_daily
 etc/periodic/daily/210.fp_purge_old_password_tokens
 etc/periodic/daily/220.fp_daily_rendering_times
 etc/periodic/daily/260.fp_newusers
+etc/periodic/daily/300.send-security-notices
+etc/periodic/daily/310.send-report-notices-daily
+etc/periodic/daily/320.send-report-new-ports-daily
+etc/periodic/fortnightly/310.send-report-notices-fortnightly
+etc/periodic/fortnightly/320.send-report-new-ports-fortnightly
 etc/periodic/hourly/120.fp_test_master_port_make
 etc/periodic/hourly/140.fp_test_master_port_db
 etc/periodic/hourly/180.fp_stats_hourly
 etc/periodic/hourly/240.fp_missing_port_categories
 etc/periodic/hourly/260.fp_refresh_various_cache_items
+etc/periodic/monthly/310.send-report-notices-monthly
+etc/periodic/monthly/320.send-report-new-ports-monthly
+etc/periodic/weekly/310.send-report-notices-weekly
+etc/periodic/weekly/320.send-report-new-ports-weekly

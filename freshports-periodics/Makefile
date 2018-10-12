@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-periodics
-PORTVERSION=	1.0.14
+PORTVERSION=	1.0.17
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
@@ -19,16 +19,17 @@ NO_BUILD=	YES
 USERS=	freshports
 GROUPS=	${USERS}
 
+PERIODS=	hourly daily weekly fortnightly monthly
+
 .include <bsd.port.pre.mk>
 
 do-install:
 	@${ECHO} "Installing in ${PREFIX}/libexec/freshports"
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/hourly
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/daily
 
-	# the master port testing scripts
-	(cd ${WRKSRC}/hourly && ${COPYTREE_BIN} . ${STAGEDIR}${PREFIX}/etc/periodic/hourly)
-	(cd ${WRKSRC}/daily  && ${COPYTREE_BIN} . ${STAGEDIR}${PREFIX}/etc/periodic/daily)
+.for _period in ${PERIODS}
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/${_period}
+	(cd ${WRKSRC}/${_period}  && ${COPYTREE_BIN} . ${STAGEDIR}${PREFIX}/etc/periodic/${_period})
+.endfor
 
 .include <bsd.port.post.mk>
