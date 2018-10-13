@@ -10,7 +10,7 @@
 
 PORTNAME=	FreshPorts-Scripts-Dependencies
 PORTVERSION=	1.0.0
-PORTREVISION=	3
+PORTREVISION=	6
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 DISTFILES=	# none
@@ -20,7 +20,6 @@ MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 
 NO_BUILD=	YES
-#NO_WRKSUBDIR=	YES
 NO_INSTALL=	YES
 
 # needed for freshports-fp-daemon
@@ -34,9 +33,11 @@ RUN_DEPENDS+=	p5-Date-Calc>0:devel/p5-Date-Calc
 RUN_DEPENDS+=	p5-DBD-Pg>0:databases/p5-DBD-Pg
 RUN_DEPENDS+=	p5-Email-MIME>0:mail/p5-Email-MIME
 RUN_DEPENDS+=	p5-List-MoreUtils>0:lang/p5-List-MoreUtils
-RUN_DEPENDS+=	p5-Mail-Sender>0:mail/p5-Mail-Sender
+RUN_DEPENDS+	p5-IO-Socket-SSL>0:security/p5-IO-Socket-SSL
+RUN_DEPENDS+=	p5-Email-Sender>0:mail/p5-Email-Sender
 RUN_DEPENDS+=	p5-Text-Unidecode>0:converters/p5-Text-Unidecode
 RUN_DEPENDS+=	p5-TimeDate>0:devel/p5-TimeDate
+RUN_DEPENDS+=	p5-Text-Wrapper>0:textproc/p5-Text-Wrapper
 RUN_DEPENDS+=	p5-XML-Node>0:textproc/p5-XML-Node
 RUN_DEPENDS+=	p5-XML-Writer>0:textproc/p5-XML-Writer
 RUN_DEPENDS+=	p5-libwww>0:www/p5-libwww
