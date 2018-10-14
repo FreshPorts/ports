@@ -10,10 +10,12 @@
 
 PORTNAME=	freshports
 PORTVERSION=	1.0.36
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
+
+
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
@@ -60,11 +62,9 @@ do-install:
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/daily
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/general
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/html
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/news
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/pages
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/ports
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/spooling
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/signals
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/tmp
 
@@ -73,6 +73,8 @@ do-install:
 
 	# install everything +x, because it's easier
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${WWWDIR})
+
+
 
 	# move configuration files to the right place
 	${MKDIR} ${STAGEDIR}${ETCDIR}
