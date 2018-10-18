@@ -7,6 +7,7 @@ etc/periodic/daily/260.fp_newusers
 etc/periodic/daily/300.send-security-notices
 etc/periodic/daily/310.send-report-notices-daily
 etc/periodic/daily/320.send-report-new-ports-daily
+etc/periodic/everythreeminutes/100.fp_system_status
 etc/periodic/fortnightly/310.send-report-notices-fortnightly
 etc/periodic/fortnightly/320.send-report-new-ports-fortnightly
 etc/periodic/hourly/120.fp_test_master_port_make

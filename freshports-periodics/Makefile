@@ -6,8 +6,8 @@
 #
 
 PORTNAME=	freshports-periodics
-PORTVERSION=	1.0.17
-PORTREVISION=	0
+PORTVERSION=	1.0.19
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
@@ -19,7 +19,7 @@ NO_BUILD=	YES
 USERS=	freshports
 GROUPS=	${USERS}
 
-PERIODS=	hourly daily weekly fortnightly monthly
+PERIODS=	everythreeminutes hourly daily weekly fortnightly monthly
 
 .include <bsd.port.pre.mk>
 
