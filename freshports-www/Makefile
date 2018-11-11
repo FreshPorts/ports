@@ -9,24 +9,24 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	1.0.36
+PORTVERSION=	1.1.0
 PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
 
-
-
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+
+USES=		perl5 php python
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	FreshPorts
 
 NO_BUILD=	YES
 
-WANT_PGSQL=	client
-USES=		perl5 php python
+WANT_PGSQL=	client plperl
+USE_PHP=	ctype dom exif fileinfo filter gd hash iconv json mbstring opcache pgsql phar posix session simplexml tokenizer xml xmlreader xmlwriter zip zlib
 
 FP_DATADIR=	/var/db/freshports
 FP_LOGDIR=	/var/log/freshports
@@ -49,7 +49,6 @@ NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=0:dvl/py-freshports-fp-listen
 RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 RUN_DEPENDS+=	nginx:www/nginx
-RUN_DEPENDS+=	php${PHP_VER}-extensions>0:lang/php${PHP_VER}-extensions
 RUN_DEPENDS+=	php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2
 RUN_DEPENDS+=	php${PHP_VER}-pear-Pager>0:devel/pear-Pager
 
@@ -73,8 +72,6 @@ do-install:
 
 	# install everything +x, because it's easier
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${WWWDIR})
-
-
 
 	# move configuration files to the right place
 	${MKDIR} ${STAGEDIR}${ETCDIR}

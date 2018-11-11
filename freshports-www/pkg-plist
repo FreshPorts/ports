@@ -43,6 +43,7 @@
 %%WWWDIR%%/classes/latest_commits.php
 %%WWWDIR%%/classes/master_slave.php
 %%WWWDIR%%/classes/newsfeed.php
+%%WWWDIR%%/classes/package_flavors.php
 %%WWWDIR%%/classes/packages.php
 %%WWWDIR%%/classes/page_load_detail.php
 %%WWWDIR%%/classes/page_options.php
@@ -58,6 +59,7 @@
 %%WWWDIR%%/classes/sanity_test_failures.php
 %%WWWDIR%%/classes/searches.php
 %%WWWDIR%%/classes/system_branch.php
+%%WWWDIR%%/classes/system_status.php
 %%WWWDIR%%/classes/user.php
 %%WWWDIR%%/classes/user_tasks.php
 %%WWWDIR%%/classes/vuln_latest.php
