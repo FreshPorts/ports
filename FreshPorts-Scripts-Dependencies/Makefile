@@ -10,7 +10,7 @@
 
 PORTNAME=	FreshPorts-Scripts-Dependencies
 PORTVERSION=	1.0.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 DISTFILES=	# none

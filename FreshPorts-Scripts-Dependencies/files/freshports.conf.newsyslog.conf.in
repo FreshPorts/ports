@@ -3,3 +3,9 @@
 #
 #%%FP_LOGDIR%%/freshports.log       %%FRESHPORTS_USER%%:%%FRESHPORTS_GROUP%% 640 14  *   $D0  B
 #%%FP_LOGDIR%%/vuxml.log            %%FRESHPORTS_USER%%:%%FRESHPORTS_GROUP%% 640 14  *   $D0  B
+
+#%%FP_LOGDIR%%/report-*.daily                %%FRESHPORTS_USER%%:%%FRESHPORTS_GROUP%% 640 14  *   $D0    BG
+#%%FP_LOGDIR%%/report-*.weekly               %%FRESHPORTS_USER%%:%%FRESHPORTS_GROUP%% 640 14  *   $W0    BG
+#%%FP_LOGDIR%%/report-*.fortnightly          %%FRESHPORTS_USER%%:%%FRESHPORTS_GROUP%% 640 14  *   $M9D0  BG
+#%%FP_LOGDIR%%/report-*.fortnightly          %%FRESHPORTS_USER%%:%%FRESHPORTS_GROUP%% 640 14  *   $M23D0 BG
+#%%FP_LOGDIR%%/report-*.monthly              %%FRESHPORTS_USER%%:%%FRESHPORTS_GROUP%% 640 14  *   $M1D0  BG
