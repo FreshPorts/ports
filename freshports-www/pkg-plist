@@ -408,10 +408,10 @@
 @dir(freshports,freshports,755) %%FP_DATADIR%%
 @dir(freshports,freshports,755) %%FP_DATADIR%%/cache
 @dir(www,freshports,775)        %%FP_DATADIR%%/cache/daily
+@dir(www,freshports,755)        %%FP_DATADIR%%/cache/general
 @dir(www,freshports,775)        %%FP_DATADIR%%/cache/news
 @dir(www,freshports,755)        %%FP_DATADIR%%/cache/pages
 @dir(www,freshports,775)        %%FP_DATADIR%%/cache/ports
-@dir(www,freshports,755)        %%FP_DATADIR%%/cache/general
 @dir(freshports,freshports,755) %%FP_DATADIR%%/signals
 @dir(freshports,freshports,755) %%FP_DATADIR%%/tmp
 @dir(freshports,freshports,755) %%FP_LOGDIR%%
