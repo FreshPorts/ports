@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	FreshPorts-Scripts-Dependencies
-PORTVERSION=	1.0.0
-PORTREVISION=	7
+PORTVERSION=	1.0.1
+PORTREVISION=	2
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 DISTFILES=	# none
@@ -55,4 +55,12 @@ USES=		perl5 python pgsql
 USERS=	freshports ingress
 GROUPS=	${USERS}
 
-.include <bsd.port.mk>
+PORTSJAIL=	/var/db/freshports/ports-jail
+
+.include <bsd.port.pre.mk>
+
+post-install:
+	${MKDIR} ${STAGEDIR}${PORTSJAIL}/etc
+	${INSTALL_DATA} ${FILESDIR}/make.conf ${STAGEDIR}${PORTSJAIL}/etc/
+	
+.include <bsd.port.post.mk>
