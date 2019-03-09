@@ -1,0 +1,5 @@
+/var/db/freshports/ports-jail/etc/make.conf
+
+@dir /var/db/freshports/ports-jail/etc
+@dir /var/db/freshports/ports-jail
+@comment @dir /var/db/freshports
