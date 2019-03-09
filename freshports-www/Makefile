@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports
 PORTVERSION=	1.1.5
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
@@ -57,15 +57,6 @@ RUN_DEPENDS+=	php${PHP_VER}-pear-Pager>0:devel/pear-Pager
 do-install:
 	@${ECHO} "Installing in ${WWWDIR}"
 	${MKDIR} ${STAGEDIR}${WWWDIR}
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/daily
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/general
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/news
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/pages
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/ports
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/signals
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/tmp
 
 	# we don't need this in here.
 	${RM} -rf ${WRKSRC}/docs
