@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	1.33.2
-PORTREVISION=	0
+PORTVERSION=	1.34.2
+PORTREVISION=	2
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www
@@ -51,6 +51,7 @@ RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 RUN_DEPENDS+=	nginx:www/nginx
 RUN_DEPENDS+=	php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2
 RUN_DEPENDS+=	php${PHP_VER}-pear-Pager>0:devel/pear-Pager
+RUN_DEPENDS+=	libucl>0:textproc/libucl
 
 .include <bsd.port.pre.mk>
 
