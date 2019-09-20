@@ -1,5 +1,40 @@
 /var/db/freshports/ports-jail/etc/make.conf
 
-@dir /var/db/freshports/ports-jail/etc
-@dir /var/db/freshports/ports-jail
+@dir(www,freshports,755)        %%FP_DATADIR%%/cache
+@dir(freshports,freshports,755) %%FP_DATADIR%%/cache/html
+@dir(www,freshports,775) %%FP_DATADIR%%/cache/spooling
+@dir(freshports,freshports,755) %%FP_DATADIR%%/mail
+@dir(freshports,freshports,755) %%FP_DATADIR%%/ports-jail
+@dir(freshports,freshports,755) %%FP_DATADIR%%/ports-jail/var
+@dir(freshports,freshports,755) %%FP_DATADIR%%/ports-jail/var/db
+@dir(freshports,freshports,755) %%FP_DATADIR%%/ports-jail/var/db/repos
+@dir(freshports,freshports,755) %%FP_DATADIR%%/message-queues
+@dir(freshports,freshports,755) %%FP_DATADIR%%/message-queues/archive
+@dir(freshports,freshports,755) %%FP_DATADIR%%/message-queues/recent
+@dir(freshports,freshports,755) %%FP_DATADIR%%/message-queues/retry
+@dir(freshports,freshports,755) %%FP_DATADIR%%/signals
+@dir(freshports,freshports,755) %%FP_DATADIR%%/tmp
+@dir(freshports,freshports,755) %%FP_LOGDIR%%
+
+@dir libexec/freshports
+
+@dir %%FP_DATADIR%%/ports-jail/bin
+@dir %%FP_DATADIR%%/ports-jail/dev
+@dir %%FP_DATADIR%%/ports-jail/etc
+@dir %%FP_DATADIR%%/ports-jail/lib
+@dir %%FP_DATADIR%%/ports-jail/libexec
+@dir %%FP_DATADIR%%/ports-jail/sbin
+@dir %%FP_DATADIR%%/ports-jail/usr/bin
+@dir %%FP_DATADIR%%/ports-jail/usr/lib
+@dir %%FP_DATADIR%%/ports-jail/usr/libexec
+@dir %%FP_DATADIR%%/ports-jail/usr/sbin
+@dir %%FP_DATADIR%%/ports-jail/usr/share/mk
+@dir %%FP_DATADIR%%/ports-jail/usr/share
+@dir %%FP_DATADIR%%/ports-jail/usr
+
 @comment @dir /var/db/freshports
+
+@dir(ingress,ingress,755)    %%INGRESS_DATADIR%%/mail
+@dir(ingress,ingress,755)    %%INGRESS_DATADIR%%/message-queues
+@dir(ingress,freshports,775) %%INGRESS_DATADIR%%/message-queues/incoming
+@dir %%INGRESS_DATADIR%%
