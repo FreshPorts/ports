@@ -10,7 +10,7 @@
 
 PORTNAME=	FreshPorts-Scripts-Dependencies
 PORTVERSION=	1.0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 DISTFILES=	# none
@@ -47,6 +47,7 @@ RUN_DEPENDS+=	maildrop>0:mail/maildrop
 RUN_DEPENDS+=	p5-DBD-Pg>0:databases/p5-DBD-Pg
 RUN_DEPENDS+=	p5-XML-Writer>0:textproc/p5-XML-Writer
 RUN_DEPENDS+=	subversion>0:devel/subversion
+RUN_DEPENDS+=	git-lite>0:devel/git-lite
 RUN_DEPENDS+=	sudo>0:security/sudo
 
 WANT_PGSQL=	client
