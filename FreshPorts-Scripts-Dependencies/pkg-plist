@@ -16,7 +16,7 @@
 @dir(freshports,freshports,755) %%FP_DATADIR%%/tmp
 @dir(freshports,freshports,755) %%FP_LOGDIR%%
 
-@dir libexec/freshports
+@dir(dan,dan,) libexec/freshports
 
 @dir %%FP_DATADIR%%/ports-jail/bin
 @dir %%FP_DATADIR%%/ports-jail/dev
