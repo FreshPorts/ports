@@ -10,7 +10,7 @@
 
 PORTNAME=	FreshPorts-Scripts-Dependencies
 PORTVERSION=	1.0.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 DISTFILES=	# none
@@ -26,7 +26,7 @@ NO_INSTALL=	YES
 RUN_DEPENDS+=	daemontools>0:sysutils/daemontools
 
 # for p5-FreshPortsModules
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2@${PY_FLAVOR}
 
 RUN_DEPENDS+=	p5-Class-Observable>0:devel/p5-Class-Observable
 RUN_DEPENDS+=	p5-Date-Calc>0:devel/p5-Date-Calc
@@ -47,11 +47,16 @@ RUN_DEPENDS+=	maildrop>0:mail/maildrop
 RUN_DEPENDS+=	p5-DBD-Pg>0:databases/p5-DBD-Pg
 RUN_DEPENDS+=	p5-XML-Writer>0:textproc/p5-XML-Writer
 RUN_DEPENDS+=	subversion>0:devel/subversion
+
+# for importing Git commits
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}GitPython>0:devel/py-gitpython@${PY_FLAVOR}
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR}
+
 RUN_DEPENDS+=	git-lite>0:devel/git-lite
 RUN_DEPENDS+=	sudo>0:security/sudo
 
 WANT_PGSQL=	client
-USES=		perl5 python pgsql
+USES=		perl5 python:3.6 pgsql
 
 USERS=	freshports ingress
 GROUPS=	${USERS}
