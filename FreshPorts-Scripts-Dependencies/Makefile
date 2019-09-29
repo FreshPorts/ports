@@ -10,7 +10,7 @@
 
 PORTNAME=	FreshPorts-Scripts-Dependencies
 PORTVERSION=	1.0.3
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 DISTFILES=	# none
@@ -61,6 +61,7 @@ USES=		perl5 python:3.6 pgsql
 USERS=	freshports ingress
 GROUPS=	${USERS}
 
+ETCDIR=		${PREFIX}/etc/freshports
 FP_DATADIR=	/var/db/freshports
 INGRESS_DATADIR=	/var/db/ingress
 PORTSJAIL=	/var/db/freshports/ports-jail
@@ -76,6 +77,7 @@ PLIST_SUB+=	FP_LOGDIR=${FP_LOGDIR}
 post-install:
 	# logs
 	${MKDIR} ${STAGEDIR}${FP_LOGDIR}
+	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${MKDIR} ${STAGEDIR}${PORTSJAIL}/etc
 	${INSTALL_DATA} ${FILESDIR}/make.conf ${STAGEDIR}${PORTSJAIL}/etc/
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/freshports
@@ -108,5 +110,7 @@ post-install:
 	${MKDIR} ${STAGEDIR}${INGRESS_DATADIR}/mail
 	${MKDIR} ${STAGEDIR}${INGRESS_DATADIR}/message-queues
 	${MKDIR} ${STAGEDIR}${INGRESS_DATADIR}/message-queues/incoming
+
+	${LN} -sf ${ETCDIR}/config.sh ${STAGEDIR}${PREFIX}/libexec/freshports
 	
 .include <bsd.port.post.mk>
