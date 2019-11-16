@@ -19,6 +19,7 @@
 %%WWWDIR%%/classes/cache-commit.php
 %%WWWDIR%%/classes/cache-file.php
 %%WWWDIR%%/classes/cache-general.php
+%%WWWDIR%%/classes/cache-news.php
 %%WWWDIR%%/classes/cache-port.php
 %%WWWDIR%%/classes/cache.php
 %%WWWDIR%%/classes/categories.php
