@@ -10,7 +10,7 @@
 
 PORTNAME=	FreshPorts-Scripts-Dependencies
 PORTVERSION=	1.0.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 DISTFILES=	# none
@@ -56,7 +56,7 @@ RUN_DEPENDS+=	git-lite>0:devel/git-lite
 RUN_DEPENDS+=	sudo>0:security/sudo
 
 WANT_PGSQL=	client
-USES=		perl5 python:3.6 pgsql
+USES=		perl5 python pgsql
 
 USERS=	freshports ingress
 GROUPS=	${USERS}
