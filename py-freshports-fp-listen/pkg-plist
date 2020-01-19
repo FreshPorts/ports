@@ -1,10 +1,9 @@
 @sample(root,freshports,640) %%ETCDIR%%/fp-listen.ini.sample
-
 %%SERVICE_DIR%%/fp-listen/env/HOME
 %%SERVICE_DIR%%/fp-listen/log/run
 %%SERVICE_DIR%%/fp-listen/README.txt
 %%SERVICE_DIR%%/fp-listen/run
-
+%%PYTHON_SITELIBDIR%%/fp-listen/fp-listen.pyc
 @dir(root,wheel,755) %%SERVICE_DIR%%
 @dir(root,wheel,755) %%SERVICE_DIR%%/fp-listen
 @dir(root,wheel,755) %%SERVICE_DIR%%/fp-listen/log

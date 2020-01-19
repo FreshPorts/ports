@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	freshports-fp-listen
-PORTVERSION=	1.0.11
+PORTVERSION=	1.2.0
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
@@ -43,6 +43,13 @@ SUB_LIST+=	PYTHON_SITELIBDIR=${PYTHON_SITELIBDIR}
 SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 
 SUB_FILES=	run
+
+do-install:
+	(cd ${WRKSRC}/fp-listen \
+ 		&& ${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
+		-b -d ${PREFIX} -f . && \
+		${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}/fp-listen && \
+		${INSTALL_SCRIPT} ${WRKSRC}/fp-listen/fp-listen.pyc ${STAGEDIR}${PYTHON_SITELIBDIR}/fp-listen )
 
 post-install:
 	@${ECHO} "Installing in ${SERVICE_DIR}/fp-listen"
