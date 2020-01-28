@@ -101,17 +101,6 @@
 %%WWWDIR%%/configuration/jail.sh
 %%WWWDIR%%/configuration/mail-aliases.txt
 %%WWWDIR%%/configuration/permissions.txt
-%%WWWDIR%%/configuration/phorum-blocked-from-registration.inc
-%%WWWDIR%%/configuration/phorum/1.php
-%%WWWDIR%%/configuration/phorum/2.php
-%%WWWDIR%%/configuration/phorum/cache_moderators.php
-%%WWWDIR%%/configuration/phorum/footer.php
-%%WWWDIR%%/configuration/phorum/forums.php
-%%WWWDIR%%/configuration/phorum/functions.php
-%%WWWDIR%%/configuration/phorum/header.php
-%%WWWDIR%%/configuration/phorum/starting-points/1.php
-%%WWWDIR%%/configuration/phorum/starting-points/2.php
-%%WWWDIR%%/configuration/phorum/starting-points/forums.php
 %%WWWDIR%%/configuration/robots.txt
 %%WWWDIR%%/configuration/robots.txt.sample
 %%WWWDIR%%/configuration/status-config.php
@@ -159,6 +148,7 @@
 %%WWWDIR%%/rewrite/missing-port.php
 %%WWWDIR%%/rewrite/missing.php
 %%WWWDIR%%/www/--/index.php
+%%WWWDIR%%/www/--/forums-gone.php
 %%WWWDIR%%/www/.well-known/keybase.txt
 %%WWWDIR%%/www/DesignContestVoting/A/bacula.html
 %%WWWDIR%%/www/DesignContestVoting/A/categories.html
@@ -386,7 +376,6 @@
 %%WWWDIR%%/www/other-copyrights.php
 %%WWWDIR%%/www/package.php
 %%WWWDIR%%/www/password-reset-via-token.php
-%%WWWDIR%%/www/phorum
 %%WWWDIR%%/www/phpPolls/.htaccess
 %%WWWDIR%%/www/phpPolls/index.php3
 %%WWWDIR%%/www/phpPolls/list.php3

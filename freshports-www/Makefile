@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	1.37.2
+PORTVERSION=	1.38
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
@@ -83,13 +83,6 @@ do-install:
 
 	# robots.txt link
 	${LN} -sf ${ETCDIR}/robots.txt ${STAGEDIR}${WWWDIR}/www/robots.txt
-
-	# phorum link
-	${LN} -sf ${PREFIX}/www/phorum           ${STAGEDIR}${WWWDIR}/www/phorum
-	${LN} -sf ${ETCDIR}/cache_moderators.php ${STAGEDIR}${WWWDIR}/configuration/phorum/cache_moderators.php
-	${LN} -sf ${ETCDIR}/forums.php           ${STAGEDIR}${WWWDIR}/configuration/phorum/forums.php
-	${LN} -sf ${ETCDIR}/1.php                ${STAGEDIR}${WWWDIR}/configuration/phorum/1.php
-	${LN} -sf ${ETCDIR}/2.php                ${STAGEDIR}${WWWDIR}/configuration/phorum/2.php
 
 	# nginx link
 	${LN} -sf ${PREFIX}/etc/nginx/includes/freshports.org.conf ${STAGEDIR}${ETCDIR}/vhosts.conf
