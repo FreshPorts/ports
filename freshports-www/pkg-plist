@@ -16,6 +16,7 @@
 %%WWWDIR%%/README.md
 %%WWWDIR%%/classes/announcements.php
 %%WWWDIR%%/classes/badges.php
+%%WWWDIR%%/classes/cache-category.php
 %%WWWDIR%%/classes/cache-commit.php
 %%WWWDIR%%/classes/cache-file.php
 %%WWWDIR%%/classes/cache-general.php
