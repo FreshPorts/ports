@@ -22,6 +22,7 @@
 %%WWWDIR%%/classes/cache-general.php
 %%WWWDIR%%/classes/cache-news.php
 %%WWWDIR%%/classes/cache-port.php
+%%WWWDIR%%/classes/cache-port-packages.php
 %%WWWDIR%%/classes/cache.php
 %%WWWDIR%%/classes/categories.php
 %%WWWDIR%%/classes/category-listing.php
@@ -51,6 +52,7 @@
 %%WWWDIR%%/classes/page_load_detail.php
 %%WWWDIR%%/classes/page_options.php
 %%WWWDIR%%/classes/port-display.php
+%%WWWDIR%%/classes/port-packages-display.php
 %%WWWDIR%%/classes/port_commits_by_committer.php
 %%WWWDIR%%/classes/port_configure_plist.php
 %%WWWDIR%%/classes/port_dependencies.php

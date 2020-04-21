@@ -9,11 +9,11 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	1.40
-PORTREVISION=	1
+PORTVERSION=	1.41p4
+PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
-PKGNAMESUFFIX=	-www
+PKGNAMESUFFIX=	-www-packages
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
