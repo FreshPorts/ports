@@ -52,7 +52,6 @@
 %%WWWDIR%%/classes/page_load_detail.php
 %%WWWDIR%%/classes/page_options.php
 %%WWWDIR%%/classes/port-display.php
-%%WWWDIR%%/classes/port-packages-display.php
 %%WWWDIR%%/classes/port_commits_by_committer.php
 %%WWWDIR%%/classes/port_configure_plist.php
 %%WWWDIR%%/classes/port_dependencies.php
