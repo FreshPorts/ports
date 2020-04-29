@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	freshports-fp-listen
-PORTVERSION=	1.2.3
+PORTVERSION=	1.3.0
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
