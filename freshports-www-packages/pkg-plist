@@ -254,7 +254,6 @@
 %%WWWDIR%%/www/fraud/whois.freshports.net.php
 %%WWWDIR%%/www/generate_content.php
 %%WWWDIR%%/www/google0852121516b75cac.html
-%%WWWDIR%%/www/graphs.js
 %%WWWDIR%%/www/graphs.php
 %%WWWDIR%%/www/graphs/bar-graphs.php
 %%WWWDIR%%/www/graphs/graph.php
@@ -364,9 +363,9 @@
 %%WWWDIR%%/www/index.php
 %%WWWDIR%%/www/inthenews.php
 %%WWWDIR%%/www/javascript/freshports.js
-%%WWWDIR%%/www/javascript/jquery-1.5.min.js
-%%WWWDIR%%/www/jquery-1.2.6.min.js
-%%WWWDIR%%/www/jquery.flot.pack.js
+%%WWWDIR%%/www/javascript/graphs.js
+%%WWWDIR%%/www/javascript/jquery-3.5.0.min.js
+%%WWWDIR%%/www/javascript/jquery.flot.js
 %%WWWDIR%%/www/legal.php
 %%WWWDIR%%/www/login.php
 %%WWWDIR%%/www/logout.php
