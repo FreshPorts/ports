@@ -231,6 +231,7 @@
 %%WWWDIR%%/www/css/freshports.css
 %%WWWDIR%%/www/customize.php
 %%WWWDIR%%/www/date.php
+%%WWWDIR%%/www/delete-account.php
 %%WWWDIR%%/www/faq.php
 %%WWWDIR%%/www/favicon.ico
 %%WWWDIR%%/www/filter-setup.php
@@ -389,12 +390,13 @@
 %%WWWDIR%%/www/phpPolls/results.php3
 %%WWWDIR%%/www/phpPolls/view.php3
 %%WWWDIR%%/www/phpPolls/vote.php3
+%%WWWDIR%%/www/phpinfo.php
 %%WWWDIR%%/www/pkg_process.inc
 %%WWWDIR%%/www/pkg_upload.php
 %%WWWDIR%%/www/pkg_utils.inc
-%%WWWDIR%%/www/port-description.admin.php
 %%WWWDIR%%/www/port-watch.php
 %%WWWDIR%%/www/ports-broken.php
+%%WWWDIR%%/www/ports-conflicts.php
 %%WWWDIR%%/www/ports-deleted.php
 %%WWWDIR%%/www/ports-deprecated.php
 %%WWWDIR%%/www/ports-expiration-date.php
@@ -404,7 +406,6 @@
 %%WWWDIR%%/www/ports-interactive.php
 %%WWWDIR%%/www/ports-new.php
 %%WWWDIR%%/www/ports-no-cdrom.php
-%%WWWDIR%%/www/ports-not-in-latest-index.php
 %%WWWDIR%%/www/ports-restricted.php
 %%WWWDIR%%/www/ports-vulnerable.php
 %%WWWDIR%%/www/privacy.php
@@ -415,8 +416,8 @@
 %%WWWDIR%%/www/sanity_test_failures.php
 %%WWWDIR%%/www/search.php
 %%WWWDIR%%/www/survey/index.html
-%%WWWDIR%%/www/unrefreshed.php
-%%WWWDIR%%/www/vote.php
+%%WWWDIR%%/www/test-lists.php
+%%WWWDIR%%/www/testing.php
 %%WWWDIR%%/www/vuxml.php
 %%WWWDIR%%/www/watch-categories.php
 %%WWWDIR%%/www/watch-list-maintenance.php
