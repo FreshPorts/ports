@@ -1,0 +1,50 @@
+#!/bin/sh
+# $FreeBSD$
+
+# PROVIDE: ingress
+# REQUIRE: LOGIN cleanvar
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf to enable ingress:
+# ingress_enable (bool):	Set to "NO" by default.
+#				Set it to "YES" to enable ingress
+#
+
+. /etc/rc.subr
+
+name="ingress"
+rcvar=${name}_enable
+
+pidfile="/var/run/${name}/${name}.pid"
+ingress_user="ingress"
+ingress_command="%%FP_SERVICESDIR%%/ingress.sh"
+command="/usr/sbin/daemon"
+
+load_rc_config $name
+
+: ${ingress_enable:=NO}
+: ${ingress_user:=ingress}
+: ${ingress_group:=ingress}
+: ${ingress_syslog_facility:=local3}
+
+
+required_files="%%ETCDIR%%/ingress.sh"
+
+start_precmd=ingress_prestart
+
+ingress_prestart()
+{
+	# create the file pid, and directory, with correct permissions
+	if [ ! -e ${pidfile} ]; then
+		install -o ${ingress_user} -g ${ingress_group} /dev/null ${pidfile};
+	else
+		chown ${ingress_user}:${ingress_group} ${pidfile};
+	fi
+}
+
+command_args="-P ${pidfile} -t ${name} -T ${name} -l ${ingress_syslog_facility} ${ingress_command}"
+
+echo $command $command_args
+
+run_rc_command "$1"

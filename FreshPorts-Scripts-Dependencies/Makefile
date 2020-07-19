@@ -10,7 +10,7 @@
 
 PORTNAME=	FreshPorts-Scripts-Dependencies
 PORTVERSION=	1.0.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 DISTFILES=	# none
@@ -21,9 +21,6 @@ COMMENT=	For use by Dan Langille only
 
 NO_BUILD=	YES
 NO_INSTALL=	YES
-
-# needed for freshports-fp-daemon
-RUN_DEPENDS+=	daemontools>0:sysutils/daemontools
 
 # for p5-FreshPortsModules
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2@${PY_FLAVOR}

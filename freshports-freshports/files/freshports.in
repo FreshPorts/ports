@@ -1,0 +1,49 @@
+#!/bin/sh
+# $FreeBSD$
+
+# PROVIDE: freshports
+# REQUIRE: LOGIN cleanvar
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf to enable freshports:
+# freshports_enable (bool):	Set to "NO" by default.
+#				Set it to "YES" to enable freshports
+#
+
+. /etc/rc.subr
+
+name="freshports"
+rcvar=${name}_enable
+
+pidfile="/var/run/${name}/${name}.pid"
+freshports_user="freshports"
+freshports_command="%%FP_SERVICESDIR%%/freshports.sh"
+command="/usr/sbin/daemon"
+
+load_rc_config $name
+
+: ${freshports_enable:=NO}
+: ${freshports_user:=freshports}
+: ${freshports_group:=freshports}
+: ${freshports_syslog_facility:=local3}
+
+required_files="%%ETCDIR%%/freshports.sh"
+
+start_precmd=freshports_prestart
+
+freshports_prestart()
+{
+	# create the file pid, and directory, with correct permissions
+	if [ ! -e ${pidfile} ]; then
+		install -o ${freshports_user} -g ${freshports_group} /dev/null ${pidfile};
+	else
+		chown ${freshports_user}:${freshports_group} ${pidfile};
+	fi
+}
+
+command_args="-P ${pidfile} -t ${name} -T ${name} -l ${freshports_syslog_facility} ${freshports_command}"
+
+echo $command $command_args
+
+run_rc_command "$1"

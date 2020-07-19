@@ -1,0 +1,9 @@
+@sample(root,ingress,640) %%ETCDIR%%/ingress.sh.sample
+
+%%FP_SERVICESDIR%%/ingress.sh
+
+etc/rc.d/ingress
+
+@dir(ingress,ingress,) /var/run/ingress
+@dir(root,wheel,755) %%FP_SERVICESDIR%%
+@dir(freshports,freshports,775) %%LOGDIR%%

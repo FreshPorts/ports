@@ -1,0 +1,9 @@
+@sample(root,freshports,640) %%ETCDIR%%/freshports.sh.sample
+
+%%FP_SERVICESDIR%%/freshports.sh
+
+etc/rc.d/freshports
+
+@dir(freshports,freshports,) /var/run/freshports
+@dir(root,wheel,755) %%FP_SERVICESDIR%%
+@dir(freshports,freshports,775) %%LOGDIR%%

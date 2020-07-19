@@ -1,0 +1,4 @@
+Install freshports daemon which looks for incoming commits, in the form of XML
+files, and processes them.
+
+WWW: http://www.FreshPorts.org/
