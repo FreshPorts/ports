@@ -44,6 +44,4 @@ freshports_prestart()
 
 command_args="-P ${pidfile} -t ${name} -T ${name} -l ${freshports_syslog_facility} ${freshports_command}"
 
-echo $command $command_args
-
 run_rc_command "$1"

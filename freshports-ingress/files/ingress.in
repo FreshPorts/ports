@@ -45,6 +45,4 @@ ingress_prestart()
 
 command_args="-P ${pidfile} -t ${name} -T ${name} -l ${ingress_syslog_facility} ${ingress_command}"
 
-echo $command $command_args
-
 run_rc_command "$1"
