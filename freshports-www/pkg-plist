@@ -367,7 +367,13 @@
 %%WWWDIR%%/www/javascript/freshports.js
 %%WWWDIR%%/www/javascript/graphs.js
 %%WWWDIR%%/www/javascript/jquery-3.5.0.min.js
+%%WWWDIR%%/www/javascript/jquery.canvaswrapper.js
+%%WWWDIR%%/www/javascript/jquery.colorhelpers.js
+%%WWWDIR%%/www/javascript/jquery.flot.browser.js
+%%WWWDIR%%/www/javascript/jquery.flot.drawSeries.js
 %%WWWDIR%%/www/javascript/jquery.flot.js
+%%WWWDIR%%/www/javascript/jquery.flot.saturated.js
+%%WWWDIR%%/www/javascript/jquery.flot.uiConstants.js
 %%WWWDIR%%/www/legal.php
 %%WWWDIR%%/www/login.php
 %%WWWDIR%%/www/logout.php
