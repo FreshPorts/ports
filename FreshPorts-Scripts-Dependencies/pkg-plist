@@ -34,6 +34,7 @@
 
 @comment @dir /var/db/freshports
 
+@dir(ingress,ingress,755)    %%INGRESS_DATADIR%%
 @dir(ingress,ingress,755)    %%INGRESS_DATADIR%%/mail
 @dir(ingress,ingress,755)    %%INGRESS_DATADIR%%/message-queues
 @dir(ingress,freshports,775) %%INGRESS_DATADIR%%/message-queues/incoming
