@@ -1,0 +1,11 @@
+@dir(www,freshports,0775) %%FP_DATADIR%%/cache/categories
+@dir(www,freshports,0775) %%FP_DATADIR%%/cache/daily
+@dir(www,freshports,0775) %%FP_DATADIR%%/cache/general
+@dir(freshports,freshports,0775) %%FP_DATADIR%%/cache/html
+@dir(www,freshports,0775) %%FP_DATADIR%%/cache/news
+@dir(www,freshports,0775) %%FP_DATADIR%%/cache/packages
+@dir(www,freshports,0775) %%FP_DATADIR%%/cache/pages
+@dir(www,freshports,0775) %%FP_DATADIR%%/cache/ports
+@dir(www,freshports,0775) %%FP_DATADIR%%/cache/spooling
+@dir(freshports,freshports,0775) %%FP_DATADIR%%/cache
+@dir(freshports,freshports,0775) %%FP_DATADIR%%
