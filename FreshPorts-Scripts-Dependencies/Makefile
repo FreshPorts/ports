@@ -49,7 +49,7 @@ RUN_DEPENDS+=	subversion>0:devel/subversion
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}GitPython>0:devel/py-gitpython@${PY_FLAVOR}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR}
 
-RUN_DEPENDS+=	git-lite>0:devel/git-lite
+RUN_DEPENDS+=	git-lite>0:devel/git@lite
 RUN_DEPENDS+=	sudo>0:security/sudo
 
 WANT_PGSQL=	client

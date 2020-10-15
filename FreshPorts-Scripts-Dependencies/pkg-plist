@@ -38,7 +38,6 @@
 @dir(ingress,ingress,755)    %%INGRESS_DATADIR%%/mail
 @dir(ingress,ingress,755)    %%INGRESS_DATADIR%%/message-queues
 @dir(ingress,freshports,775) %%INGRESS_DATADIR%%/message-queues/incoming
-@dir %%INGRESS_DATADIR%%
 
 libexec/freshports/config.sh
 @dir %%ETCDIR%%
