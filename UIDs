@@ -1,2 +1,3 @@
 freshports:*:10001:10001::0:0:FreshPorts user:/var/db/freshports:/bin/sh
-ingress:*:10002:10002::0:0:email ingress user:/var/db/ingress:/bin/sh
+ingress:*:10002:10002::0:0:git ingress user:/var/db/ingress:/bin/sh
+fp-daemon:*:10003:10003::0:0:svn ingress user:/var/db/fp-daemon:/bin/sh

@@ -1,2 +1,3 @@
 freshports:*:10001
 ingress:*:10002
+fp-daemon:*:10003
