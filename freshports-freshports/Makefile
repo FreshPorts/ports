@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	freshports-freshports
-PORTVERSION=	2.0.9
+PORTVERSION=	2.0.10
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
