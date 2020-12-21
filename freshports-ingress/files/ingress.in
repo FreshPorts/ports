@@ -28,7 +28,6 @@ load_rc_config $name
 : ${ingress_group:=ingress}
 : ${ingress_syslog_facility:=local3}
 
-
 required_files="%%ETCDIR%%/ingress.sh"
 
 start_precmd=ingress_prestart
@@ -41,6 +40,26 @@ ingress_prestart()
 	else
 		chown ${ingress_user}:${ingress_group} ${pidfile};
 	fi
+
+	# create the signals directory
+	if [ ! -d "/var/db/${ingress_user}/signals" ]; then
+		install -d -o ${ingress_user} -g ${ingress_group} "/var/db/${ingress_user}/signals"
+	fi
+
+	# create the message-queues directory
+	if [ ! -d /var/db/${ingress_user}/message-queues ]; then
+		install -d -o ${ingress_user} -g ${ingress_group} -m 0775 /var/db/${ingress_user}/message-queues
+	fi
+
+        # required dirs
+        REQUIRED_DIRS="holding incoming spooling"
+        for dir in $REQUIRED_DIRS
+        do
+		# create the incoming directory
+		if [ ! -d /var/db/${ingress_user}/message-queues/$dir ]; then
+			install -d -o ${ingress_user} -g ${ingress_group} -m 0775 /var/db/${ingress_user}/message-queues/$dir
+		fi
+	done
 }
 
 command_args="-P ${pidfile} -t ${name} -T ${name} -l ${ingress_syslog_facility} ${ingress_command}"
