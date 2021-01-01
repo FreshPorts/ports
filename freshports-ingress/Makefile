@@ -44,7 +44,7 @@ do-install:
 
 	${INSTALL_SCRIPT} ${WRKSRC}/ingress.sh ${STAGEDIR}${FP_SERVICESDIR}
 	${INSTALL_DATA}   ${WRKSRC}/config/ingress.sh ${STAGEDIR}${ETCDIR}/ingress.sh.sample
-	
+
 	${MKDIR} ${STAGEDIR}/var/run/ingress
 
 	${INSTALL_SCRIPT} ${WRKDIR}/ingress ${STAGEDIR}$/${PREFIX}/etc/rc.d/
