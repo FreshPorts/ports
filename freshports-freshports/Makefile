@@ -9,13 +9,18 @@
 #
 
 PORTNAME=	freshports-freshports
-PORTVERSION=	2.0.10
+PORTVERSION=	2.0.11
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+
+# ingress.sh invokes perl on a script installed by freshports-scripts-git
+USES=		perl5
+
+RUN_DEPENDS+=	freshports-scripts-git>=2.0.0:dvl/freshports-scripts-git
 
 NO_BUILD=	YES
 
@@ -48,4 +53,5 @@ do-install:
 	${MKDIR} ${STAGEDIR}/var/run/freshports
 
 	${INSTALL_SCRIPT} ${WRKDIR}/freshports ${STAGEDIR}$/${PREFIX}/etc/rc.d/
+
 .include <bsd.port.post.mk>
