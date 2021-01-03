@@ -17,6 +17,11 @@ MASTER_SITES=   # none
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 
+# ingress.sh invokes perl on a script installed by freshports-scripts-git
+USES=		perl5
+
+RUN_DEPENDS+=	freshports-scripts-git>=2.0.0:dvl/freshports-scripts-git
+
 NO_BUILD=	YES
 
 USERS=	ingress
@@ -48,4 +53,5 @@ do-install:
 	${MKDIR} ${STAGEDIR}/var/run/ingress
 
 	${INSTALL_SCRIPT} ${WRKDIR}/ingress ${STAGEDIR}$/${PREFIX}/etc/rc.d/
+
 .include <bsd.port.post.mk>
