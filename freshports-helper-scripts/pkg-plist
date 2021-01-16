@@ -1,0 +1,7 @@
+%%LIBEXECDIR%%/check_for_git_commits.sh
+%%LIBEXECDIR%%/commit-raw-find-by-message-id.sh
+%%LIBEXECDIR%%/commit-raw-find-by-revision.sh
+%%LIBEXECDIR%%/commit-raw-reinject-raw-file.sh
+%%LIBEXECDIR%%/git-commit-single.sh
+%%LIBEXECDIR%%/git-single-commit.sh
+%%LIBEXECDIR%%/inject-retry-raw.sh
