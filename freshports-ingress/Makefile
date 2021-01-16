@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	freshports-ingress
-PORTVERSION=	2.0.4
-PORTREVISION=	3
+DISTVERSION=	2.0.4
+PORTREVISION=	4
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
@@ -21,6 +21,8 @@ COMMENT=	For use by Dan Langille only
 USES=		perl5
 
 RUN_DEPENDS+=	freshports-scripts-git>=2.0.0:dvl/freshports-scripts-git
+RUN_DEPENDS+=	freshports-git-proc-commit>0:dvl/freshports-git-proc-commit
+RUN_DEPENDS+=	freshports-helper_scripts>=0.0.1:dvl/freshports-helper-scripts
 
 NO_BUILD=	YES
 
