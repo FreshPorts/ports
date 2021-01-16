@@ -7,7 +7,7 @@
 
 PORTNAME=	freshports-periodics
 PORTVERSION=	1.0.24
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
@@ -24,8 +24,10 @@ PERIODS=	everythreeminutes hourly daily weekly fortnightly monthly
 .include <bsd.port.pre.mk>
 
 do-install:
-	@${ECHO} "Installing in ${PREFIX}/libexec/freshports"
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/cron.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic
+	
+	${INSTALL_DATA} ${FILESDIR}/freshports-periodics ${STAGEDIR}${PREFIX}/etc/cron.d
 
 .for _period in ${PERIODS}
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/${_period}

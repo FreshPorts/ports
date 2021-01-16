@@ -1,3 +1,4 @@
+etc/cron.d/freshports-periodics
 etc/periodic/daily/100.fp_archive_messages
 etc/periodic/daily/160.fp_ports_tree_file_count
 etc/periodic/daily/200.fp_stats_daily
@@ -21,3 +22,5 @@ etc/periodic/monthly/310.send-report-notices-monthly
 etc/periodic/monthly/320.send-report-new-ports-monthly
 etc/periodic/weekly/310.send-report-notices-weekly
 etc/periodic/weekly/320.send-report-new-ports-weekly
+
+@dir etc/cron.d
