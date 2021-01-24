@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports
 PORTVERSION=	1.52
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www
@@ -51,7 +51,7 @@ NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php
 
 # NOTE: the html directory is nullfs mounted from the ingress directory
 CACHE_DIR=	${FP_DATADIR}/cache
-CACHE_DIRS=	categories daily general html news packages pages ports spooling
+CACHE_DIRS=	categories daily general news packages pages ports spooling
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=0:dvl/py-freshports-fp-listen
 RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator

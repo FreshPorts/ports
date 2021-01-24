@@ -439,7 +439,6 @@
 @dir %%FP_DATADIR%%/cache/categories
 @dir %%FP_DATADIR%%/cache/daily
 @dir %%FP_DATADIR%%/cache/general
-@dir %%FP_DATADIR%%/cache/html
 @dir %%FP_DATADIR%%/cache/news
 @dir %%FP_DATADIR%%/cache/packages
 @dir %%FP_DATADIR%%/cache/pages
