@@ -144,11 +144,15 @@
 %%WWWDIR%%/include/password-reset-via-token.php
 %%WWWDIR%%/include/spam-filter-information.php
 %%WWWDIR%%/include/watch-lists.php
+%%WWWDIR%%/scripts/cache-clear-ports.sh
 %%WWWDIR%%/rewrite/functions.php
 %%WWWDIR%%/rewrite/missing-category.php
 %%WWWDIR%%/rewrite/missing-non-port.php
 %%WWWDIR%%/rewrite/missing-port.php
 %%WWWDIR%%/rewrite/missing.php
+%%WWWDIR%%/www/.well-known/pgp-key.txt
+%%WWWDIR%%/www/.well-known/security.txt
+%%WWWDIR%%/www/.well-known/security.txt.sig
 %%WWWDIR%%/www/--/index.php
 %%WWWDIR%%/www/--/forums-gone.php
 %%WWWDIR%%/www/.well-known/keybase.txt
@@ -200,6 +204,7 @@
 %%WWWDIR%%/www/backend/announcements.php
 %%WWWDIR%%/www/backend/atom0.3.php
 %%WWWDIR%%/www/backend/commits.php
+%%WWWDIR%%/www/backend/commits-recent.php
 %%WWWDIR%%/www/backend/html.php
 %%WWWDIR%%/www/backend/index.php
 %%WWWDIR%%/www/backend/js.php
@@ -304,6 +309,7 @@
 %%WWWDIR%%/www/images/expand.gif
 %%WWWDIR%%/www/images/expiration.gif
 %%WWWDIR%%/www/images/expired.gif
+%%WWWDIR%%/www/images/fallout-16x16.png
 %%WWWDIR%%/www/images/favicon-16x16.png
 %%WWWDIR%%/www/images/favicon-32x32.png
 %%WWWDIR%%/www/images/favicon-96x96.png
@@ -396,7 +402,6 @@
 %%WWWDIR%%/www/phpPolls/results.php3
 %%WWWDIR%%/www/phpPolls/view.php3
 %%WWWDIR%%/www/phpPolls/vote.php3
-%%WWWDIR%%/www/phpinfo.php
 %%WWWDIR%%/www/pkg_process.inc
 %%WWWDIR%%/www/pkg_upload.php
 %%WWWDIR%%/www/pkg_utils.inc
@@ -430,6 +435,18 @@
 %%WWWDIR%%/www/watch-list.php
 %%WWWDIR%%/www/watch.php
 %%WWWDIR%%/www/welcome.php
+
+@dir %%FP_DATADIR%%/cache/categories
+@dir %%FP_DATADIR%%/cache/daily
+@dir %%FP_DATADIR%%/cache/general
+@dir %%FP_DATADIR%%/cache/html
+@dir %%FP_DATADIR%%/cache/news
+@dir %%FP_DATADIR%%/cache/packages
+@dir %%FP_DATADIR%%/cache/pages
+@dir %%FP_DATADIR%%/cache/ports
+@dir %%FP_DATADIR%%/cache/spooling
+@dir %%FP_DATADIR%%/cache
+@dir %%FP_DATADIR%%
 
 @dir(freshports,freshports,755) %%FP_LOGDIR%%
 
