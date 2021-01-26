@@ -436,18 +436,5 @@
 %%WWWDIR%%/www/watch.php
 %%WWWDIR%%/www/welcome.php
 
-@dir %%FP_DATADIR%%/cache/categories
-@dir %%FP_DATADIR%%/cache/daily
-@dir %%FP_DATADIR%%/cache/general
-@dir %%FP_DATADIR%%/cache/news
-@dir %%FP_DATADIR%%/cache/packages
-@dir %%FP_DATADIR%%/cache/pages
-@dir %%FP_DATADIR%%/cache/ports
-@dir %%FP_DATADIR%%/cache/spooling
-@dir %%FP_DATADIR%%/cache
-@dir %%FP_DATADIR%%
-
-@dir(freshports,freshports,755) %%FP_LOGDIR%%
-
 @dir etc/syslog.d
 @dir etc/newsyslog.conf.d

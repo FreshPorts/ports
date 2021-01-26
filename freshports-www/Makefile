@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	1.52
-PORTREVISION=	1
+PORTVERSION=	1.53
+PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www
@@ -31,11 +31,7 @@ USE_PHP=	ctype dom exif fileinfo filter gd hash iconv json mbstring opcache pgsq
 USERS=		freshports www
 GROUPS=		${USERS}
 
-FP_DATADIR=	/var/db/freshports
 FP_LOGDIR=	/var/log/freshports
-
-PLIST_SUB+=	FP_DATADIR=${FP_DATADIR}
-PLIST_SUB+=	FP_LOGDIR=${FP_LOGDIR}
 
 SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR}
 SUB_LIST+=	FRESHPORTS_USER=freshports
@@ -50,8 +46,6 @@ INC_FILES=	common.php constants.local.php
 NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php rss1.0.php rss2.0.php
 
 # NOTE: the html directory is nullfs mounted from the ingress directory
-CACHE_DIR=	${FP_DATADIR}/cache
-CACHE_DIRS=	categories daily general news packages pages ports spooling
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=0:dvl/py-freshports-fp-listen
 RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
@@ -88,22 +82,11 @@ do-install:
 	(cd ${STAGEDIR}${WWWDIR}/www/backend && ${LN} -sf news.php ${_news})
 .endfor
 
-	# cachedir
-	@${ECHO} "Installing in ${CACHE_DIR}"
-	${MKDIR} ${STAGEDIR}${CACHE_DIR}
-
-.for _dir in ${CACHE_DIRS}
-	${MKDIR} ${STAGEDIR}${CACHE_DIR}/${_dir}
-.endfor
-
 	# robots.txt link
 	${LN} -sf ${ETCDIR}/robots.txt ${STAGEDIR}${WWWDIR}/www/robots.txt
 
 	# nginx link
 	${LN} -sf ${PREFIX}/etc/nginx/includes/freshports.org.conf ${STAGEDIR}${ETCDIR}/vhosts.conf
-
-	# logs
-	${MKDIR} ${STAGEDIR}${FP_LOGDIR}
 
 	# syslog.conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/syslog.d
