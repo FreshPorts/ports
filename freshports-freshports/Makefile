@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports-freshports
 PORTVERSION=	2.0.11
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
@@ -46,6 +46,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${FP_SERVICESDIR}
 	${MKDIR} ${STAGEDIR}/${LOGDIR}
 	${MKDIR} ${STAGEDIR}/${ETCDIR}
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/syslog.d
 
 	${INSTALL_SCRIPT} ${WRKSRC}/freshports.sh ${STAGEDIR}${FP_SERVICESDIR}
 	${INSTALL_DATA}   ${WRKSRC}/config/freshports.sh ${STAGEDIR}${ETCDIR}/freshports.sh.sample
@@ -53,5 +54,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}/var/run/freshports
 
 	${INSTALL_SCRIPT} ${WRKDIR}/freshports ${STAGEDIR}$/${PREFIX}/etc/rc.d/
+
+	${INSTALL_DATA} ${FILESDIR}/freshports.syslogd.conf ${STAGEDIR}${PREFIX}/etc/syslog.d/freshports-daemon.conf.sample
 
 .include <bsd.port.post.mk>
