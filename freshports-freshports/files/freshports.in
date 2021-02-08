@@ -26,7 +26,7 @@ load_rc_config $name
 : ${freshports_enable:=NO}
 : ${freshports_user:=freshports}
 : ${freshports_group:=freshports}
-: ${freshports_syslog_facility:=local3}
+: ${freshports_syslog_facility:=local5}
 
 required_files="%%ETCDIR%%/freshports.sh"
 

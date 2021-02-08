@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports-ingress
 DISTVERSION=	2.0.4
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
@@ -48,6 +48,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${FP_SERVICESDIR}
 	${MKDIR} ${STAGEDIR}/${LOGDIR}
 	${MKDIR} ${STAGEDIR}/${ETCDIR}
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/syslog.d
 
 	${INSTALL_SCRIPT} ${WRKSRC}/ingress.sh ${STAGEDIR}${FP_SERVICESDIR}
 	${INSTALL_DATA}   ${WRKSRC}/config/ingress.sh ${STAGEDIR}${ETCDIR}/ingress.sh.sample
@@ -55,5 +56,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}/var/run/ingress
 
 	${INSTALL_SCRIPT} ${WRKDIR}/ingress ${STAGEDIR}$/${PREFIX}/etc/rc.d/
+
+	${INSTALL_DATA} ${FILESDIR}/ingress.syslogd.conf ${STAGEDIR}${PREFIX}/etc/syslog.d/ingress-daemon.conf.sample
 
 .include <bsd.port.post.mk>

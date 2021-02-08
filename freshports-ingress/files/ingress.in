@@ -26,7 +26,7 @@ load_rc_config $name
 : ${ingress_enable:=NO}
 : ${ingress_user:=ingress}
 : ${ingress_group:=ingress}
-: ${ingress_syslog_facility:=local3}
+: ${ingress_syslog_facility:=local4}
 
 required_files="%%ETCDIR%%/ingress.sh"
 

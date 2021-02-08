@@ -3,6 +3,7 @@
 %%FP_SERVICESDIR%%/ingress.sh
 
 etc/rc.d/ingress
+@sample etc/syslog.d/ingress-daemon.conf.sample
 
 @dir(ingress,ingress,) /var/run/ingress
 @dir(root,wheel,755) %%FP_SERVICESDIR%%
