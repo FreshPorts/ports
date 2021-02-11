@@ -21,10 +21,11 @@ COMMENT=	For use by Dan Langille only
 NO_BUILD=	YES
 NO_INSTALL=	YES
 
+USES=		python
 
 RUN_DEPENDS+=	freshports-ingress>=2.0.4:dvl/freshports-ingress
 RUN_DEPENDS+=	freshports-ingress-svn>=1.0.9:dvl/freshports-ingress-svn
-RUN_DEPENDS+=	packages-import>=0.1.17:dvl/packages-import
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}packages-import>=0.1.17:dvl/py-packages-import
 RUN_DEPENDS+=	freshports-periodics>=1.0.24:dvl/freshports-periodics
 
 .include <bsd.port.mk>

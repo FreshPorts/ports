@@ -1,0 +1,10 @@
+@sample(root,freshports,640) etc/freshports/config.ini.sample
+etc/periodic/hourly/900.freshports-check-repos-for-new-builds
+libexec/freshports/UpdatePackagesFromRawPackages.py
+libexec/freshports/check_repos_for_new_stuff.py
+libexec/freshports/fetch-extract-parse-import-one-abi.sh
+libexec/freshports/get_packagesite.txz_date
+libexec/freshports/import-via-copy-packagesite-all-raw-fields.py
+libexec/freshports/import_packagesite.py
+@dir(freshports,freshports,755) %%FP_DATADIR%%/packagesite
+@dir %%FP_DATADIR%%
