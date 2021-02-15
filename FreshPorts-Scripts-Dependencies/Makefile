@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	FreshPorts-Scripts-Dependencies
-PORTVERSION=	1.0.3
-PORTREVISION=	8
+PORTVERSION=	1.0.4
+PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 DISTFILES=	# none
@@ -59,55 +59,9 @@ USERS=	freshports ingress
 GROUPS=	${USERS}
 
 ETCDIR=		${PREFIX}/etc/freshports
-FP_DATADIR=	/var/db/freshports
-INGRESS_DATADIR=	/var/db/ingress
-PORTSJAIL=	/var/db/freshports/ports-jail
 FP_LOGDIR=	/var/log/freshports
 
-PLIST_SUB+=	INGRESS_DATADIR=${INGRESS_DATADIR}
-PLIST_SUB+=	FP_DATADIR=${FP_DATADIR}
 PLIST_SUB+=	FP_LOGDIR=${FP_LOGDIR}
 
 
-.include <bsd.port.pre.mk>
-
-post-install:
-	# logs
-	${MKDIR} ${STAGEDIR}${FP_LOGDIR}
-	${MKDIR} ${STAGEDIR}${ETCDIR}
-	${MKDIR} ${STAGEDIR}${PORTSJAIL}/etc
-	${INSTALL_DATA} ${FILESDIR}/make.conf ${STAGEDIR}${PORTSJAIL}/etc/
-	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/freshports
-	# FP_DATADIR is the homedir of the freshports user and will already exist.
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/html
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/spooling
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/mail
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/message-queues
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/message-queues/archive
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/message-queues/recent
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/message-queues/retry
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/bin
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/dev
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/etc
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/lib
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/libexec
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/sbin
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/usr/share/mk
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/usr/sbin
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/usr/bin
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/usr/lib
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/usr/libexec
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/var
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/var/db
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/ports-jail/var/db/repos
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/signals
-	${MKDIR} ${STAGEDIR}${FP_DATADIR}/tmp
-	${MKDIR} ${STAGEDIR}${INGRESS_DATADIR}/mail
-	${MKDIR} ${STAGEDIR}${INGRESS_DATADIR}/message-queues
-	${MKDIR} ${STAGEDIR}${INGRESS_DATADIR}/message-queues/incoming
-
-	${LN} -sf ${ETCDIR}/config.sh ${STAGEDIR}${PREFIX}/libexec/freshports
-	
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	FreshPorts-Modules-Dependencies
-PORTVERSION=	1.1.18
-PORTREVISION=	5
+PORTVERSION=	1.1.19
+PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMEPREFIX=	p5-
@@ -20,7 +20,7 @@ EXTRACT_ONLY=	# none
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 
-USES=		perl5 python pgsql
+USES=		pgsql
 
 RUN_DEPENDS+=	p5-Class-Observable>0:devel/p5-Class-Observable
 RUN_DEPENDS+=	p5-Date-Calc>0:devel/p5-Date-Calc
@@ -40,28 +40,7 @@ RUN_DEPENDS+=	sudo>0:security/sudo
 
 WANT_PGSQL=	client
 
-USERS=	freshports ingress
-GROUPS=	${USERS}
-
-ETCDIR=			${PREFIX}/etc/freshports
-FP_LOGDIR=		/var/log/freshports
-
-SUB_LIST+=	FRESHPORTS_USER=freshports
-SUB_LIST+=	FRESHPORTS_GROUP=freshports
-SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR}
-
-SUB_FILES=	freshports.conf.newsyslog.conf freshports.conf.syslog.conf
-
 NO_BUILD=	YES
+NO_INSTALL=	YES
 
-.include <bsd.port.pre.mk>
-
-do-install:
-	# move configuration files to the right place
-	${MKDIR} ${STAGEDIR}${ETCDIR}
-
-	# symlinks from code dir to ETCDIR
-	${MKDIR} ${STAGEDIR}/${SITE_PERL}/FreshPorts
-	${LN} -sf ${ETCDIR}/config.pm ${STAGEDIR}/${SITE_PERL}/FreshPorts
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
