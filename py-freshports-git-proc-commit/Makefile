@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports-git-proc-commit
 PORTVERSION=	0.0.2
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,7 +24,7 @@ NO_BUILD=	YES
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2@${PY_FLAVOR}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR}
-RUN_DEPENDS+=	git>0:devel/git
+RUN_DEPENDS+=	git-lite>0:devel/git@lite
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	FreshPorts
