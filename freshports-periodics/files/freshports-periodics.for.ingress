@@ -8,26 +8,32 @@
 # every 3 minutes
 fp_check_for_git_commits_enable="YES"
 
+# daily
 fp_archive_messages_enable="YES"
 fp_ports_tree_file_count_enable="YES"
 fp_stats_daily_enable="YES"
 fp_purge_old_password_tokens_enable="YES"
 fp_daily_rendering_times_enable="YES"
 fp_newusers_enable="YES"
+
+# hourly
 fp_test_master_port_make_enable="YES"
 fp_test_master_port_db_enable="YES"
 fp_stats_hourly_enable="YES"
 fp_missing_port_categories_enable="YES"
 
-
+# reports
 fp_send_security_notices_enable="YES"
 
 fp_send_report_notices_daily_enable="YES"
 fp_send_report_new_ports_daily_enable="YES"
+
 fp_send_report_notices_fortnightly_enable="YES"
 fp_send_report_new_ports_fortnightly_enable="YES"
+
 fp_send_report_notices_weekly_enable="YES"
 fp_send_report_new_ports_weekly_enable="YES"
+
 fp_send_report_notices_monthly_enable="YES"
 fp_send_report_new_ports_monthly_enable="YES"
 
