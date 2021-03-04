@@ -10,37 +10,23 @@
 
 PORTNAME=	freshports-git-proc-commit
 PORTVERSION=	0.0.4
-PORTREVISION=	1
+PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTFILES=	# none
+EXTRACT_ONLY=	# none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 
-USES=		python shebangfix
+USES=		python
 
 NO_BUILD=	YES
+NO_INSTALL=	YES
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2@${PY_FLAVOR}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR}
 RUN_DEPENDS+=	git-lite>0:devel/git@lite
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	FreshPorts
-GH_PROJECT=	git_proc_commit
-
-SHEBANG_FILES=	git-to-freshports/git-to-freshports-xml.py
-SCRIPTS=	check_git.sh git-delta.sh git-range-of-commits.sh git-single-commit.sh git-to-freshports-xml.py
-
-.include <bsd.port.pre.mk>
-
-do-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/freshports
-
-	# install everything +x, because it's easier
-.for _script in ${SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/git-to-freshports/${_script} ${STAGEDIR}${PREFIX}/libexec/freshports
-.endfor
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

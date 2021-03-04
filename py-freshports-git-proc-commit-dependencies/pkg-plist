@@ -1,0 +1,5 @@
+libexec/freshports/check_git.sh
+libexec/freshports/git-delta.sh
+libexec/freshports/git-range-of-commits.sh
+libexec/freshports/git-single-commit.sh
+libexec/freshports/git-to-freshports-xml.py
