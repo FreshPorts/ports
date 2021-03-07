@@ -6,10 +6,11 @@
 #
 
 PORTNAME=	helper_scripts
-DISTVERSION=	0.0.1
-PORTREVISION=	1
+DISTVERSION=	0.0.2
+PORTREVISION=	0
 CATEGORIES=	dvl
-MASTER_SITES=   # none
+MASTER_SITES=	https://git.langille.org/FreshPorts/helper_scripts/archive/${DISTVERSION}${EXTRACT_SUFX}?dummy=/
+
 PKGNAMEPREFIX=	freshports-
 
 MAINTAINER=	dan@langille.org
@@ -30,5 +31,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 do-install:
 	${MKDIR} ${STAGEDIR}${LIBEXECDIR}
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${LIBEXECDIR} "-name *\.sh")
+
+	${INSTALL_SCRIPT} ${WRKSRC}/create-symlinks-amongst-dev-source-directories ${STAGEDIR}${LIBEXECDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/website-clear-all-cache.sample                 ${STAGEDIR}${LIBEXECDIR}
 
 .include <bsd.port.post.mk>
