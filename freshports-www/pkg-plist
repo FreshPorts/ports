@@ -55,6 +55,7 @@
 %%WWWDIR%%/classes/port_commits_by_committer.php
 %%WWWDIR%%/classes/port_configure_plist.php
 %%WWWDIR%%/classes/port_dependencies.php
+%%WWWDIR%%/classes/ports_by_pkg_plist.php
 %%WWWDIR%%/classes/ports-unrefreshed.php
 %%WWWDIR%%/classes/ports.php
 %%WWWDIR%%/classes/ports_moved.php
@@ -102,6 +103,7 @@
 %%WWWDIR%%/configuration/freshports.conf.php.sample
 %%WWWDIR%%/configuration/jail.sh
 %%WWWDIR%%/configuration/mail-aliases.txt
+%%WWWDIR%%/configuration/php-processing.conf
 %%WWWDIR%%/configuration/permissions.txt
 %%WWWDIR%%/configuration/robots.txt
 %%WWWDIR%%/configuration/robots.txt.sample
