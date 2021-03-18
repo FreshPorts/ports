@@ -428,6 +428,7 @@
 %%WWWDIR%%/www/report-subscriptions.php
 %%WWWDIR%%/www/sanity_test_failures.php
 %%WWWDIR%%/www/search.php
+%%WWWDIR%%/www/security-policy.php
 %%WWWDIR%%/www/survey/index.html
 %%WWWDIR%%/www/test-lists.php
 %%WWWDIR%%/www/testing.php
