@@ -6,6 +6,7 @@ HOST               = [redacted]
 DBNAME             = '[redacted]'
 
 PACKAGER_DBUSER    = 'packager'
+# if there is a % in the password, escape it with a %
 PACKAGER_PASSWORD  = '[redacted]'
 
 [filesystem]
