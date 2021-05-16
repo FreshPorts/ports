@@ -1,6 +1,0 @@
-#
-# NOTE - this file is maintained by a package and local changes will be lost.
-# 
-*/3	*	*	*	*	root	periodic everythreeminutes
-0	*	*	*	*	root	periodic hourly
-20      3	9,23	*	*	root	periodic fortnightly
