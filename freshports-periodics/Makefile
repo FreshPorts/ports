@@ -7,7 +7,7 @@
 
 PORTNAME=	freshports-periodics
 PORTVERSION=	1.0.24
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
@@ -25,11 +25,13 @@ PERIODS=	everythreeminutes hourly daily weekly fortnightly monthly
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/cron.d
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 
-	${INSTALL_DATA} ${FILESDIR}/freshports-periodics ${STAGEDIR}${PREFIX}/etc/cron.d
-	${INSTALL_DATA} ${FILESDIR}/freshports-periodics.for.ingress ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${FILESDIR}/freshports-periodics               ${STAGEDIR}${PREFIX}/etc/cron.d
+	${INSTALL_DATA} ${FILESDIR}/freshports-periodics.for.ingress   ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${FILESDIR}/freshports-periodics.for-newsyslog ${STAGEDIR}${PREFIX}/etc/newsyslog.d/freshports-periodics
 
 .for _period in ${PERIODS}
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/${_period}

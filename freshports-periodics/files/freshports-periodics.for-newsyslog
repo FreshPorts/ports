@@ -1,0 +1,8 @@
+# logfilename          [owner:group]    mode count size when  flags [/pid_file] [sig_num]
+
+/var/log/daily.log			640  14	   *	@T00  BN
+/var/log/daily_status_security.log	640  14	   *	@T00  BN
+/var/log/everythreeminutes.log		640  14	   *	@T00  BN
+/var/log/hourly.log			640  14	   *	@T00  BN
+/var/log/fortnightly.log		640  7 	   *	M9D0  BN
+/var/log/fortnightly.log		640  7 	   *	M23D0 BN
