@@ -1,5 +1,5 @@
 etc/cron.d/freshports-periodics
-etc/newsyslog.d/freshports-periodics
+etc/newsyslog.conf.d/freshports-periodics
 etc/periodic/daily/100.fp_archive_messages
 etc/periodic/daily/160.fp_ports_tree_file_count
 etc/periodic/daily/200.fp_stats_daily
