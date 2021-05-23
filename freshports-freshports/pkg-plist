@@ -4,7 +4,7 @@
 
 etc/rc.d/freshports
 @sample etc/syslog.d/freshports-daemon.conf.sample
-@sample etc/newsyslog.conf.d/freshports-daemon.sample
+@sample etc/newsyslog.conf.d/freshports-daemon.conf.sample
 
 @dir(freshports,freshports,) /var/run/freshports
 @dir(root,wheel,755) %%FP_SERVICESDIR%%

@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports-freshports
 PORTVERSION=	2.0.11
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
@@ -59,6 +59,6 @@ do-install:
 
 	# newsyslog.conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
-	${INSTALL_DATA} ${FILESDIR}/freshports-daemon.newsyslog.d.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/freshports-daemon.sample
+	${INSTALL_DATA} ${FILESDIR}/freshports-daemon.newsyslog.d.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/freshports-daemon.conf.sample
 
 .include <bsd.port.post.mk>

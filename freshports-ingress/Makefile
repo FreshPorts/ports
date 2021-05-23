@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports-ingress
 DISTVERSION=	2.0.4
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
@@ -61,6 +61,6 @@ do-install:
 
 	# newsyslog.conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
-	${INSTALL_DATA} ${FILESDIR}/freshports-ingress.newsyslog.d.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/ingress.sample
+	${INSTALL_DATA} ${FILESDIR}/freshports-ingress.newsyslog.d.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/ingress.conf.sample
 
 .include <bsd.port.post.mk>
