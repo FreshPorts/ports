@@ -24,7 +24,7 @@ rc=0
 case "${fp_check_repos_for_new_builds_enable:-NO}" in
 [Yy][Ee][Ss])
         logger -p local3.notice -t FreshPorts into $0
-        echo "cd $fp_scripts_dir && ./check_repos_for_new_stuff.py" | su -fm $fp_freshports_user 2>&1 >> ${DIRLOG}/check_repos_for_new_stuff.py.log || rc=3
+        echo "cd $fp_scripts_dir && /usr/bin/lockf -t 0 /tmp/.freshports-check-repos ./check_repos_for_new_stuff.py" | su -fm $fp_freshports_user 2>&1 >> ${DIRLOG}/check_repos_for_new_stuff.py.log || rc=3
 	;;
 *)
 	;;
