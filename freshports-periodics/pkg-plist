@@ -14,6 +14,7 @@ etc/periodic/everythreeminutes/100.fp_system_status
 etc/periodic/everythreeminutes/215.fp_check_git_for_commits
 etc/periodic/fortnightly/310.send-report-notices-fortnightly
 etc/periodic/fortnightly/320.send-report-new-ports-fortnightly
+etc/periodic/hourly/100.fp.set_hour_flags
 etc/periodic/hourly/120.fp_test_master_port_make
 etc/periodic/hourly/140.fp_test_master_port_db
 etc/periodic/hourly/180.fp_stats_hourly
