@@ -8,4 +8,5 @@
 %%LIBEXECDIR%%/git-range-of-commits.sh
 %%LIBEXECDIR%%/git-single-commit.sh
 %%LIBEXECDIR%%/inject-retry-raw.sh
+%%LIBEXECDIR%%/set_hourly_flags.sh
 @sample %%LIBEXECDIR%%/website-clear-all-cache.sample
