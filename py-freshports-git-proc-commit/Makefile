@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	freshports-git-proc-commit
-PORTVERSION=	0.1.0
+PORTVERSION=	0.1.1
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
