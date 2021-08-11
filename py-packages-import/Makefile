@@ -9,11 +9,11 @@
 #
 
 PORTNAME=	packages-import
-PORTVERSION=	0.1.18
+PORTVERSION=	0.1.19
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   https://git.langille.org/FreshPorts/packages-import/archive/
-DISTNAME=	${PORTVERSION}
+#DISTNAME=	${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dan@langille.org
