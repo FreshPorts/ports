@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 # PROVIDE: ingress
-# REQUIRE: LOGIN cleanvar
+# REQUIRE: LOGIN cleanvar jail
 # KEYWORD: shutdown
 
 #
