@@ -1,5 +1,0 @@
-# All files in /usr/local/etc/newsyslog.conf.d/ are pulled in by newsyslog
-# That is why the following entries are commented out
-#
-#/var/log/nginx/freshsource.org-access.log       root:logcheck 640 14  *   $D0  B
-#/var/log/nginx/freshsource.org-error.log        root:logcheck 640 14  *   $D0  B /var/run/nginx.pid 30
