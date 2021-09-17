@@ -12,7 +12,7 @@ PORTNAME=	freshports
 PORTVERSION=	1.0.30
 PORTREVISION=	0
 CATEGORIES=	dvl
-MASTER_SITES=   # none
+MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www-dependencies
 DISTFILES=	# none
 EXTRACT_ONLY=	# none
@@ -24,7 +24,7 @@ USES=		perl5 php python
 
 WANT_PGSQL=	client
 
-USE_PHP=	ctype dom exif fileinfo filter gd hash iconv json mbstring opcache pgsql phar posix session simplexml tokenizer xml xmlreader xmlwriter zip zlib 
+USE_PHP=	ctype dom exif fileinfo filter gd hash iconv json mbstring opcache pgsql phar posix session simplexml tokenizer xml xmlreader xmlwriter zip zlib
 
 FP_LOGDIR=	/var/log/freshports
 
@@ -33,6 +33,8 @@ PLIST_SUB+=	FP_LOGDIR=${FP_LOGDIR}
 
 SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR}
 SUB_LIST+=	FRESHPORTS_USER=freshports
+
+SUB_LIST+=	LOGCHECK_GROUP=logcheck
 
 SUB_FILES=	freshports-www.conf.newsyslog.conf freshports-www.conf.syslog.conf
 
