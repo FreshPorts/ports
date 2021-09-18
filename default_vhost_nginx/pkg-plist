@@ -1,0 +1,6 @@
+@sample %%WWWDIR%%/configuration/vhosts.conf.sample
+%%WWWDIR%%/configuration/virtualhost-common-ssl.conf
+%%WWWDIR%%/configuration/virtualhost-common.conf
+%%WWWDIR%%/www/favicon.ico
+%%WWWDIR%%/www/index.html
+%%WWWDIR%%/www/robots.txt
