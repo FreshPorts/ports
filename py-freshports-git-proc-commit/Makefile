@@ -9,14 +9,14 @@
 #
 
 PORTNAME=	freshports-git-proc-commit
-PORTVERSION=	0.1.1
+PORTVERSION=	0.1.3
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dan@langille.org
-COMMENT=	For use by Dan Langille only
+COMMENT=	Process git commits into XML
 
 USES=		python shebangfix
 
