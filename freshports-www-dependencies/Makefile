@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	1.0.30
-PORTREVISION=	0
+PORTVERSION=	2.2.0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www-dependencies
@@ -41,15 +41,22 @@ SUB_FILES=	freshports-www.conf.newsyslog.conf freshports-www.conf.syslog.conf
 # having these configuration files in different directories.. perhaps they should be consolidated.
 # In the DISTFILE, these files will have a .sample extension. Leaving that suffix off here helps us create
 # symlinks to the real file
-CONF_FILES=	database.php freshports.conf.php robots.txt status-config.php vhosts.conf vhosts.conf.nginx virtualhost-common.conf virtualhost-common-ssl.conf
+CONF_FILES=	config.sh database.php freshports.conf.php freshports.net.conf robots.txt status-config.php vhosts.conf vhosts.conf.nginx virtualhost-common.conf virtualhost-common-ssl.conf
 INC_FILES=	common.php constants.local.php
 NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php rss1.0.php rss2.0.php
 
+# these are copied from freshports-www-git/Makefile
+RUN_DEPENDS+=	phpmailer6>0:mail/phpmailer6
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen-git>=1.0.2:dvl/py-freshports-fp-listen-git@${PY_FLAVOR}
 RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 RUN_DEPENDS+=	nginx:www/nginx
 RUN_DEPENDS+=	php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2
 RUN_DEPENDS+=	php${PHP_VER}-pear-Pager>0:devel/pear-Pager
+RUN_DEPENDS+=	libucl>0:textproc/libucl
+
+# these are useful to have
 RUN_DEPENDS+=	subversion>0:devel/subversion
+RUN_DEPENDS+=	git>0:devel/git
 RUN_DEPENDS+=	sudo>0:security/sudo
 RUN_DEPENDS+=	libucl>0:textproc/libucl
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2
