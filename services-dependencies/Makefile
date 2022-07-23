@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	services-dependencies
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.1
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
@@ -21,7 +21,7 @@ USES=		php:web
 # for bacula
 USE_PHP=	pgsql
 
-RUN_DEPENDS+=	mod_php74>0:www/mod_php74
+RUN_DEPENDS+=	mod_php81>0:www/mod_php81
 
 NO_BUILD=	YES
 NO_INSTALL=	YES
