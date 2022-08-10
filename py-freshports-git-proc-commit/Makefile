@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	freshports-git-proc-commit
-PORTVERSION=	0.1.3
+PORTVERSION=	0.1.4
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
@@ -38,7 +38,7 @@ SCRIPTS=	check_git.sh git-delta.sh git-range-of-commits.sh git-single-commit.sh 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/freshports
 
-	# install everything +x, because it's easier
+# install everything +x, because it's easier
 .for _script in ${SCRIPTS}
 	${INSTALL_SCRIPT} ${WRKSRC}/git-to-freshports/${_script} ${STAGEDIR}${PREFIX}/libexec/freshports
 .endfor
