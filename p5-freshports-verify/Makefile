@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-verify
-PORTVERSION=	2.0.6
+PORTVERSION=	2.0.8
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
@@ -25,10 +25,10 @@ RUN_DEPENDS+=	p5-freshports-modules-git>0:dvl/p5-freshports-modules-git
 .include <bsd.port.pre.mk>
 
 do-install:
-	@${ECHO} "Installing in ${PREFIX}/libexec/freshports/verify"
-	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/freshports/verify
+	@${ECHO} "Installing in ${PREFIX}/libexec/freshports/Verify"
+	${MKDIR} ${STAGEDIR}/${SITE_PERL}/FreshPorts/Verify
 
 	# install everything +x, because it's easier
-	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${PREFIX}/libexec/freshports/verify)
+	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}/${SITE_PERL}/FreshPorts/Verify)
 
 .include <bsd.port.post.mk>
