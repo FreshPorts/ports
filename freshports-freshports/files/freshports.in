@@ -54,7 +54,7 @@ freshports_prestart()
 	fi
 
         # required dirs
-        REQUIRED_DIRS="archive incoming recent retry"
+        REQUIRED_DIRS="archive incoming recent retry spooling"
         for dir in $REQUIRED_DIRS
         do
 		# create the incoming directory
