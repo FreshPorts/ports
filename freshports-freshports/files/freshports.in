@@ -1,4 +1,4 @@
-#!/bin/sh
+˚√˚v#!/bin/sh
 # $FreeBSD$
 
 # PROVIDE: freshports
@@ -54,10 +54,10 @@ freshports_prestart()
 	fi
 
         # required dirs
-        REQUIRED_DIRS="archive incoming recent retry spooling"
+        REQUIRED_DIRS="archive recent retry spooling"
         for dir in $REQUIRED_DIRS
         do
-		# create the incoming directory
+		# create the required directories
 		if [ ! -d /var/db/${freshports_user}/message-queues/$dir ]; then
 			echo creating /var/db/${freshports_user}/message-queues/$dir
 			install -d -o ${freshports_user} -g ${freshports_group} -m 0775 /var/db/${freshports_user}/message-queues/$dir
