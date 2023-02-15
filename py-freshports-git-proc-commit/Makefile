@@ -5,11 +5,11 @@
 #
 # Install the scripts needed by FreshPorts ingress - for git processing
 #
-# Copyright (c) 2002-2021 DVL Software Limited
+# Copyright (c) 2002-2023 Dan Langille
 #
 
 PORTNAME=	freshports-git-proc-commit
-PORTVERSION=	0.1.4
+PORTVERSION=	0.1.5
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
