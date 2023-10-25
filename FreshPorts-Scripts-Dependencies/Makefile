@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	FreshPorts-Scripts-Dependencies
-PORTVERSION=	1.0.5
+PORTVERSION=	1.0.6
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
@@ -42,7 +42,6 @@ RUN_DEPENDS+=	p5-XML-Writer>0:textproc/p5-XML-Writer
 RUN_DEPENDS+=	p5-libwww>0:www/p5-libwww
 RUN_DEPENDS+=	p5-Unix-Syslog>0:sysutils/p5-Unix-Syslog
 
-RUN_DEPENDS+=	maildrop>0:mail/maildrop
 RUN_DEPENDS+=	p5-DBD-Pg>0:databases/p5-DBD-Pg
 RUN_DEPENDS+=	p5-XML-Writer>0:textproc/p5-XML-Writer
 RUN_DEPENDS+=	subversion>0:devel/subversion
