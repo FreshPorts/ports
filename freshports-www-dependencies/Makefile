@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports
 PORTVERSION=	2.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www-dependencies
@@ -45,9 +45,9 @@ CONF_FILES=	config.sh database.php freshports.conf.php freshports.net.conf robot
 INC_FILES=	common.php constants.local.php
 NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php rss1.0.php rss2.0.php
 
-# these are copied from freshports-www-git/Makefile
+# these are copied from freshports-www/Makefile
 RUN_DEPENDS+=	phpmailer6>0:mail/phpmailer6
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen-git>=1.0.2:dvl/py-freshports-fp-listen-git@${PY_FLAVOR}
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=1.0.2:dvl/py-freshports-fp-listen@${PY_FLAVOR}
 RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 RUN_DEPENDS+=	nginx:www/nginx
 RUN_DEPENDS+=	php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2

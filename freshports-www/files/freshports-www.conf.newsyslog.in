@@ -1,0 +1,7 @@
+# All files in /usr/local/etc/newsyslog.conf.d/ are pulled in by newsyslog
+# That is why the following entries are commented out
+#
+#%%FP_LOGDIR%%/freshports.log             %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%% 640 14  *   $D0  B
+
+#/var/log/nginx/freshports.org-access.log       root:wheel          640 14  *   $D0  B
+#/var/log/nginx/freshports.org-error.log        root:wheel          640 14  *   $D0  B /var/run/nginx.pid 30

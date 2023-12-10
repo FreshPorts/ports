@@ -10,7 +10,7 @@
 
 PORTNAME=	freshports
 PORTVERSION=	1.41p7a
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 PKGNAMESUFFIX=	-www-packages
@@ -48,7 +48,7 @@ CONF_FILES=	database.php freshports.conf.php robots.txt status-config.php vhosts
 INC_FILES=	common.php constants.local.php
 NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php rss1.0.php rss2.0.php
 
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen-git>=0:dvl/py-freshports-fp-listen-git
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=0:dvl/py-freshports-fp-listen
 RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 RUN_DEPENDS+=	nginx:www/nginx
 RUN_DEPENDS+=	php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2

@@ -1,0 +1,54 @@
+#!/bin/sh
+# $FreeBSD$
+
+# PROVIDE: fp-listen
+# REQUIRE: LOGIN cleanvar
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf to enable fp-listen:
+# fp_listen_enable (bool):	Set to "NO" by default.
+#				Set it to "YES" to enable fp-listen
+#
+
+. /etc/rc.subr
+
+name="fp_listen"
+rcvar=${name}_enable
+
+piddir="/var/run/${name}"
+pidfile="${piddir}/${name}.pid"
+fp_listen_user="freshports"
+fp_listen_command="%%PREFIX%%/bin/python %%FP_SERVICESDIR%%/fp-listen.py"
+command="/usr/sbin/daemon"
+
+load_rc_config $name
+
+: ${fp_listen_enable:=NO}
+: ${fp_listen_user:=freshports}
+: ${fp_listen_group:=freshports}
+: ${fp_listen_syslog_facility:=local3}
+
+required_files="%%ETCDIR%%/fp-listen.ini"
+
+start_precmd=fp_listen_prestart
+
+fp_listen_prestart()
+{
+	# create directory
+	if [ ! -e ${piddir} ]; then
+		install -d -o ${fp_listen_user} -g ${fp_listen_group} ${piddir};
+	fi
+
+	# create the file pid with correct permissions
+	if [ ! -e ${pidfile} ]; then
+		install -o ${fp_listen_user} -g ${fp_listen_group} /dev/null ${pidfile};
+	else
+		chown ${fp_listen_user}:${fp_listen_group} ${pidfile};
+	fi
+
+}
+
+command_args="-P ${pidfile} -r -t ${name} -T ${name} -l ${fp_listen_syslog_facility} ${fp_listen_command}"
+
+run_rc_command "$1"

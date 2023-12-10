@@ -1,0 +1,9 @@
+%%ETCDIR%%/fp-listen.ini.sample
+etc/rc.d/fp_listen
+%%PYTHON_SITELIBDIR%%/fp-listen/__pycache__/fp-listen%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/fp-listen/__pycache__/fp-listen%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/fp-listen/fp-listen.py
+%%PYTHON_SITELIBDIR%%/fp_listen-1.0.2-py%%PYTHON_VER%%.egg-info/PKG-INFO
+%%PYTHON_SITELIBDIR%%/fp_listen-1.0.2-py%%PYTHON_VER%%.egg-info/SOURCES.txt
+%%PYTHON_SITELIBDIR%%/fp_listen-1.0.2-py%%PYTHON_VER%%.egg-info/dependency_links.txt
+%%PYTHON_SITELIBDIR%%/fp_listen-1.0.2-py%%PYTHON_VER%%.egg-info/top_level.txt

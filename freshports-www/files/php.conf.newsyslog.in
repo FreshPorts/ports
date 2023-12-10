@@ -1,0 +1,2 @@
+#/var/log/php.log             www:logcheck   640 14  *   $D0  B
+#/var/log/php-fpm.log         root:logcheck  640 14  *   $D0  B   /var/run/php-fpm.pid SIGUSR1
