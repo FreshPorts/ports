@@ -1,0 +1,16 @@
+# All files in /usr/local/etc/newsyslog.conf.d/ are pulled in by newsyslog
+# That is why the following entries are commented out
+#
+#%%FP_LOGDIR%%/freshports.log                %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%% 640 14  *   $D0    BN
+#%%FP_LOGDIR%%/refreshing.log                %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%% 640 14  *   $D0    BN
+#%%FP_LOGDIR%%/refreshing.*.log              %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%% 640 14  *   $D0    BGN
+#%%FP_LOGDIR%%/vuxml.log                     %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%% 640 14  *   $D0    BN
+
+# note the ingress user:
+#%%FP_LOGDIR%%/git.log                       %%INGRESS_USER%%:%%LOGCHECK_GROUP%%    640 14  *   $D0    BN
+
+#%%FP_LOGDIR%%/report-*.daily.log            %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%% 640 14  *   $D0    BGN
+#%%FP_LOGDIR%%/report-*.weekly.log           %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%% 640 14  *   $W0    BGN
+#%%FP_LOGDIR%%/report-*.fortnightly.log      %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%% 640 14  *   $M9D0  BGN
+#%%FP_LOGDIR%%/report-*.fortnightly.log      %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%% 640 14  *   $M23D0 BGN
+#%%FP_LOGDIR%%/report-*.monthly.log          %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%% 640 14  *   $M1D0  BGN

@@ -1,0 +1,30 @@
+#!/bin/sh -
+#
+# FreshPorts periodic script
+#
+# Updates the stored list of categories for searching
+#
+
+# If there is a global system configuration file, suck it in.
+#
+if [ -r /etc/defaults/periodic.conf ]
+then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+# assign default values
+fp_scripts_dir=${fp_scripts_dir:-%%PREFIX%%/%%FP_LIBEXEC%%}
+fp_freshports_user=${fp_freshports_user:-%%FRESHPORTS_USER%%}
+
+case "$fp_categories_rebuild_search" in
+	[Yy][Ee][Ss])
+	logger -p local3.notice -t FreshPorts "into $0"
+	echo ""
+	echo "cd $fp_scripts_dir && ./categories_rebuild_search_html.sh" | su -fm $fp_freshports_user || rc=3
+	;;
+        
+    *)  rc=0;;
+esac
+
+exit $rc

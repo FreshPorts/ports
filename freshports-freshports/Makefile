@@ -17,10 +17,10 @@ MASTER_SITES=   # none
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 
-# ingress.sh invokes perl on a script installed by freshports-scripts-git
+# ingress.sh invokes perl on a script installed by freshports-scripts
 USES=		perl5
 
-RUN_DEPENDS+=	p5-freshports-scripts-git>=2.0.0:dvl/p5-freshports-scripts-git
+RUN_DEPENDS+=	p5-freshports-scripts>=2.0.0:dvl/p5-freshports-scripts
 
 NO_BUILD=	YES
 

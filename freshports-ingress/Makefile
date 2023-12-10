@@ -10,17 +10,17 @@
 
 PORTNAME=	freshports-ingress
 DISTVERSION=	2.0.4
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 
-# ingress.sh invokes perl on a script installed by freshports-scripts-git
+# ingress.sh invokes perl on a script installed by freshports-scripts
 USES=		perl5 python
 
-RUN_DEPENDS+=	p5-freshports-scripts-git>=2.0.0:dvl/p5-freshports-scripts-git
+RUN_DEPENDS+=	p5-freshports-scripts>=2.0.0:dvl/p5-freshports-scripts
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-git-proc-commit>0:dvl/py-freshports-git-proc-commit
 RUN_DEPENDS+=	freshports-helper_scripts>=0.0.1:dvl/freshports-helper-scripts
 

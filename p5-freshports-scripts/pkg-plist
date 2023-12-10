@@ -1,0 +1,133 @@
+@sample(root,freshports,640) %%ETCDIR%%/config.sh.sample
+
+@sample etc/syslog.d/freshports.conf.sample
+@sample etc/newsyslog.conf.d/freshports.conf.sample
+
+%%FP_LIBEXEC%%/ExportXMLFromDB.pl
+@mode 444
+%%FP_LIBEXEC%%/Jail/README.txt
+@mode
+%%FP_LIBEXEC%%/Jail/copy-scripts-into-jail.sh
+%%FP_LIBEXEC%%/Jail/create-jail-directories.sh
+@mode 444
+%%FP_LIBEXEC%%/Jail/files/README.txt
+%%FP_LIBEXEC%%/Jail/files/etc/make.conf
+%%FP_LIBEXEC%%/Jail/files/usr/src/sys/Makefile
+@mode
+%%FP_LIBEXEC%%/Jail/refresh-jail-scripts.sh
+%%FP_LIBEXEC%%/Jail/scripts/cat-descr.sh
+%%FP_LIBEXEC%%/Jail/scripts/make-category-comment.sh
+%%FP_LIBEXEC%%/Jail/scripts/make-generate-plist.sh
+%%FP_LIBEXEC%%/Jail/scripts/make-flavors-package-names.sh
+%%FP_LIBEXEC%%/Jail/scripts/make-master-port-test.sh
+%%FP_LIBEXEC%%/Jail/scripts/make-master-sites-all.sh
+%%FP_LIBEXEC%%/Jail/scripts/make-pkg-message-in.sh
+%%FP_LIBEXEC%%/Jail/scripts/make-port.sh
+%%FP_LIBEXEC%%/Jail/scripts/make-showconfig.sh
+%%FP_LIBEXEC%%/Jail/scripts/realpath.sh
+%%FP_LIBEXEC%%/Jail/scripts/vars.sh.sample
+@mode 444
+%%FP_LIBEXEC%%/README.txt
+@mode
+%%FP_LIBEXEC%%/announce.pl
+%%FP_LIBEXEC%%/archive-compress-monthly.sh
+%%FP_LIBEXEC%%/archive-compress.sh
+%%FP_LIBEXEC%%/archive-messages.sh
+%%FP_LIBEXEC%%/cache-refresh.sh
+%%FP_LIBEXEC%%/categories_rebuild_search_html.sh
+%%FP_LIBEXEC%%/categories_update_descriptions.pl
+%%FP_LIBEXEC%%/check_report_logs.pl
+%%FP_LIBEXEC%%/checkaddress.pl
+%%FP_LIBEXEC%%/checkout-branch
+%%FP_LIBEXEC%%/config.sh
+%%FP_LIBEXEC%%/daily_rendering_times.pl
+%%FP_LIBEXEC%%/daily_rendering_times.sh
+%%FP_LIBEXEC%%/daily_stats.pl
+%%FP_LIBEXEC%%/fetch-cvs-file.sh
+%%FP_LIBEXEC%%/fetch-refresh-ports.pl
+%%FP_LIBEXEC%%/fetch-svn-file.sh
+%%FP_LIBEXEC%%/freshports.sh
+%%FP_LIBEXEC%%/get-list-of-current-categories.sh
+%%FP_LIBEXEC%%/git-checkout.sh
+%%FP_LIBEXEC%%/hourly_stats.pl
+%%FP_LIBEXEC%%/job-waiting.pl
+%%FP_LIBEXEC%%/launch-refreshes.sh
+%%FP_LIBEXEC%%/load_xml_into_db.pl
+%%FP_LIBEXEC%%/load_xml_into_db_git.pl
+%%FP_LIBEXEC%%/load_xml_into_db_svn.pl
+%%FP_LIBEXEC%%/main-page-update.pl
+%%FP_LIBEXEC%%/missing-port-categories.sh
+%%FP_LIBEXEC%%/newusers.pl
+%%FP_LIBEXEC%%/newusers.sh
+%%FP_LIBEXEC%%/page-loads-last-five-minutes.pl
+%%FP_LIBEXEC%%/ports_categories-populate.pl
+%%FP_LIBEXEC%%/ports_tree_file_count.pl
+%%FP_LIBEXEC%%/process_default_versions.pl
+%%FP_LIBEXEC%%/process_mail.pl
+%%FP_LIBEXEC%%/process_moved.pl
+%%FP_LIBEXEC%%/process_moved.sh
+%%FP_LIBEXEC%%/process_updating.pl
+%%FP_LIBEXEC%%/process_updating.sh
+%%FP_LIBEXEC%%/process_vuxml.pl
+%%FP_LIBEXEC%%/process_vuxml.sh
+%%FP_LIBEXEC%%/purge_old_password_tokens.pl
+%%FP_LIBEXEC%%/queue-status.pl
+%%FP_LIBEXEC%%/refresh-an-unrefreshed-port.pl
+%%FP_LIBEXEC%%/refresh-daily-summaries.pl
+%%FP_LIBEXEC%%/refresh-each-port.pl
+%%FP_LIBEXEC%%/refresh-each-port-of-commit.pl
+%%FP_LIBEXEC%%/refresh-one-port.pl
+%%FP_LIBEXEC%%/refresh-ports.pl
+%%FP_LIBEXEC%%/refresh-ports.sh
+%%FP_LIBEXEC%%/refresh-unrefreshed-ports.pl
+%%FP_LIBEXEC%%/report-new-ports.pl
+%%FP_LIBEXEC%%/report-notification.pl
+%%FP_LIBEXEC%%/report-maintainer-ports.pl
+%%FP_LIBEXEC%%/report-security-notice.pl
+%%FP_LIBEXEC%%/searchlog.sh
+%%FP_LIBEXEC%%/show-config.pl
+%%FP_LIBEXEC%%/show-config.sh
+%%FP_LIBEXEC%%/svn-up-file.sh
+%%FP_LIBEXEC%%/system_status.sh
+%%FP_LIBEXEC%%/test-sending-email.pl
+%%FP_LIBEXEC%%/test-master-port.pl
+%%FP_LIBEXEC%%/test-master-port.sh
+%%FP_LIBEXEC%%/test_category_save.pl
+%%FP_LIBEXEC%%/test-categories.pl
+%%FP_LIBEXEC%%/test_element_fetch.pl
+%%FP_LIBEXEC%%/test_element_save.pl
+%%FP_LIBEXEC%%/test_file_array.pl
+%%FP_LIBEXEC%%/test_grep.pl
+%%FP_LIBEXEC%%/test_hash.pl
+%%FP_LIBEXEC%%/test_hash_element.pl
+%%FP_LIBEXEC%%/test_hash_hash.pl
+%%FP_LIBEXEC%%/test_port_save.pl
+%%FP_LIBEXEC%%/test_split.pl
+%%FP_LIBEXEC%%/unrefreshed.pl
+%%FP_LIBEXEC%%/vuln_latest.pl
+
+%%FP_JAIL_PATH%%/cat-descr.sh
+%%FP_JAIL_PATH%%/etc/make.conf
+%%FP_JAIL_PATH%%/make-category-comment.sh
+%%FP_JAIL_PATH%%/make-flavors-package-names.sh
+%%FP_JAIL_PATH%%/make-generate-plist.sh
+%%FP_JAIL_PATH%%/make-master-port-test.sh
+%%FP_JAIL_PATH%%/make-master-sites-all.sh
+%%FP_JAIL_PATH%%/make-port.sh
+%%FP_JAIL_PATH%%/make-pkg-message-in.sh
+%%FP_JAIL_PATH%%/make-showconfig.sh
+%%FP_JAIL_PATH%%/realpath.sh
+@sample %%FP_JAIL_PATH%%/vars.sh.sample
+
+etc/periodic/hourly/506.fp_categories_rebuild_search_html
+
+@comment @dir %%FP_DATADIR%%
+@dir %%FP_JAIL_PATH%%/etc
+@dir %%FP_JAIL_PATH%%
+@dir %%FP_JAILS_DIR%%
+
+@dir etc/syslog.d
+@dir etc/newsyslog.conf.d
+
+@comment %%INGRESS_DATADIR%% is the ingress homedir created by USERS= ingress
+@comment @dir                %%INGRESS_DATADIR%%
