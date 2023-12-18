@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	packages-import
-DISTVERSION=	0.1.21
+DISTVERSION=	0.1.22
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   https://git.langille.org/FreshPorts/packages-import/archive/
