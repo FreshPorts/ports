@@ -12,7 +12,6 @@
 @mode 444
 %%FP_LIBEXEC%%/Jail/files/README.txt
 %%FP_LIBEXEC%%/Jail/files/etc/make.conf
-%%FP_LIBEXEC%%/Jail/files/usr/src/sys/Makefile
 @mode
 %%FP_LIBEXEC%%/Jail/refresh-jail-scripts.sh
 %%FP_LIBEXEC%%/Jail/scripts/cat-descr.sh
