@@ -20,6 +20,7 @@ etc/periodic/hourly/140.fp_test_master_port_db
 etc/periodic/hourly/180.fp_stats_hourly
 etc/periodic/hourly/240.fp_missing_port_categories
 etc/periodic/hourly/260.fp_refresh_various_cache_items
+etc/periodic/hourly/506.fp_categories_rebuild_search_html
 etc/periodic/hourly/980.dump_freshports_tags
 etc/periodic/monthly/310.send-report-notices-monthly
 etc/periodic/monthly/320.send-report-new-ports-monthly

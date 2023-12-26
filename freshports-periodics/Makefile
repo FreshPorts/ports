@@ -6,22 +6,37 @@
 #
 
 PORTNAME=	freshports-periodics
-PORTVERSION=	1.0.28
+PORTVERSION=	1.0.30
 PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=   # none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/periodics
 
 NO_BUILD=	YES
 
 USERS=	freshports
 GROUPS=	${USERS}
 
+# variables for substitution in vendor tarbaalal
+FP_LIBEXEC="${LOCALBASE}/libexec/freshports"
+FP_USER_FRESHPORTS="freshports"
+FP_USER_INGRESS="ingress"
+FP_LOG_DIR="/var/log/freshports"
+
 PERIODS=	everythreeminutes hourly daily weekly fortnightly monthly
 
 .include <bsd.port.pre.mk>
+
+post-patch:
+	@${FIND} ${WRKSRC} -type f -exec \
+		${REINPLACE_CMD} -e 's@%%LOCALBASE%%@${LOCALBASE}@g' \
+	                         -e 's@%%FP_LIBEXEC%%@${FP_LIBEXEC}@g' \
+	                         -e 's@%%FP_USER_FRESHPORTS%%@${FP_USER_FRESHPORTS}@g' \
+	                         -e 's@%%FP_USER_INGRESS%%@${FP_USER_INGRESS}@g' \
+	                         -e 's@%%FP_LOG_DIR%%@${FP_LOG_DIR}@g' {} \;
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/cron.d
