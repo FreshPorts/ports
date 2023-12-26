@@ -118,12 +118,12 @@
 %%FP_JAIL_PATH%%/realpath.sh
 @sample %%FP_JAIL_PATH%%/vars.sh.sample
 
-etc/periodic/hourly/506.fp_categories_rebuild_search_html
-
 @comment @dir %%FP_DATADIR%%
+
 @dir %%FP_JAIL_PATH%%/etc
 @dir %%FP_JAIL_PATH%%
 @dir %%FP_JAILS_DIR%%
+@dir %%FP_LIBEXEC%%/Jail/files/usr
 
 @dir etc/syslog.d
 @dir etc/newsyslog.conf.d

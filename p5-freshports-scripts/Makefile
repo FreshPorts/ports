@@ -7,13 +7,14 @@
 
 PORTNAME=	freshports-scripts
 PORTVERSION=	2.0.43
-PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		http://www.FreshPorts.org/
 
 USES=		perl5 pgsql python
 
@@ -66,8 +67,7 @@ SUB_LIST+=	FP_LIBEXEC=${FP_LIBEXEC} \
 		INGRESS_USER=ingress \
 		LOGCHECK_GROUP=logcheck
 
-SUB_FILES=	506.fp_categories_rebuild_search_html \
-		freshports.conf.newsyslog.conf freshports.conf.syslog.conf
+SUB_FILES=	freshports.conf.newsyslog.conf freshports.conf.syslog.conf
 
 .include <bsd.port.pre.mk>
 
@@ -75,7 +75,6 @@ do-install:
 	${RM} ${WRKSRC}/Makefile.PL
 	@${ECHO} "Installing in ${PREFIX}/${FP_LIBEXEC}"
 	${MKDIR} ${STAGEDIR}${PREFIX}/${FP_LIBEXEC}
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/hourly
 	${MKDIR} ${STAGEDIR}${FP_JAIL_PATH}
 	${MKDIR} ${STAGEDIR}${FP_JAIL_PATH}/etc
 
@@ -96,8 +95,6 @@ do-install:
 
 # install the make.conf file
 	${INSTALL_SCRIPT} ${WRKSRC}/Jail/files/etc/make.conf ${STAGEDIR}${FP_JAIL_PATH}/etc
-
-	${INSTALL_SCRIPT} ${WRKDIR}/506.fp_categories_rebuild_search_html ${STAGEDIR}${PREFIX}/etc/periodic/hourly/
 
 # syslog.conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/syslog.d
