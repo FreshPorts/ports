@@ -28,6 +28,7 @@
 @mode 444
 %%FP_LIBEXEC%%/README.txt
 @mode
+%%FP_LIBEXEC%%/add-new-abi.sh
 %%FP_LIBEXEC%%/announce.pl
 %%FP_LIBEXEC%%/archive-compress-monthly.sh
 %%FP_LIBEXEC%%/archive-compress.sh
@@ -38,10 +39,12 @@
 %%FP_LIBEXEC%%/check_report_logs.pl
 %%FP_LIBEXEC%%/checkaddress.pl
 %%FP_LIBEXEC%%/checkout-branch
+%%FP_LIBEXEC%%/current-list-of-valid-abi.sh
 %%FP_LIBEXEC%%/config.sh
 %%FP_LIBEXEC%%/daily_rendering_times.pl
 %%FP_LIBEXEC%%/daily_rendering_times.sh
 %%FP_LIBEXEC%%/daily_stats.pl
+%%FP_LIBEXEC%%/delete-depcreated-abi.sh
 %%FP_LIBEXEC%%/fetch-cvs-file.sh
 %%FP_LIBEXEC%%/fetch-refresh-ports.pl
 %%FP_LIBEXEC%%/fetch-svn-file.sh
@@ -71,6 +74,7 @@
 %%FP_LIBEXEC%%/process_vuxml.sh
 %%FP_LIBEXEC%%/purge_old_password_tokens.pl
 %%FP_LIBEXEC%%/queue-status.pl
+%%FP_LIBEXEC%%/refresh-abi.sh
 %%FP_LIBEXEC%%/refresh-an-unrefreshed-port.pl
 %%FP_LIBEXEC%%/refresh-daily-summaries.pl
 %%FP_LIBEXEC%%/refresh-each-port.pl
