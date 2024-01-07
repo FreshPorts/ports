@@ -7,7 +7,7 @@
 
 PORTNAME=	freshports-modules
 PORTVERSION=	2.0.31
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-
@@ -53,8 +53,6 @@ CACHE_SUBDIRS=	daily html news ports spooling
 SUB_LIST+=	FRESHPORTS_USER=freshports
 SUB_LIST+=	FRESHPORTS_GROUP=freshports
 SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR}
-
-SUB_FILES=	freshports.conf.newsyslog.conf freshports.conf.syslog.conf
 
 .include <bsd.port.pre.mk>
 
