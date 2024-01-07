@@ -15,9 +15,9 @@ fp_stats_daily_enable="YES"
 fp_purge_old_password_tokens_enable="YES"
 fp_daily_rendering_times_enable="YES"
 fp_newusers_enable="YES"
+
 # backup the repo tags for the ingress user
 fp_dump_freshports_tags_enabled="YES"
-
 
 # hourly
 fp_test_master_port_make_enable="YES"
@@ -44,3 +44,10 @@ fp_check_repos_for_new_builds_enable="YES"
 
 fp_system_status_enable="YES"
 
+fp_set_hour_flags_enable="YES"
+
+# recreate category cache
+fp_categories_rebuild_search="YES"
+
+# refresh ABI database table based on FreeBSD project
+fp_refresh_abi_enable="YES"

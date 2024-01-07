@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-periodics
-PORTVERSION=	1.0.34
+PORTVERSION=	1.0.35
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
@@ -25,6 +25,13 @@ FP_LIBEXEC="${LOCALBASE}/libexec/freshports"
 FP_USER_FRESHPORTS="freshports"
 FP_USER_INGRESS="ingress"
 FP_LOG_DIR="/var/log/freshports"
+LOGCHECK_USER=logcheck
+
+SUB_LIST+=	FP_LOG_DIR=${FP_LOG_DIR} \
+		FP_USER_FRESHPORTS=freshports \
+		LOGCHECK_GROUP=logcheck
+
+SUB_FILES=	freshports-periodics.for.newsyslog
 
 PERIODS=	everythreeminutes hourly daily weekly fortnightly monthly
 
@@ -46,7 +53,7 @@ do-install:
 
 	${INSTALL_DATA} ${FILESDIR}/freshports-periodics               ${STAGEDIR}${PREFIX}/etc/cron.d
 	${INSTALL_DATA} ${FILESDIR}/freshports-periodics.for.ingress   ${STAGEDIR}${EXAMPLESDIR}
-	${INSTALL_DATA} ${FILESDIR}/freshports-periodics.for.newsyslog ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/freshports-periodics.conf
+	${INSTALL_DATA} ${WRKDIR}/freshports-periodics.for.newsyslog   ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/freshports-periodics.conf
 
 .for _period in ${PERIODS}
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/${_period}
