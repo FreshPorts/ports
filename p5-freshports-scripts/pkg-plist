@@ -33,7 +33,6 @@
 %%FP_LIBEXEC%%/archive-compress-monthly.sh
 %%FP_LIBEXEC%%/archive-compress.sh
 %%FP_LIBEXEC%%/archive-messages.sh
-%%FP_LIBEXEC%%/cache-refresh.sh
 %%FP_LIBEXEC%%/categories_rebuild_search_html.sh
 %%FP_LIBEXEC%%/categories_update_descriptions.pl
 %%FP_LIBEXEC%%/check_report_logs.pl

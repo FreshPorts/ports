@@ -273,7 +273,6 @@
 %%WWWDIR%%/www/backend/rss2.0.php
 %%WWWDIR%%/www/backend/news.php
 %%WWWDIR%%/www/backend/newsfeeds.php
-%%WWWDIR%%/www/backend/ports-new.php
 %%WWWDIR%%/www/backend/status.php
 %%WWWDIR%%/www/backend/watch-list.php
 %%WWWDIR%%/www/bouncing.php
