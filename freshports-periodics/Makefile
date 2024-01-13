@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-periodics
-PORTVERSION=	1.0.36
+PORTVERSION=	1.0.37
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=   # none
