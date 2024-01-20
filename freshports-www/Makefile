@@ -1,4 +1,4 @@
-# Created by: Dan Langille <dan@langille.org> 
+# Created by: Dan Langille <dan@langille.org>
 #
 # $Id: Makefile,v 1.4 2011-06-14 17:32:41 dan Exp $
 #
@@ -8,7 +8,7 @@
 #
 
 PORTNAME=	freshports
-DISTVERSION=	2.8.9
+DISTVERSION=	2.8.12
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
