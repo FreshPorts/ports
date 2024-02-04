@@ -1,9 +1,9 @@
 # logfilename                          [owner:group]       mode count size when  flags [/pid_file] [sig_num]
 
-/var/log/daily_status_security.log	                   0640  14   *    @T00   BN
-/var/log/everythreeminutes.log		                   0640  14   *    @T00   BN
-/var/log/hourly.log			                   0640  14   *    @T00   BN
-/var/log/fortnightly.log		                   0640   7   *    $M9D0  BN
-/var/log/fortnightly.log		                   0640   7   *    $M23D0 BN
+/var/log/daily_status_security.log                         0640  14   *    @T00   BN
+/var/log/everythreeminutes.log         root:logcheck       0640  14   *    @T00   BN
+/var/log/hourly.log                    root:logcheck       0640  14   *    @T00   BN
+/var/log/fortnightly.log               root:logcheck       0640   7   *    $M9D0  BN
+/var/log/fortnightly.log               root:logcheck       0640   7   *    $M23D0 BN
 
 %%FP_LOG_DIR%%/abi.log            %%FP_USER_FRESHPORTS%%:%%LOGCHECK_GROUP%% 0644   5   20   *      B
