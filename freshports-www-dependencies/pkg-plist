@@ -1,12 +1,13 @@
 etc/newsyslog.conf.d/freshports-www.conf.sample
 etc/nginx/includes/freshports.org.conf
 etc/syslog.d/freshports-www.conf.sample
+%%WWWDIR%%/configuration/config.sh
 %%WWWDIR%%/configuration/database.php
 %%WWWDIR%%/configuration/freshports.conf.php
+%%WWWDIR%%/configuration/freshports.net.conf
 %%WWWDIR%%/configuration/robots.txt
 %%WWWDIR%%/configuration/status-config.php
 %%WWWDIR%%/configuration/vhosts.conf
-%%WWWDIR%%/configuration/vhosts.conf.nginx
 %%WWWDIR%%/configuration/virtualhost-common-ssl.conf
 %%WWWDIR%%/configuration/virtualhost-common.conf
 %%WWWDIR%%/include/common.php

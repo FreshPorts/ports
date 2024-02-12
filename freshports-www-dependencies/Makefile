@@ -9,8 +9,8 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	2.2.0
-PORTREVISION=	2
+PORTVERSION=	2.2.1
+PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www-dependencies
@@ -41,7 +41,7 @@ SUB_FILES=	freshports-www.conf.newsyslog.conf freshports-www.conf.syslog.conf
 # having these configuration files in different directories.. perhaps they should be consolidated.
 # In the DISTFILE, these files will have a .sample extension. Leaving that suffix off here helps us create
 # symlinks to the real file
-CONF_FILES=	config.sh database.php freshports.conf.php freshports.net.conf robots.txt status-config.php vhosts.conf vhosts.conf.nginx virtualhost-common.conf virtualhost-common-ssl.conf
+CONF_FILES=	config.sh database.php freshports.conf.php freshports.net.conf robots.txt status-config.php vhosts.conf virtualhost-common.conf virtualhost-common-ssl.conf
 INC_FILES=	common.php constants.local.php
 NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php rss1.0.php rss2.0.php
 
