@@ -19,6 +19,7 @@ NO_BUILD=	YES
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2
 
+RUN_DEPENDS++	p5-Email-Stuffer>0:mail/p5-Email-Stuffer
 RUN_DEPENDS+=	p5-Email-Address-XS>0:mail/p5-Email-Address-XS
 RUN_DEPENDS+=	p5-Class-Observable>0:devel/p5-Class-Observable
 RUN_DEPENDS+=	p5-Date-Calc>0:devel/p5-Date-Calc
