@@ -1,5 +1,5 @@
 PORTNAME=	default_vhost
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.5
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	https://git.langille.org/dvl/${PORTNAME}/archive/${DISTVERSION}${EXTRACT_SUFX}?dummy=/
