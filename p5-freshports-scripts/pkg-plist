@@ -47,7 +47,6 @@
 %%FP_LIBEXEC%%/fetch-cvs-file.sh
 %%FP_LIBEXEC%%/fetch-refresh-ports.pl
 %%FP_LIBEXEC%%/fetch-svn-file.sh
-%%FP_LIBEXEC%%/freshports.sh
 %%FP_LIBEXEC%%/get-list-of-current-categories.sh
 %%FP_LIBEXEC%%/git-checkout.sh
 %%FP_LIBEXEC%%/hourly_stats.pl
@@ -84,6 +83,7 @@
 %%FP_LIBEXEC%%/refresh-unrefreshed-ports.pl
 %%FP_LIBEXEC%%/report-new-ports.pl
 %%FP_LIBEXEC%%/report-notification.pl
+%%FP_LIBEXEC%%/report-notification-packages.pl
 %%FP_LIBEXEC%%/report-maintainer-ports.pl
 %%FP_LIBEXEC%%/report-security-notice.pl
 %%FP_LIBEXEC%%/searchlog.sh
