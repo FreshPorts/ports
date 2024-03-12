@@ -16,6 +16,7 @@
 
 %%WWWDIR%%/LICENSE
 %%WWWDIR%%/README.md
+%%WWWDIR%%/classes/abi.php
 %%WWWDIR%%/classes/announcements.php
 %%WWWDIR%%/classes/badges.php
 %%WWWDIR%%/classes/cache-category.php
@@ -63,6 +64,7 @@
 %%WWWDIR%%/classes/ports.php
 %%WWWDIR%%/classes/ports_moved.php
 %%WWWDIR%%/classes/ports_updating.php
+%%WWWDIR%%/classes/report_subscriptions_abi.php
 %%WWWDIR%%/classes/sanity_test_failure.php
 %%WWWDIR%%/classes/sanity_test_failures.php
 %%WWWDIR%%/classes/searches.php
@@ -478,6 +480,7 @@
 %%WWWDIR%%/www/ports-restricted.php
 %%WWWDIR%%/www/ports-vulnerable.php
 %%WWWDIR%%/www/privacy.php
+%%WWWDIR%%/www/report-package-notifications.php
 %%WWWDIR%%/www/release-2003-04-29.php
 %%WWWDIR%%/www/release-2004-10.php
 %%WWWDIR%%/www/robots.txt
