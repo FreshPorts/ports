@@ -9,7 +9,7 @@
 #
 
 PORTNAME=	freshports
-PORTVERSION=	2.2.1
+PORTVERSION=	2.2.2
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
@@ -101,7 +101,7 @@ do-install:
 
 	# nginx link
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/nginx/includes
-	${LN} -sf ${ETCDIR}/vhosts.conf ${STAGEDIR}${PREFIX}/etc/nginx/includes/freshports.org.conf
+	${LN} -sf ${ETCDIR}/vhosts.conf.nginx ${STAGEDIR}${PREFIX}/etc/nginx/includes/freshports.conf
 
 	# logs
 	${MKDIR} ${STAGEDIR}${FP_LOGDIR}

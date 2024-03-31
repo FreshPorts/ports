@@ -1,5 +1,5 @@
 etc/newsyslog.conf.d/freshports-www.conf.sample
-etc/nginx/includes/freshports.org.conf
+etc/nginx/includes/freshports.conf
 etc/syslog.d/freshports-www.conf.sample
 %%WWWDIR%%/configuration/config.sh
 %%WWWDIR%%/configuration/database.php
