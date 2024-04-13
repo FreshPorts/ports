@@ -1,0 +1,4 @@
+%%WWWDIR%%/LICENSE
+%%WWWDIR%%/README.md
+@sample %%WWWDIR%%/nginx-includes/offline.conf.sample
+%%WWWDIR%%/nginx-includes/offline.inc
