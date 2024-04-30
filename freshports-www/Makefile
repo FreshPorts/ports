@@ -1,14 +1,5 @@
-# Created by: Dan Langille <dan@langille.org>
-#
-# $Id: Makefile,v 1.4 2011-06-14 17:32:41 dan Exp $
-#
-# Install the www needed by FreshPorts
-#
-# Copyright (c) 2002-2006 DVL Software Limited
-#
-
 PORTNAME=	freshports
-DISTVERSION=	2.9
+DISTVERSION=	2.9.1
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
