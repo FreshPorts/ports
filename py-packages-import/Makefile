@@ -9,7 +9,7 @@
 
 PORTNAME=	packages-import
 DISTVERSION=	2.6.4
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dvl
 MASTER_SITES=	GH
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,7 +20,7 @@ COMMENT=	For use by Dan Langille only
 NO_BUILD=	YES
 
 RUN_DEPENDS+=	jq>0:textproc/jq
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pyyaml>0:devel/py-pyyaml
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2
 
 WANT_PGSQL=	client
