@@ -19,7 +19,7 @@ NO_BUILD=	YES
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2
 
-RUN_DEPENDS++	p5-Email-Stuffer>0:mail/p5-Email-Stuffer
+RUN_DEPENDS+=	p5-Email-Stuffer>0:mail/p5-Email-Stuffer
 RUN_DEPENDS+=	p5-Email-Address-XS>0:mail/p5-Email-Address-XS
 RUN_DEPENDS+=	p5-Class-Observable>0:devel/p5-Class-Observable
 RUN_DEPENDS+=	p5-Date-Calc>0:devel/p5-Date-Calc
@@ -27,7 +27,7 @@ RUN_DEPENDS+=	p5-DBD-Pg>0:databases/p5-DBD-Pg
 RUN_DEPENDS+=	p5-Email-MIME>0:mail/p5-Email-MIME
 RUN_DEPENDS+=	p5-Email-Stuffer>0:mail/p5-Email-Stuffer
 RUN_DEPENDS+=	p5-List-MoreUtils>0:lang/p5-List-MoreUtils
-RUN_DEPENDS+	p5-IO-Socket-SSL>0:security/p5-IO-Socket-SSL
+RUN_DEPENDS+=	p5-IO-Socket-SSL>0:security/p5-IO-Socket-SSL
 RUN_DEPENDS+=	p5-Email-Sender>0:mail/p5-Email-Sender
 RUN_DEPENDS+=	p5-Text-Unidecode>0:converters/p5-Text-Unidecode
 RUN_DEPENDS+=	p5-TimeDate>0:devel/p5-TimeDate
