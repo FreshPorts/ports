@@ -59,6 +59,7 @@
 %%FP_LIBEXEC%%/missing-port-categories.sh
 %%FP_LIBEXEC%%/newusers.pl
 %%FP_LIBEXEC%%/newusers.sh
+%%FP_LIBEXEC%%/dump-package_imports.sh
 %%FP_LIBEXEC%%/page-loads-last-five-minutes.pl
 %%FP_LIBEXEC%%/ports_categories-populate.pl
 %%FP_LIBEXEC%%/ports_tree_file_count.pl

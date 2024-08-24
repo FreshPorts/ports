@@ -6,15 +6,15 @@
 #
 
 PORTNAME=	freshports-scripts
-PORTVERSION=	2.0.51
-PORTREVISION=	7
+PORTVERSION=	2.0.52
+PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
-WWW=		http://www.FreshPorts.org/
+WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/ingress/scripts/branches/git/
 
 USES=		perl5 pgsql python
 
