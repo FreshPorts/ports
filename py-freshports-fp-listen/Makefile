@@ -15,6 +15,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/daemontools/branches/git/fp-listen/
 
 NO_BUILD=	YES
 

@@ -19,6 +19,7 @@ EXTRACT_ONLY=	# none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		# none - creates directories for developement nodes
 
 NO_BUILD=	YES
 

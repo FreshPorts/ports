@@ -19,6 +19,7 @@ EXTRACT_ONLY=	# none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		# none - used by development nodes 
 
 USES=		pgsql
 

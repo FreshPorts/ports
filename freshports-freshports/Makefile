@@ -16,6 +16,7 @@ MASTER_SITES=   # none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		https://github.com/FreshPorts/freshports
 
 # ingress.sh invokes perl on a script installed by freshports-scripts
 USES=		perl5

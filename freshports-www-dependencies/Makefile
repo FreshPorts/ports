@@ -19,6 +19,7 @@ EXTRACT_ONLY=	# none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		# none, installs dependencies for development nodes
 
 USES=		perl5 php python
 

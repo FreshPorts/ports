@@ -14,6 +14,7 @@ PKGNAMEPREFIX=	freshports-
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWw=		https://git.langille.org/FreshPorts/helper_scripts
 
 NO_BUILD=	YES
 

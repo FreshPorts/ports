@@ -17,6 +17,7 @@ PKGNAMESUFFIX=	-www-packages
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		# none - I think this was intended for use by developments nodes
 
 USES=		perl5 php python
 

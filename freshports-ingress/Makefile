@@ -16,6 +16,7 @@ MASTER_SITES=   # none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/daemontools/branches/git/ingress/
 
 # ingress.sh invokes perl on a script installed by freshports-scripts
 USES=		perl5 python

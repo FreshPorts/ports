@@ -14,6 +14,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dan@langille.org
 COMMENT=	Process git commits into XML
+WWW=		https://github.com/FreshPorts/git_proc_commit
 
 USES=		python shebangfix
 

@@ -16,6 +16,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		https://github.com/FreshPorts/packages-import
 
 NO_BUILD=	YES
 
