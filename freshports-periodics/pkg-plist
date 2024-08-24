@@ -22,6 +22,7 @@ etc/periodic/hourly/180.fp_stats_hourly
 etc/periodic/hourly/240.fp_missing_port_categories
 etc/periodic/hourly/506.fp_categories_rebuild_search_html
 etc/periodic/hourly/980.dump_freshports_tags
+etc/periodic/hourly/990.refresh_package_imports_page
 etc/periodic/monthly/310.send-report-notices-monthly
 etc/periodic/monthly/320.send-report-new-ports-monthly
 etc/periodic/weekly/310.send-report-notices-weekly
