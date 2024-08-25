@@ -215,6 +215,7 @@
 %%WWWDIR%%/www/.well-known/security.txt.sig
 %%WWWDIR%%/www/--/index.php
 %%WWWDIR%%/www/--/forums-gone.php
+%%WWWDIR%%/www/--/package-imports.php
 %%WWWDIR%%/www/--/new-url-parsing.php
 %%WWWDIR%%/www/DesignContestVoting/A/bacula.html
 %%WWWDIR%%/www/DesignContestVoting/A/categories.html
