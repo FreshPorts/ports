@@ -18,10 +18,10 @@ WWw=		https://git.langille.org/FreshPorts/helper_scripts
 
 NO_BUILD=	YES
 
-USERS=	freshports
-GROUPS=	${USERS}
+USERS=		freshports
+GROUPS=		${USERS}
 
-LIBEXECDIR=${PREFIX}/libexec/freshports/helper_scripts
+LIBEXECDIR=	${PREFIX}/libexec/freshports/helper_scripts
 
 PLIST_SUB=	LIBEXECDIR=${LIBEXECDIR}
 WRKSRC=		${WRKDIR}/${PORTNAME}
