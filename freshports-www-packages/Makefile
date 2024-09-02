@@ -12,7 +12,7 @@ PORTNAME=	freshports
 PORTVERSION=	1.41p7a
 PORTREVISION=	1
 CATEGORIES=	dvl
-MASTER_SITES=   # none
+MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www-packages
 
 MAINTAINER=	dan@langille.org
@@ -27,34 +27,40 @@ GH_ACCOUNT=	FreshPorts
 NO_BUILD=	YES
 
 WANT_PGSQL=	client plperl
-USE_PHP=	ctype dom exif fileinfo filter gd hash iconv json mbstring opcache pgsql phar posix session simplexml tokenizer xml xmlreader xmlwriter zip zlib
+USE_PHP=	ctype dom exif fileinfo filter gd hash iconv json mbstring \
+		opcache pgsql phar posix session simplexml tokenizer xml \
+		xmlreader xmlwriter zip zlib
 
 FP_DATADIR=	/var/db/freshports
 FP_LOGDIR=	/var/log/freshports
 
-PLIST_SUB+=	FP_DATADIR=${FP_DATADIR}
-PLIST_SUB+=	FP_LOGDIR=${FP_LOGDIR}
+PLIST_SUB+=	FP_DATADIR=${FP_DATADIR} \
+		FP_LOGDIR=${FP_LOGDIR}
 
-SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR}
-SUB_LIST+=	FRESHPORTS_USER=freshports
+SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR} \
+		FRESHPORTS_USER=freshports
 
 SUB_LIST+=	LOGCHECK_GROUP=logcheck
 
-SUB_FILES=	freshports-www.conf.newsyslog.conf freshports-www.conf.syslog.conf
+SUB_FILES=	freshports-www.conf.newsyslog.conf \
+		freshports-www.conf.syslog.conf
 
 # having these configuration files in different directories.. perhaps they should be consolidated.
 # In the DISTFILE, these files will have a .sample extension. Leaving that suffix off here helps us create
 # symlinks to the real file
-CONF_FILES=	database.php freshports.conf.php robots.txt status-config.php vhosts.conf vhosts.conf.nginx virtualhost-common.conf virtualhost-common-ssl.conf
+CONF_FILES=	database.php freshports.conf.php robots.txt status-config.php \
+		vhosts.conf vhosts.conf.nginx virtualhost-common.conf \
+		virtualhost-common-ssl.conf
 INC_FILES=	common.php constants.local.php
-NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php rss0.91.php rss1.0.php rss2.0.php
+NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php \
+		rss0.91.php rss1.0.php rss2.0.php
 
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=0:dvl/py-freshports-fp-listen
-RUN_DEPENDS+=	UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
-RUN_DEPENDS+=	nginx:www/nginx
-RUN_DEPENDS+=	php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2
-RUN_DEPENDS+=	php${PHP_VER}-pear-Pager>0:devel/pear-Pager
-RUN_DEPENDS+=	libucl>0:textproc/libucl
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=0:dvl/py-freshports-fp-listen \
+		libucl>0:textproc/libucl \
+		nginx:www/nginx \
+		php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2 \
+		php${PHP_VER}-pear-Pager>0:devel/pear-Pager \
+		UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 
 .include <bsd.port.pre.mk>
 
@@ -62,13 +68,13 @@ do-install:
 	@${ECHO} "Installing in ${WWWDIR}"
 	${MKDIR} ${STAGEDIR}${WWWDIR}
 
-	# we don't need this in here.
+# we don't need this in here.
 	${RM} -rf ${WRKSRC}/docs
 
-	# install everything +x, because it's easier
+# install everything +x, because it's easier
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${WWWDIR})
 
-	# move configuration files to the right place
+# move configuration files to the right place
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 .for _conf in ${CONF_FILES}
 	${INSTALL_SCRIPT} ${WRKSRC}/configuration/${_conf}.sample ${STAGEDIR}${ETCDIR}
@@ -84,20 +90,20 @@ do-install:
 	(cd ${STAGEDIR}${WWWDIR}/www/backend && ${LN} -sf news.php ${_news})
 .endfor
 
-	# robots.txt link
+# robots.txt link
 	${LN} -sf ${ETCDIR}/robots.txt ${STAGEDIR}${WWWDIR}/www/robots.txt
 
-	# nginx link
+# nginx link
 	${LN} -sf ${PREFIX}/etc/nginx/includes/freshports.org.conf ${STAGEDIR}${ETCDIR}/vhosts.conf
 
-	# logs
+# logs
 	${MKDIR} ${STAGEDIR}${FP_LOGDIR}
 
-	# syslog.conf
+# syslog.conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/syslog.d
 	${INSTALL_DATA} ${WRKDIR}/freshports-www.conf.syslog.conf    ${STAGEDIR}${PREFIX}/etc/syslog.d/freshports-www.conf.sample
 
-	# newsyslog.conf
+# newsyslog.conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
 	${INSTALL_DATA} ${WRKDIR}/freshports-www.conf.newsyslog.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/freshports-www.conf.sample
 
