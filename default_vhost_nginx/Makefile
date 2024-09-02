@@ -7,8 +7,8 @@ PKGNAMESUFFIX=	_nginx
 #DISTFILES=	# none
 #EXTRACT_ONLY=	# none
 
-WWWDIR=	${PREFIX}/www/${PORTNAME}${PKGNAMESUFFIX}
-WRKSRC=	${WRKDIR}/${PORTNAME}/${PORTNAME}${PKGNAMESUFFIX}
+WWWDIR=		${PREFIX}/www/${PORTNAME}${PKGNAMESUFFIX}
+WRKSRC=		${WRKDIR}/${PORTNAME}/${PORTNAME}${PKGNAMESUFFIX}
 #/wrkdirs/usr/ports/dvl/nginx_default_vhost/work/nginx_default_vhost/default_vhost
 MAINTAINER=	dan@langille.org
 COMMENT=	A default nginx website
