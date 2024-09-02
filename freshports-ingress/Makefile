@@ -12,7 +12,7 @@ PORTNAME=	freshports-ingress
 DISTVERSION=	2.0.4
 PORTREVISION=	13
 CATEGORIES=	dvl
-MASTER_SITES=   # none
+MASTER_SITES=	# none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
@@ -21,23 +21,23 @@ WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/daemontools/branche
 # ingress.sh invokes perl on a script installed by freshports-scripts
 USES=		perl5 python
 
-RUN_DEPENDS+=	p5-freshports-scripts>=2.0.0:dvl/p5-freshports-scripts
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-git-proc-commit>0:dvl/py-freshports-git-proc-commit
-RUN_DEPENDS+=	freshports-helper_scripts>=0.0.1:dvl/freshports-helper-scripts
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-git-proc-commit>0:dvl/py-freshports-git-proc-commit \
+		freshports-helper_scripts>=0.0.1:dvl/freshports-helper-scripts \
+		p5-freshports-scripts>=2.0.0:dvl/p5-freshports-scripts
 
 NO_BUILD=	YES
 
-USERS=	ingress
-GROUPS=	${USERS}
+USERS=		ingress
+GROUPS=		${USERS}
 
-ETCDIR=	${PREFIX}/etc/freshports
-LOGDIR=	/var/log/freshports
+ETCDIR=		${PREFIX}/etc/freshports
+LOGDIR=		/var/log/freshports
 
 FP_SERVICESDIR=	${PREFIX}/libexec/freshports-service
 
 SUB_FILES=	ingress
-SUB_LIST=	LOGDIR=${LOGDIR} \
-		FP_SERVICESDIR=${FP_SERVICESDIR}
+SUB_LIST=	FP_SERVICESDIR=${FP_SERVICESDIR} \
+		LOGDIR=${LOGDIR}
 
 PLIST_SUB+=	FP_SERVICESDIR=${FP_SERVICESDIR} \
 		LOGDIR=${LOGDIR}
@@ -60,7 +60,7 @@ do-install:
 
 	${INSTALL_DATA} ${FILESDIR}/ingress.syslogd.conf ${STAGEDIR}${PREFIX}/etc/syslog.d/ingress-daemon.conf.sample
 
-	# newsyslog.conf
+# newsyslog.conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
 	${INSTALL_DATA} ${FILESDIR}/freshports-ingress.newsyslog.d.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/ingress.conf.sample
 
