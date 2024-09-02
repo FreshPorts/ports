@@ -9,7 +9,7 @@ PORTNAME=	freshports-periodics
 PORTVERSION=	1.0.41
 PORTREVISION=	0
 CATEGORIES=	dvl
-MASTER_SITES=   # none
+MASTER_SITES=	# none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
@@ -17,15 +17,15 @@ WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/periodics
 
 NO_BUILD=	YES
 
-USERS=	freshports
-GROUPS=	${USERS}
+USERS=		freshports
+GROUPS=		${USERS}
 
 # variables for substitution in vendor tarbaalal
-FP_LIBEXEC="${LOCALBASE}/libexec/freshports"
-FP_USER_FRESHPORTS="freshports"
-FP_USER_INGRESS="ingress"
-FP_LOG_DIR="/var/log/freshports"
-LOGCHECK_USER=logcheck
+FP_LIBEXEC=		"${LOCALBASE}/libexec/freshports"
+FP_USER_FRESHPORTS=	"freshports"
+FP_USER_INGRESS=	"ingress"
+FP_LOG_DIR=		"/var/log/freshports"
+LOGCHECK_USER=		logcheck
 
 SUB_LIST+=	FP_LOG_DIR=${FP_LOG_DIR} \
 		FP_USER_FRESHPORTS=freshports \
