@@ -10,7 +10,7 @@ PORTNAME=	freshports-ingress-metaport
 PORTVERSION=	0.1.1
 PORTREVISION=	0
 CATEGORIES=	dvl
-MASTER_SITES=   # none
+MASTER_SITES=	# none
 DISTFILES=	# none
 
 MAINTAINER=	dan@langille.org
@@ -21,9 +21,9 @@ NO_INSTALL=	YES
 
 USES=		python
 
-RUN_DEPENDS+=	freshports-ingress>=2.0.4:dvl/freshports-ingress
-RUN_DEPENDS+=	freshports-freshports>=2.0.0:dvl/freshports-freshports
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}packages-import>=0.1.17:dvl/py-packages-import
-RUN_DEPENDS+=	freshports-periodics>=1.0.24:dvl/freshports-periodics
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}packages-import>=0.1.17:dvl/py-packages-import \
+		freshports-freshports>=2.0.0:dvl/freshports-freshports \
+		freshports-ingress>=2.0.4:dvl/freshports-ingress \
+		freshports-periodics>=1.0.24:dvl/freshports-periodics
 
 .include <bsd.port.mk>
