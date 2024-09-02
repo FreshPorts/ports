@@ -19,24 +19,23 @@ WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/daemontools/branche
 
 NO_BUILD=	YES
 
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2@${PY_FLAVOR}
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}configparser>0:devel/py-configparser@${PY_FLAVOR}
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}configparser>0:devel/py-configparser@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2@${PY_FLAVOR}
 
 WANT_PGSQL=	client
 USES=		python
 USE_PYTHON=	distutils
 
-USERS=	freshports
-GROUPS=	${USERS}
+USERS=		freshports
+GROUPS=		${USERS}
 
 ETCDIR=		etc/freshports
 SERVICE_DIR=	${PREFIX}/libexec/freshports-service
 
-
-SUB_LIST+=	FRESHPORTS_USER=freshports
-SUB_LIST+=	PYTHON_SITELIBDIR=${PYTHON_SITELIBDIR}
-SUB_LIST+=	ETCDIR=${PREFIX}/${ETCDIR}
-SUB_LIST+=	FP_SERVICESDIR=${PYTHON_SITELIBDIR}/fp-listen
+SUB_LIST+=	ETCDIR=${PREFIX}/${ETCDIR} \
+		FP_SERVICESDIR=${PYTHON_SITELIBDIR}/fp-listen \
+		FRESHPORTS_USER=freshports \
+		PYTHON_SITELIBDIR=${PYTHON_SITELIBDIR}
 
 SUB_FILES=	fp_listen
 
