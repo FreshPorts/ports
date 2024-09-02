@@ -9,7 +9,7 @@ PORTNAME=	freshports-verify
 PORTVERSION=	2.0.10
 PORTREVISION=	1
 CATEGORIES=	dvl
-MASTER_SITES=   # none
+MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dan@langille.org
@@ -20,8 +20,8 @@ NO_BUILD=	YES
 
 USES=		perl5
 
-RUN_DEPENDS+=	p5-freshports-scripts>0:dvl/p5-freshports-scripts
-RUN_DEPENDS+=	p5-freshports-modules>0:dvl/p5-freshports-modules
+RUN_DEPENDS+=	p5-freshports-modules>0:dvl/p5-freshports-modules \
+		p5-freshports-scripts>0:dvl/p5-freshports-scripts
 
 .include <bsd.port.pre.mk>
 
@@ -29,7 +29,7 @@ do-install:
 	@${ECHO} "Installing in ${PREFIX}/libexec/freshports/Verify"
 	${MKDIR} ${STAGEDIR}/${SITE_PERL}/FreshPorts/Verify
 
-	# install everything +x, because it's easier
+# install everything +x, because it's easier
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}/${SITE_PERL}/FreshPorts/Verify)
 
 .include <bsd.port.post.mk>
