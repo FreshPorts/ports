@@ -26,8 +26,8 @@ USES=		python
 NO_BUILD=	YES
 NO_INSTALL=	YES
 
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2@${PY_FLAVOR}
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR}
-RUN_DEPENDS+=	git-lite>0:devel/git@lite
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2@${PY_FLAVOR} \
+		git-lite>0:devel/git@lite
 
 .include <bsd.port.mk>
