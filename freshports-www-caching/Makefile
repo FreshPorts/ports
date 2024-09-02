@@ -32,7 +32,8 @@ PLIST_SUB+=	FP_DATADIR=${FP_DATADIR}
 
 # NOTE: the html directory is nullfs mounted from the ingress directory
 CACHE_DIR=	${FP_DATADIR}/cache
-CACHE_DIRS=	categories daily general html news packages pages ports spooling
+CACHE_DIRS=	categories daily general html news packages pages ports \
+		spooling
 
 .include <bsd.port.pre.mk>
 
