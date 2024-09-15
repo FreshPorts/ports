@@ -164,6 +164,7 @@
 %%WWWDIR%%/rewrite/new-url-parsing.php
 %%WWWDIR%%/scripts/cache-clear-all.sh
 %%WWWDIR%%/testing/math.php
+%%WWWDIR%%/testing/interate-all-ports-pkg_prefix_sort.php
 %%WWWDIR%%/vendor/autoload.php
 %%WWWDIR%%/vendor/composer/ClassLoader.php
 %%WWWDIR%%/vendor/composer/InstalledVersions.php
