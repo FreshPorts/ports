@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-git-proc-commit
-PORTVERSION=	0.1.11
+PORTVERSION=	0.2.0
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
@@ -21,7 +21,7 @@ USES=		python shebangfix
 NO_BUILD=	YES
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pygit2>=1.15.0:devel/py-pygit2@${PY_FLAVOR} \
 		git-lite>0:devel/git@lite
 
 USE_GITHUB=	yes
