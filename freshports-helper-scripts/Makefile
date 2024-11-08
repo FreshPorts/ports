@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	helper_scripts
-DISTVERSION=	0.0.5
+DISTVERSION=	0.0.6
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	https://git.langille.org/FreshPorts/helper_scripts/archive/${DISTVERSION}${EXTRACT_SUFX}?dummy=/
