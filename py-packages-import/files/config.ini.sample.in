@@ -1,3 +1,4 @@
+
 #
 # configuration items
 #
@@ -15,3 +16,4 @@ PACKAGE_IMPORT_DIR = /var/db/freshports/packagesite
 
 SIGNAL_NEW_REPO_READY_FOR_IMPORT = /var/db/freshports/signals/new_repo_ready_for_import
 SIGNAL_JOB_WAITING               = /var/db/freshports/signals/job_waiting
+SIGNAL_OFFLINE                   = /var/db/freshports/signals/OFFLINE
