@@ -1,9 +1,11 @@
 PORTNAME=	freshports
-DISTVERSION=	2.10.8
+DISTVERSION=	2.11.0
 PORTREVISION=	0
 CATEGORIES=	dvl
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www
+
+
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
@@ -17,6 +19,7 @@ GH_ACCOUNT=	FreshPorts
 NO_BUILD=	YES
 
 WANT_PGSQL=	client plperl
+
 USE_PHP=	ctype dom exif fileinfo filter gd hash iconv json mbstring \
 		opcache pgsql phar posix session simplexml tokenizer xml \
 		xmlreader xmlwriter zip zlib
@@ -30,8 +33,17 @@ SUB_FILES=	freshports-www.conf.newsyslog freshports-www.conf.syslog \
 		php.conf.newsyslog
 
 FP_LOGDIR=	/var/log/freshports
+
+
+
+
 SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR}
+
+
 SUB_LIST+=	LOGCHECK_GROUP=logcheck
+
+
+
 
 # having these configuration files in different directories.. perhaps they should be consolidated.
 # In the DISTFILE, these files will have a .sample extension. Leaving that suffix off here helps us create
@@ -83,7 +95,11 @@ do-install:
 	${LN} -sf ${ETCDIR}/robots.txt ${STAGEDIR}${WWWDIR}/www/robots.txt
 
 # nginx link
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/nginx/includes
 	${LN} -sf ${PREFIX}/etc/nginx/includes/freshports.org.conf ${STAGEDIR}${ETCDIR}/vhosts.conf
+
+# logs
+	${MKDIR} ${STAGEDIR}${FP_LOGDIR}
 
 # syslog.conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/syslog.d

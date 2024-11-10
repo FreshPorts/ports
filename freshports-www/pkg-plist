@@ -502,5 +502,7 @@
 %%WWWDIR%%/www/watch.php
 %%WWWDIR%%/www/welcome.php
 
-@dir etc/syslog.d
 @dir etc/newsyslog.conf.d
+@dir etc/nginx/includes
+@dir etc/syslog.d
+@dir /var/log/freshports
