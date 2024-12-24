@@ -1,13 +1,3 @@
-# Created by: Dan Langille <dan@langille.org>
-# $FreeBSD$
-#
-# $Id: Makefile,v 1.4 2011-06-14 17:32:41 dan Exp $
-#
-# Install the www needed by FreshPorts
-#
-# Copyright (c) 2002-2006 DVL Software Limited
-#
-
 PORTNAME=	freshports
 PORTVERSION=	2.2.2
 PORTREVISION=	0
@@ -23,11 +13,24 @@ WWW=		# none, installs dependencies for development nodes
 
 USES=		perl5 php python
 
-WANT_PGSQL=	client
+
+
+
+
+
+WANT_PGSQL=	client plperl
 
 USE_PHP=	ctype dom exif fileinfo filter gd hash iconv json mbstring \
 		opcache pgsql phar posix session simplexml tokenizer xml \
 		xmlreader xmlwriter zip zlib
+
+USERS=		freshports www
+GROUPS=		${USERS}
+
+
+
+
+
 
 FP_LOGDIR=	/var/log/freshports
 
@@ -52,7 +55,6 @@ INC_FILES=	common.php constants.local.php
 NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php \
 		rss0.91.php rss1.0.php rss2.0.php
 
-# these are copied from freshports-www/Makefile
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=1.0.2:dvl/py-freshports-fp-listen@${PY_FLAVOR} \
 		libucl>0:textproc/libucl \
 		nginx:www/nginx \
@@ -92,10 +94,12 @@ do-install:
 # move configuration files to the right place
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 .for _conf in ${CONF_FILES}
+#	${INSTALL_SCRIPT} ${WRKSRC}/configuration/${_conf}.sample ${STAGEDIR}${ETCDIR}
 	${LN} -sf ${ETCDIR}/${_conf} ${STAGEDIR}${WWWDIR}/configuration/${_conf}
 .endfor
 
 .for _inc in ${INC_FILES}
+#	${INSTALL_SCRIPT} ${WRKSRC}/include/${_inc}.sample ${STAGEDIR}${ETCDIR}
 	${LN} -sf ${ETCDIR}/${_inc} ${STAGEDIR}${WWWDIR}/include/${_inc}
 .endfor
 
@@ -120,5 +124,6 @@ do-install:
 # newsyslog.conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
 	${INSTALL_DATA} ${WRKDIR}/freshports-www.conf.newsyslog.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/freshports-www.conf.sample
+#	${INSTALL_DATA} ${WRKDIR}/php.conf.newsyslog            ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/php.conf.sample
 
 .include <bsd.port.post.mk>
