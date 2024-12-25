@@ -11,7 +11,7 @@
 PORTNAME=	freshports-www-cache
 PORTVERSION=	0.0.1
 PORTREVISION=	0
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www-cache
 DISTFILES=	# none

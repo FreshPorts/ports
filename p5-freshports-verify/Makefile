@@ -8,7 +8,7 @@
 PORTNAME=	freshports-verify
 PORTVERSION=	2.0.10
 PORTREVISION=	1
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-
 
@@ -20,8 +20,8 @@ NO_BUILD=	YES
 
 USES=		perl5
 
-RUN_DEPENDS+=	p5-freshports-modules>0:dvl/p5-freshports-modules \
-		p5-freshports-scripts>0:dvl/p5-freshports-scripts
+RUN_DEPENDS+=	p5-freshports-modules>0:freshports/p5-freshports-modules \
+		p5-freshports-scripts>0:freshports/p5-freshports-scripts
 
 .include <bsd.port.pre.mk>
 

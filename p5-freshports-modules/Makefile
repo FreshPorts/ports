@@ -8,7 +8,7 @@
 PORTNAME=	freshports-modules
 PORTVERSION=	2.1.2
 PORTREVISION=	0
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-
 

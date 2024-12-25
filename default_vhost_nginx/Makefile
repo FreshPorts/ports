@@ -1,7 +1,7 @@
 PORTNAME=	default_vhost
 PORTVERSION=	1.0.6
 PORTREVISION=	0
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	https://git.langille.org/dvl/${PORTNAME}/archive/${DISTVERSION}${EXTRACT_SUFX}?dummy=/
 PKGNAMESUFFIX=	_nginx
 #DISTFILES=	# none

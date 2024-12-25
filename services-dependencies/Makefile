@@ -9,7 +9,7 @@
 PORTNAME=	services-dependencies
 PORTVERSION=	1.0.2
 PORTREVISION=	0
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	# none
 DISTFILES=	# none
 EXTRACT_ONLY=	# none

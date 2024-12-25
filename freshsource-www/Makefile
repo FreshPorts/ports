@@ -11,14 +11,14 @@
 PORTNAME=	freshsource
 PORTVERSION=	2.3.12
 PORTREVISION=	0
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 
-RUN_DEPENDS=	freshports-www>0:dvl/freshports-www \
+RUN_DEPENDS=	freshports-www>0:freshports/freshports-www \
 		nginx>0:www/nginx
 
 NO_BUILD=	YES

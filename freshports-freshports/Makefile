@@ -11,7 +11,7 @@
 PORTNAME=	freshports-freshports
 PORTVERSION=	2.0.15
 PORTREVISION=	1
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	# none
 
 MAINTAINER=	dan@langille.org
@@ -21,7 +21,7 @@ WWW=		https://github.com/FreshPorts/freshports
 # ingress.sh invokes perl on a script installed by freshports-scripts
 USES=		perl5
 
-RUN_DEPENDS+=	p5-freshports-scripts>=2.0.0:dvl/p5-freshports-scripts
+RUN_DEPENDS+=	p5-freshports-scripts>=2.0.0:freshports/p5-freshports-scripts
 
 NO_BUILD=	YES
 

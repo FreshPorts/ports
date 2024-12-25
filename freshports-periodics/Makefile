@@ -8,7 +8,7 @@
 PORTNAME=	freshports-periodics
 PORTVERSION=	1.0.41
 PORTREVISION=	0
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	# none
 
 MAINTAINER=	dan@langille.org

@@ -8,7 +8,7 @@
 PORTNAME=	helper_scripts
 DISTVERSION=	0.0.6
 PORTREVISION=	0
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	https://git.langille.org/FreshPorts/helper_scripts/archive/${DISTVERSION}${EXTRACT_SUFX}?dummy=/
 PKGNAMEPREFIX=	freshports-
 

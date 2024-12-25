@@ -8,7 +8,7 @@
 PORTNAME=	FreshPorts-Modules-Dependencies
 PORTVERSION=	1.1.19
 PORTREVISION=	0
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-
 DISTFILES=	# none

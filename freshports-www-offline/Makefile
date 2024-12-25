@@ -1,7 +1,7 @@
 PORTNAME=	freshports-www-offline
 PORTVERSION=	0.0.2
 PORTREVISION=	1
-CATEGORIES=	dvl
+CATEGORIES=	freshports  
 MASTER_SITES=	# none
 
 MAINTAINER=	dan@langille.org

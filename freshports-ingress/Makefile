@@ -11,7 +11,7 @@
 PORTNAME=	freshports-ingress
 DISTVERSION=	2.0.4
 PORTREVISION=	13
-CATEGORIES=	dvl
+CATEGORIES=	freshports
 MASTER_SITES=	# none
 
 MAINTAINER=	dan@langille.org
@@ -21,9 +21,9 @@ WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/daemontools/branche
 # ingress.sh invokes perl on a script installed by freshports-scripts
 USES=		perl5 python
 
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-git-proc-commit>0:dvl/py-freshports-git-proc-commit \
-		freshports-helper_scripts>=0.0.1:dvl/freshports-helper-scripts \
-		p5-freshports-scripts>=2.0.0:dvl/p5-freshports-scripts
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-git-proc-commit>0:freshports/py-freshports-git-proc-commit \
+		freshports-helper_scripts>=0.0.1:freshports/freshports-helper-scripts \
+		p5-freshports-scripts>=2.0.0:freshports/p5-freshports-scripts
 
 NO_BUILD=	YES
 
