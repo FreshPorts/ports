@@ -1,5 +1,7 @@
 Typically, this repo is checked out to the top level directory of your ports tree.
 
+As of 2025-01-02, all FreshPorts nodes are using the ports created from this repo.
+
 In this case, it's a poudriere instance:
 
 ```
