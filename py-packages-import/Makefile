@@ -8,8 +8,7 @@
 #
 
 PORTNAME=	packages-import
-DISTVERSION=	2.7.0
-PORTREVISION=	1
+DISTVERSION=	2.7.1
 CATEGORIES=	freshports
 MASTER_SITES=	GH
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -35,7 +34,7 @@ GROUPS=		${USERS}
 
 FP_DATADIR=	/var/db/freshports
 
-SCRIPTS=	UpdatePackagesFromRawPackages.py check_repos_for_new_stuff.py get_packagesite.txz_date import_packagesite.py fetch-extract-parse-import-one-abi.sh import-via-copy-packagesite-all-raw-fields.py
+SCRIPTS=	UpdatePackagesFromRawPackages.py check_repos_for_new_stuff.py fetch-parse-meta.conf get_packagesite.txz_date import_packagesite.py fetch-extract-parse-import-one-abi.sh import-via-copy-packagesite-all-raw-fields.py
 
 SHEBANG_FILES=	UpdatePackagesFromRawPackages.py check_repos_for_new_stuff.py import_packagesite.py import-via-copy-packagesite-all-raw-fields.py
 
