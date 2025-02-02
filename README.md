@@ -9,3 +9,17 @@ In this case, it's a poudriere instance:
 [23:14 pkg01 dvl /usr/local/poudriere/ports/default] % sudo chown dvl:dvl freshports
 [23:14 pkg01 dvl /usr/local/poudriere/ports/default] % git clone git@github.com:FreshPorts/ports.git freshports
 ```
+In `/usr/local/etc/poudriere.d/default-make.conf`, these entries were added:
+
+```
+VALID_CATEGORIES+=freshports
+UID_FILES+=${PORTSDIR}/UIDs ${PORTSDIR}/freshports/UIDs
+GID_FILES+=${PORTSDIR}/GIDs ${PORTSDIR}/freshports/GIDs
+```
+
+You may have to change `default-make.conf` to reflect your poudriere ports tree name.
+
+```
+[23:21 pkg01 dvl /usr/local/poudriere/ports/default/freshports] % sudo poudriere ports -l | grep default
+default     git       2024-12-31 04:18:08 /usr/local/poudriere/ports/default
+```
