@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-modules
-PORTVERSION=	2.1.2
+PORTVERSION=	2.1.3
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
