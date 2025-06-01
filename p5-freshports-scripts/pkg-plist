@@ -25,6 +25,7 @@
 %%FP_LIBEXEC%%/Jail/scripts/make-showconfig.sh
 %%FP_LIBEXEC%%/Jail/scripts/realpath.sh
 %%FP_LIBEXEC%%/Jail/scripts/vars.sh.sample
+%%FP_LIBEXEC%%/Jail/upgrade-jail-via-replace.sh
 @mode 444
 %%FP_LIBEXEC%%/README.txt
 @mode

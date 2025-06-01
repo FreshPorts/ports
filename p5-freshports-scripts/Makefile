@@ -2,11 +2,11 @@
 #
 # Install the scripts needed by FreshPorts ingress
 #
-# Copyright (c) 2002-2023 Dan Langille
+# Copyright (c) 2002-2025 Dan Langille
 #
 
 PORTNAME=	freshports-scripts
-PORTVERSION=	2.1.1
+PORTVERSION=	2.1.3
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
