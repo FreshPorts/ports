@@ -24,7 +24,6 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2 \
 		git-lite>0:devel/git@lite \
 		logcheck>0:security/logcheck \
 		p5-DBD-Pg>0:databases/p5-DBD-Pg \
-		p5-File-Temp>0:devel/p5-File-Temp \
 		p5-freshports-modules>=2.0.0:freshports/p5-freshports-modules \
 		p5-IO-String>0:devel/p5-IO-String \
 		p5-Text-Wrapper>0:textproc/p5-Text-Wrapper \
