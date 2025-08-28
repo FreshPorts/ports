@@ -1,4 +1,3 @@
-
 #
 # configuration items
 #
@@ -9,6 +8,10 @@ DBNAME             = '[redacted]'
 PACKAGER_DBUSER    = 'packager'
 # if there is a % in the password, escape it with a %
 PACKAGER_PASSWORD  = '[redacted]'
+
+COMMITS_DBUSER    = 'commits'
+# if there is a % in the password, escape it with a %
+COMMITS_PASSWORD  = '[redacted]'
 
 [filesystem]
 SCRIPT_DIR         = %%PREFIX%%/libexec/freshports

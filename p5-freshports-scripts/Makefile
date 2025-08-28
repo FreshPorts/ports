@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-scripts
-PORTVERSION=	2.1.3
+PORTVERSION=	2.2.0
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -16,9 +16,11 @@ MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/ingress/scripts/branches/git/
 
-USES=		perl5 pgsql python
+USES=		perl5 pgsql python shebangfix
 
 NO_BUILD=	YES
+
+SHEBANG_FILES=	process_vuxml_import_temp_file.py
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2 \
 		git-lite>0:devel/git@lite \

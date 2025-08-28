@@ -1,7 +1,6 @@
 @sample(root,freshports,640) %%ETCDIR%%/config.pm.sample
 %%SITE_PERL%%/FreshPorts/announcements.pm
 %%SITE_PERL%%/FreshPorts/branches.pm
-%%SITE_PERL%%/FreshPorts/cache.pm
 %%SITE_PERL%%/FreshPorts/caching.pm
 %%SITE_PERL%%/FreshPorts/category.pm
 %%SITE_PERL%%/FreshPorts/categories.pm
@@ -19,7 +18,6 @@
 %%SITE_PERL%%/FreshPorts/db_utils.pm
 %%SITE_PERL%%/FreshPorts/element.pm
 %%SITE_PERL%%/FreshPorts/email.pm
-%%SITE_PERL%%/FreshPorts/housekeeping.pm
 %%SITE_PERL%%/FreshPorts/master_slave.pm
 %%SITE_PERL%%/FreshPorts/messages.pm
 %%SITE_PERL%%/FreshPorts/non_ports.pm
