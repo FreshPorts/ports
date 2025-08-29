@@ -15,6 +15,7 @@
 @mode
 %%FP_LIBEXEC%%/Jail/refresh-jail-scripts.sh
 %%FP_LIBEXEC%%/Jail/scripts/cat-descr.sh
+%%FP_LIBEXEC%%/Jail/scripts/list-current-distfiles.sh
 %%FP_LIBEXEC%%/Jail/scripts/make-category-comment.sh
 %%FP_LIBEXEC%%/Jail/scripts/make-generate-plist.sh
 %%FP_LIBEXEC%%/Jail/scripts/make-flavors-package-names.sh
