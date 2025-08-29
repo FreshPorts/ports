@@ -31,7 +31,8 @@
 %%SITE_PERL%%/FreshPorts/Verify/set-no_latest_link.no_package.pkgname.portepoch.pl
 %%SITE_PERL%%/FreshPorts/Verify/set-patch-extract-fetch-depends-uses.pl
 %%SITE_PERL%%/FreshPorts/Verify/set-pkgmessage-and-options_name.pl
+%%SITE_PERL%%/FreshPorts/Verify/set-pkgmessage.pl
 %%SITE_PERL%%/FreshPorts/Verify/set-reset-ignore.pl
 %%SITE_PERL%%/FreshPorts/Verify/set-restricted-no-cdrom.pl
 %%SITE_PERL%%/FreshPorts/Verify/set-showconfig.pl
-%%SITE_PERL%%/FreshPorts/Verify/set-pkgmessage.pl
+%%SITE_PERL%%/FreshPorts/Verify/set-use_rc_subr.pl

@@ -6,8 +6,8 @@
 #
 
 PORTNAME=	freshports-verify
-PORTVERSION=	2.0.10
-PORTREVISION=	1
+PORTVERSION=	2.2.0
+PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-
@@ -16,9 +16,9 @@ MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/ingress/Verify/trunk/
 
-NO_BUILD=	YES
-
 USES=		perl5
+
+NO_BUILD=	YES
 
 RUN_DEPENDS+=	p5-freshports-modules>0:freshports/p5-freshports-modules \
 		p5-freshports-scripts>0:freshports/p5-freshports-scripts
