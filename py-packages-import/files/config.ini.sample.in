@@ -9,6 +9,11 @@ PACKAGER_DBUSER    = 'packager'
 # if there is a % in the password, escape it with a %
 PACKAGER_PASSWORD  = '[redacted]'
 
+#
+# this file was originally created for the package importing code.
+# Later, when vuxml processing started to use python, the commits user
+# information was added for that.
+#
 COMMITS_DBUSER    = 'commits'
 # if there is a % in the password, escape it with a %
 COMMITS_PASSWORD  = '[redacted]'
