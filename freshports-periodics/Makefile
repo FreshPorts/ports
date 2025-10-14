@@ -6,14 +6,18 @@
 #
 
 PORTNAME=	freshports-periodics
-PORTVERSION=	1.0.41
+PORTVERSION=	1.1.0
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
-WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/periodics
+WWW=		https://github.com/FreshPorts/periodics/
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	FreshPorts
+GH_PROJECT=	periodics
 
 NO_BUILD=	YES
 
