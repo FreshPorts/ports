@@ -12,6 +12,7 @@
 @mode 444
 %%FP_LIBEXEC%%/Jail/files/README.txt
 %%FP_LIBEXEC%%/Jail/files/etc/make.conf
+%%FP_LIBEXEC%%/Jail/files/etc/rc.conf.local
 @mode
 %%FP_LIBEXEC%%/Jail/refresh-jail-scripts.sh
 %%FP_LIBEXEC%%/Jail/scripts/cat-descr.sh
@@ -56,6 +57,7 @@
 %%FP_LIBEXEC%%/launch-refreshes.sh
 %%FP_LIBEXEC%%/load_xml_into_db.pl
 %%FP_LIBEXEC%%/missing-port-categories.sh
+%%FP_LIBEXEC%%/most-active-users.sh
 %%FP_LIBEXEC%%/newusers.pl
 %%FP_LIBEXEC%%/newusers.sh
 %%FP_LIBEXEC%%/dump-package_imports.sh

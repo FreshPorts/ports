@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-scripts
-PORTVERSION=	2.2.1
+PORTVERSION=	2.2.3
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
