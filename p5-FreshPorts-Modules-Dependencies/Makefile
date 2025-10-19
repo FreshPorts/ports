@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	FreshPorts-Modules-Dependencies
-PORTVERSION=	1.1.19
+PORTVERSION=	1.1.20
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -30,6 +30,7 @@ RUN_DEPENDS+=	p5-Class-Observable>0:devel/p5-Class-Observable \
 		p5-IO-Socket-SSL>0:security/p5-IO-Socket-SSL \
 		p5-libwww>0:www/p5-libwww \
 		p5-List-MoreUtils>0:lang/p5-List-MoreUtils \
+		p5-Readonly>0:devel/p5-Readonly \
 		p5-Text-Unidecode>0:converters/p5-Text-Unidecode \
 		p5-TimeDate>0:devel/p5-TimeDate \
 		p5-Unix-Syslog>0:sysutils/p5-Unix-Syslog \
