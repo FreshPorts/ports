@@ -1,13 +1,6 @@
-# Created by: Dan Langille <dan@langille.org>
-#
-# Install the scripts needed by FreshPorts ingress
-#
-# Copyright (c) 2002-2025 Dan Langille
-#
-
 PORTNAME=	freshports-scripts
 PORTVERSION=	2.2.5
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-

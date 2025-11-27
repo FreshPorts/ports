@@ -2,15 +2,15 @@
 #
 
 # logfilename                                     [owner:group]         mode count size when   flags [/pid_file] [sig_num]
-%%FP_LOGDIR%%/freshports.log                %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%%   640  14    *    $D0    B
+%%FP_LOGDIR%%/freshports.log                %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%%   640  50    *    $D0    B
 # note the ingress user:
-%%FP_LOGDIR%%/git.log                       %%INGRESS_USER%%:%%LOGCHECK_GROUP%%      640  14    *    $D0    B
-%%FP_LOGDIR%%/jobs_waiting.log              %%FRESHPORTS_USER%%:%%FRESHPORTS_GROUP%% 664  14    *    $D0    B
-%%FP_LOGDIR%%/process_updating.log          %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%%   640  14    *    $D0    B
-%%FP_LOGDIR%%/vuxml.log                     %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%%   640  14    *    $D0    B
+%%FP_LOGDIR%%/git.log                       %%INGRESS_USER%%:%%LOGCHECK_GROUP%%      640  50    *    $D0    B
+%%FP_LOGDIR%%/jobs_waiting.log              %%FRESHPORTS_USER%%:%%FRESHPORTS_GROUP%% 664  50    *    $D0    B
+%%FP_LOGDIR%%/process_updating.log          %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%%   640  50    *    $D0    B
+%%FP_LOGDIR%%/vuxml.log                     %%FRESHPORTS_USER%%:%%LOGCHECK_GROUP%%   640  50    *    $D0    B
 
-%%FP_LOGDIR%%/report-*.daily.log            root:%%FRESHPORTS_GROUP%%       640  14    *    $D0    BG
-%%FP_LOGDIR%%/report-*.weekly.log           root:%%FRESHPORTS_GROUP%%       640  14    *    $W0    BG
-%%FP_LOGDIR%%/report-*.fortnightly.log      root:%%FRESHPORTS_GROUP%%       640  14    *    $M9D0  BG
-%%FP_LOGDIR%%/report-*.fortnightly.log      root:%%FRESHPORTS_GROUP%%       640  14    *    $M23D0 BG
-%%FP_LOGDIR%%/report-*.monthly.log          root:%%FRESHPORTS_GROUP%%       640  14    *    $M1D0  BG
+%%FP_LOGDIR%%/report-*.daily.log            root:%%FRESHPORTS_GROUP%%       640  50    *    $D0    BG
+%%FP_LOGDIR%%/report-*.weekly.log           root:%%FRESHPORTS_GROUP%%       640  50    *    $W0    BG
+%%FP_LOGDIR%%/report-*.fortnightly.log      root:%%FRESHPORTS_GROUP%%       640  50    *    $M9D0  BG
+%%FP_LOGDIR%%/report-*.fortnightly.log      root:%%FRESHPORTS_GROUP%%       640  50    *    $M23D0 BG
+%%FP_LOGDIR%%/report-*.monthly.log          root:%%FRESHPORTS_GROUP%%       640  50    *    $M1D0  BG

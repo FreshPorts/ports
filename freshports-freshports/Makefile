@@ -1,16 +1,6 @@
-# Created by: Dan Langille <dan@langille.org>
-# $FreeBSD$
-#
-# $Id: Makefile,v 1.4 2011-06-14 17:32:41 dan Exp $
-#
-# Install the ports needed by FreshPorts
-#
-# Copyright (c) 2002-2006 DVL Software Limited
-#
-
 PORTNAME=	freshports-freshports
 PORTVERSION=	2.0.15
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 
