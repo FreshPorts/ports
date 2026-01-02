@@ -14,6 +14,9 @@ MASTER_SITES=	# none
 DISTFILES=	# none
 EXTRACT_ONLY=	# none
 
+IGNORE=		Not installed anywhere. Delete after 2026-06-01
+EXPIRATION_DATE=	2026-06-01
+
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 
@@ -21,7 +24,7 @@ USES=		php:web
 # for bacula
 USE_PHP=	pgsql
 
-RUN_DEPENDS+=	mod_php81>0:www/mod_php81
+RUN_DEPENDS+=	mod_php81>0:www/mod_php83
 
 # used by /usr/local/etc/nrpe.d/atlas_probe.cfg which invokes /usr/local/libexec/nagios-custom/check_ripe_atlas
 RUN_DEPENDS+=	p5-LWP-Protocol-https>0:www/p5-LWP-Protocol-https
