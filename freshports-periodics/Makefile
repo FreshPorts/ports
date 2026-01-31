@@ -7,7 +7,7 @@
 
 PORTNAME=	freshports-periodics
 PORTVERSION=	1.1.1
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 
