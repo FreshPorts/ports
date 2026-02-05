@@ -1,6 +1,6 @@
 PORTNAME=	freshports-freshports
 PORTVERSION=	2.0.15
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 

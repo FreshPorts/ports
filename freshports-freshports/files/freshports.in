@@ -63,6 +63,8 @@ freshports_prestart()
 			install -d -o ${freshports_user} -g ${freshports_group} -m 0775 /var/db/${freshports_user}/message-queues/$dir
 		fi
 	done
+	
+	cd /var/db/${freshports_user}
 }
 
 command_args="-P ${pidfile} -t ${name} -T ${name} -l ${freshports_syslog_facility} ${freshports_command}"
