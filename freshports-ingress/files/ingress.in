@@ -60,6 +60,8 @@ ingress_prestart()
 			install -d -o ${ingress_user} -g ${ingress_group} -m 0775 /var/db/${ingress_user}/message-queues/$dir
 		fi
 	done
+
+	cd /var/db/${freshports_user}
 }
 
 command_args="-P ${pidfile} -t ${name} -T ${name} -l ${ingress_syslog_facility} ${ingress_command}"
