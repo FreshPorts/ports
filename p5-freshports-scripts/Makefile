@@ -1,5 +1,5 @@
 PORTNAME=	freshports-scripts
-PORTVERSION=	2.2.6
+PORTVERSION=	2.3.0.1
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -13,7 +13,7 @@ USES=		perl5 pgsql python shebangfix
 
 NO_BUILD=	YES
 
-SHEBANG_FILES=	process_vuxml_import_temp_file.py
+SHEBANG_FILES=	process_vuxml_import_temp_file.py index_pkgversions.py
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2 \
 		git-lite>0:devel/git@lite \
@@ -64,16 +64,19 @@ SUB_LIST+=	FP_LIBEXEC=${FP_LIBEXEC} \
 		INGRESS_USER=ingress \
 		LOGCHECK_GROUP=logcheck
 
-SUB_FILES=	freshports.conf.newsyslog.conf freshports.conf.syslog.conf
+SUB_FILES=	freshports-compare-daily-index.cron freshports.conf.newsyslog.conf freshports.conf.syslog.conf
 
 .include <bsd.port.pre.mk>
 
 do-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/cron.d
 	${RM} ${WRKSRC}/Makefile.PL
 	@${ECHO} "Installing in ${PREFIX}/${FP_LIBEXEC}"
 	${MKDIR} ${STAGEDIR}${PREFIX}/${FP_LIBEXEC}
 	${MKDIR} ${STAGEDIR}${FP_JAIL_PATH}
 	${MKDIR} ${STAGEDIR}${FP_JAIL_PATH}/etc
+
+	${INSTALL_DATA} ${WRKDIR}/freshports-compare-daily-index.cron ${STAGEDIR}${PREFIX}/etc/cron.d/freshports-compare-daily-index
 
 # install everything +x, because it's easier
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${PREFIX}/${FP_LIBEXEC})

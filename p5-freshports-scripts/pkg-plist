@@ -1,3 +1,5 @@
+etc/cron.d/freshports-compare-daily-index
+
 @sample(root,freshports,640) %%ETCDIR%%/config.sh.sample
 
 @sample etc/syslog.d/freshports.conf.sample
@@ -133,3 +135,11 @@
 
 @comment %%INGRESS_DATADIR%% is the ingress homedir created by USERS= ingress
 @comment @dir                %%INGRESS_DATADIR%%
+
+%%FP_LIBEXEC%%/index_pkgversions.py
+%%FP_LIBEXEC%%/compare-index.sh
+%%FP_LIBEXEC%%/compare-index-daily.sh
+%%FP_LIBEXEC%%/refresh-from-index.sh
+%%FP_LIBEXEC%%/refresh-listed-ports.pl
+%%FP_LIBEXEC%%/set-pkgversion-build-run-depends.pl
+%%FP_LIBEXEC%%/check_jail_osversion

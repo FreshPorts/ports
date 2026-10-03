@@ -1,0 +1,6 @@
+# Compare the database against the ports INDEX and refresh any port whose
+# version has drifted. Builds the INDEX at the commit FreshPorts last
+# processed, so both sides describe the same tree. Mails the result either way.
+
+#minute hour    mday    month   wday    who        command
+4       2       *       *       *       freshports %%PREFIX%%/libexec/freshports/compare-index-daily.sh

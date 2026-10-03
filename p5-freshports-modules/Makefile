@@ -2,11 +2,11 @@
 #
 # Install the  modules needed by FreshPorts ingress
 #
-# Copyright (c) 2002-2023 Dan Langille
+# Copyright (c) 2002-2026 Dan Langille
 #
 
 PORTNAME=	freshports-modules
-PORTVERSION=	2.2.1
+PORTVERSION=	2.3.0
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
