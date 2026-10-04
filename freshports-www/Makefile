@@ -1,9 +1,11 @@
 PORTNAME=	freshports
-DISTVERSION=	2.13.0
+DISTVERSION=	2.14.0
 PORTREVISION=	1
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www
+
+
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
@@ -18,7 +20,7 @@ NO_BUILD=	YES
 
 WANT_PGSQL=	client plperl
 
-USE_PHP=	ctype dom exif fileinfo filter gd gettext hash iconv json \
+USE_PHP=	ctype dom exif fileinfo filter gd gettext hash iconv intl json \
 		mbstring opcache pgsql phar posix session simplexml tokenizer \
 		xml xmlreader xmlwriter zip zlib
 
@@ -32,9 +34,16 @@ SUB_FILES=	freshports-www.conf.newsyslog freshports-www.conf.syslog \
 
 FP_LOGDIR=	/var/log/freshports
 
+
+
+
 SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR}
 
+
 SUB_LIST+=	LOGCHECK_GROUP=logcheck
+
+
+
 
 # having these configuration files in different directories.. perhaps they should be consolidated.
 # In the DISTFILE, these files will have a .sample extension. Leaving that suffix off here helps us create

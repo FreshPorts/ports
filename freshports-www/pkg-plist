@@ -144,6 +144,7 @@
 %%WWWDIR%%/include/getvalues.php
 %%WWWDIR%%/include/htmlify-test.php
 %%WWWDIR%%/include/htmlify.php
+%%WWWDIR%%/include/i18n.php
 %%WWWDIR%%/include/lib_autolink/LICENSE
 %%WWWDIR%%/include/lib_autolink/README.md
 %%WWWDIR%%/include/lib_autolink/composer.json
@@ -156,6 +157,10 @@
 %%WWWDIR%%/include/password-reset-via-token.php
 %%WWWDIR%%/include/spam-filter-information.php
 %%WWWDIR%%/include/watch-lists.php
+%%WWWDIR%%/locale/README.md
+%%WWWDIR%%/locale/freshports.pot
+%%WWWDIR%%/locale/tr_TR/LC_MESSAGES/freshports.po
+%%WWWDIR%%/locale/zh_CN/LC_MESSAGES/freshports.po
 %%WWWDIR%%/rewrite/functions.php
 %%WWWDIR%%/rewrite/missing-category.php
 %%WWWDIR%%/rewrite/missing-non-port.php
@@ -163,6 +168,8 @@
 %%WWWDIR%%/rewrite/missing.php
 %%WWWDIR%%/rewrite/new-url-parsing.php
 %%WWWDIR%%/scripts/cache-clear-all.sh
+%%WWWDIR%%/scripts/i18n-compile.sh
+%%WWWDIR%%/scripts/i18n-extract.sh
 %%WWWDIR%%/testing/math.php
 %%WWWDIR%%/testing/interate-all-ports-pkg_prefix_sort.php
 %%WWWDIR%%/vendor/autoload.php
@@ -443,6 +450,7 @@
 %%WWWDIR%%/www/javascript/graphs.js
 %%WWWDIR%%/www/javascript/jquery-3.6.0.min.js
 %%WWWDIR%%/www/javascript/jquery.flot.min.js
+%%WWWDIR%%/www/language.php
 %%WWWDIR%%/www/legal.php
 %%WWWDIR%%/www/login.php
 %%WWWDIR%%/www/logout.php
