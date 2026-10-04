@@ -3,4 +3,4 @@
 # processed, so both sides describe the same tree. Mails the result either way.
 
 #minute hour    mday    month   wday    who        command
-4       2       *       *       *       freshports %%PREFIX%%/libexec/freshports/compare-index-daily.sh
+4       2       *       *       *       freshports  /usr/bin/lockf -t 0 /tmp/.compare-index-daily %%PREFIX%%/libexec/freshports/compare-index-daily.sh

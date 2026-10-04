@@ -5,8 +5,6 @@ CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www
 
-
-
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 WWW=		https://github.com/FreshPorts/freshports
@@ -20,9 +18,9 @@ NO_BUILD=	YES
 
 WANT_PGSQL=	client plperl
 
-USE_PHP=	ctype dom exif fileinfo filter gd hash iconv json mbstring \
-		opcache pgsql phar posix session simplexml tokenizer xml \
-		xmlreader xmlwriter zip zlib
+USE_PHP=	ctype dom exif fileinfo filter gd gettext hash iconv json \
+		mbstring opcache pgsql phar posix session simplexml tokenizer \
+		xml xmlreader xmlwriter zip zlib
 
 USERS=		freshports www
 GROUPS=		${USERS}
@@ -34,16 +32,9 @@ SUB_FILES=	freshports-www.conf.newsyslog freshports-www.conf.syslog \
 
 FP_LOGDIR=	/var/log/freshports
 
-
-
-
 SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR}
 
-
 SUB_LIST+=	LOGCHECK_GROUP=logcheck
-
-
-
 
 # having these configuration files in different directories.. perhaps they should be consolidated.
 # In the DISTFILE, these files will have a .sample extension. Leaving that suffix off here helps us create
@@ -56,6 +47,7 @@ NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php \
 		rss0.91.php rss1.0.php rss2.0.php
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=1.0.2:freshports/py-freshports-fp-listen@${PY_FLAVOR} \
+		gettext-tools>0:devel/gettext-tools \
 		libucl>0:textproc/libucl \
 		nginx:www/nginx \
 		php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2 \
