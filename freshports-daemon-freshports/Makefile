@@ -11,7 +11,7 @@ WWW=		https://github.com/FreshPorts/
 # ingress.sh invokes perl on a script installed by freshports-scripts
 USES=		perl5
 
-RUN_DEPENDS+=	p5-freshports-scripts>=2.0.0:freshports/p5-freshports-scripts
+RUN_DEPENDS+=	p5-freshports-ingress-scripts>=2.0.0:freshports/p5-freshports-ingress-scripts
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	FreshPorts

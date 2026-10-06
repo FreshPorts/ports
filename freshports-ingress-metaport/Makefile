@@ -23,8 +23,8 @@ NO_INSTALL=	YES
 USES=		python
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}packages-import>=0.1.17:freshports/py-packages-import \
-		freshports-freshports>=2.0.0:freshports/freshports-freshports \
-		freshports-ingress>=2.0.4:freshports/freshports-ingress \
+		freshports-daemon-freshports>=2.0.0:freshports/freshports-daemon-freshports \
+		freshports-daemon-ingress>=2.0.4:freshports/freshports-daemon-ingress \
 		freshports-periodics>=1.0.24:freshports/freshports-periodics
 
 .include <bsd.port.mk>
