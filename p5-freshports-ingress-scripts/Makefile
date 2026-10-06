@@ -1,4 +1,4 @@
-PORTNAME=	freshports-scripts
+PORTNAME=	freshports-ingress-scripts
 PORTVERSION=	2.3.0.1
 PORTREVISION=	0
 CATEGORIES=	freshports
@@ -7,20 +7,24 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
-WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/ingress/scripts/branches/git/
+WWW=		https://github.com/FreshPorts/ingress-scripts
 
 USES=		perl5 pgsql python shebangfix
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	FreshPorts
+GH_PROJECT=	ingress-scripts
+
 NO_BUILD=	YES
 
-SHEBANG_FILES=	process_vuxml_import_temp_file.py index_pkgversions.py
+SHEBANG_FILES=	index_pkgversions.py process_vuxml_import_temp_file.py
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2 \
 		git-lite>0:devel/git@lite \
 		logcheck>0:security/logcheck \
 		p5-DBD-Pg>0:databases/p5-DBD-Pg \
 		p5-File-Temp>0:devel/p5-File-Temp \
-		p5-freshports-modules>=2.0.0:freshports/p5-freshports-modules \
+		p5-freshports-ingress-modules>=2.0.0:freshports/p5-freshports-ingress-modules \
 		p5-IO-String>0:devel/p5-IO-String \
 		p5-Text-Wrapper>0:textproc/p5-Text-Wrapper \
 		p5-XML-DOM-XPath>=0:textproc/p5-XML-DOM-XPath \
@@ -64,7 +68,8 @@ SUB_LIST+=	FP_LIBEXEC=${FP_LIBEXEC} \
 		INGRESS_USER=ingress \
 		LOGCHECK_GROUP=logcheck
 
-SUB_FILES=	freshports-compare-daily-index.cron freshports.conf.newsyslog.conf freshports.conf.syslog.conf
+SUB_FILES=	freshports-compare-daily-index.cron \
+		freshports.conf.newsyslog.conf freshports.conf.syslog.conf
 
 .include <bsd.port.pre.mk>
 

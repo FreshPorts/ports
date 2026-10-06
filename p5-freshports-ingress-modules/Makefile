@@ -5,7 +5,7 @@
 # Copyright (c) 2002-2026 Dan Langille
 #
 
-PORTNAME=	freshports-modules
+PORTNAME=	freshports-ingress-modules
 PORTVERSION=	2.3.0
 PORTREVISION=	0
 CATEGORIES=	freshports
@@ -14,9 +14,13 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
-WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/ingress/modules/branches/git/
+WWW=		
 
 NO_BUILD=	YES
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	FreshPorts
+GH_PROJECT=	ingress-modules
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2
 

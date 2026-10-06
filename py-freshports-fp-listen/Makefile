@@ -15,15 +15,20 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
-WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/daemontools/branches/git/fp-listen/
+WWW=		https://github.com/FreshPorts/fp-listen/
 
 NO_BUILD=	YES
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}configparser>0:devel/py-configparser@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2@${PY_FLAVOR}
 
-WANT_PGSQL=	client
 USES=		python
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	FreshPorts
+GH_PROJECT=	fp-listen
+
+WANT_PGSQL=	client
 USE_PYTHON=	distutils
 
 USERS=		freshports

@@ -128,7 +128,7 @@ etc/cron.d/freshports-compare-daily-index
 @dir %%FP_JAIL_PATH%%/etc
 @dir %%FP_JAIL_PATH%%
 @dir %%FP_JAILS_DIR%%
-@dir %%FP_LIBEXEC%%/Jail/files/usr
+@comment %%FP_LIBEXEC%%/Jail/files/usr
 
 @dir etc/syslog.d
 @dir etc/newsyslog.conf.d

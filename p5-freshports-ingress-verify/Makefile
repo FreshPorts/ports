@@ -5,7 +5,7 @@
 # Copyright (c) 2002-2021 DVL Software Limited
 #
 
-PORTNAME=	freshports-verify
+PORTNAME=	freshports-ingress-verify
 PORTVERSION=	2.2.0
 PORTREVISION=	0
 CATEGORIES=	freshports
@@ -18,10 +18,14 @@ WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/ingress/Verify/trun
 
 USES=		perl5
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	FreshPorts
+GH_PROJECT=	ingress-verify
+
 NO_BUILD=	YES
 
-RUN_DEPENDS+=	p5-freshports-modules>0:freshports/p5-freshports-modules \
-		p5-freshports-scripts>0:freshports/p5-freshports-scripts
+RUN_DEPENDS+=	p5-freshports-ingress-modules>0:freshports/p5-freshports-ingress-modules \
+		p5-freshports-ingress-scripts>0:freshports/p5-freshports-ingress-scripts
 
 .include <bsd.port.pre.mk>
 

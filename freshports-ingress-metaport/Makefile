@@ -15,6 +15,7 @@ DISTFILES=	# none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		https://github.com/FreshPorts/
 
 NO_BUILD=	YES
 NO_INSTALL=	YES

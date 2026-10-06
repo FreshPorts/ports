@@ -9,7 +9,7 @@ EXTRACT_ONLY=	# none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
-WWW=		# none, installs dependencies for development nodes
+WWW=		https://github.com/FreshPorts/
 
 USES=		perl5 php python
 

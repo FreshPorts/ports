@@ -19,7 +19,7 @@ EXTRACT_ONLY=	# none
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
-WWW=		https://svn.int.unixathome.org/viewvc.cgi/websites/ports/py-freshports-git-proc-commit-dependencies/
+WWW=		https://github.com/FreshPorts/git_proc_commit
 
 USES=		python
 

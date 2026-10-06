@@ -17,6 +17,7 @@ PKGNAMESUFFIX=	-www
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
+WWW=		https://github.com/FreshPorts/
 
 RUN_DEPENDS=	freshports-www>0:freshports/freshports-www \
 		nginx>0:www/nginx

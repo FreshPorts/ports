@@ -159,6 +159,7 @@
 %%WWWDIR%%/include/watch-lists.php
 %%WWWDIR%%/locale/README.md
 %%WWWDIR%%/locale/freshports.pot
+%%WWWDIR%%/locale/pt_BR/LC_MESSAGES/freshports.po
 %%WWWDIR%%/locale/tr_TR/LC_MESSAGES/freshports.po
 %%WWWDIR%%/locale/zh_CN/LC_MESSAGES/freshports.po
 %%WWWDIR%%/rewrite/functions.php
@@ -510,7 +511,7 @@
 %%WWWDIR%%/www/watch.php
 %%WWWDIR%%/www/welcome.php
 
-@dir etc/newsyslog.conf.d
+
 @dir etc/nginx/includes
 @dir etc/syslog.d
 @dir /var/log/freshports
