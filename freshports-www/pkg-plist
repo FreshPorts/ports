@@ -137,6 +137,7 @@
 %%WWWDIR%%/include/constants.php
 %%WWWDIR%%/include/databaselogin.php
 %%WWWDIR%%/include/design-voting/voting.php
+%%WWWDIR%%/include/fontsize.php
 %%WWWDIR%%/include/freshports.php
 %%WWWDIR%%/include/freshports_page.php
 %%WWWDIR%%/include/freshports_page_expiration_ports.php
@@ -155,10 +156,13 @@
 %%WWWDIR%%/include/login.php
 %%WWWDIR%%/include/new-user.php
 %%WWWDIR%%/include/password-reset-via-token.php
+%%WWWDIR%%/include/redirect-back.php
+%%WWWDIR%%/include/search-gate.php
 %%WWWDIR%%/include/spam-filter-information.php
 %%WWWDIR%%/include/watch-lists.php
 %%WWWDIR%%/locale/README.md
 %%WWWDIR%%/locale/freshports.pot
+%%WWWDIR%%/locale/de_DE/LC_MESSAGES/freshports.po
 %%WWWDIR%%/locale/pt_BR/LC_MESSAGES/freshports.po
 %%WWWDIR%%/locale/tr_TR/LC_MESSAGES/freshports.po
 %%WWWDIR%%/locale/zh_CN/LC_MESSAGES/freshports.po
@@ -306,6 +310,7 @@
 %%WWWDIR%%/www/favicon.ico
 %%WWWDIR%%/www/filter-setup.php
 %%WWWDIR%%/www/filter.php
+%%WWWDIR%%/www/fontsize.php
 %%WWWDIR%%/www/forgotten-password.php
 %%WWWDIR%%/www/fp2-announcement.php
 %%WWWDIR%%/www/fraud/first-email.php
@@ -500,6 +505,7 @@
 %%WWWDIR%%/www/report-subscriptions.php
 %%WWWDIR%%/www/sanity_test_failures.php
 %%WWWDIR%%/www/search.php
+%%WWWDIR%%/www/search-gate.php
 %%WWWDIR%%/www/security-policy.php
 %%WWWDIR%%/www/survey/index.html
 %%WWWDIR%%/www/test-lists.php
