@@ -16,6 +16,7 @@
 
 %%WWWDIR%%/LICENSE
 %%WWWDIR%%/README.md
+%%WWWDIR%%/VERSION
 %%WWWDIR%%/classes/abi.php
 %%WWWDIR%%/classes/announcements.php
 %%WWWDIR%%/classes/badges.php
@@ -399,6 +400,7 @@
 %%WWWDIR%%/www/images/gitlab.svg
 %%WWWDIR%%/www/images/go.gif
 %%WWWDIR%%/www/images/home.svg
+%%WWWDIR%%/www/images/ipv6.svg
 %%WWWDIR%%/www/images/ignored.png
 %%WWWDIR%%/www/images/index.html
 %%WWWDIR%%/www/images/logs.gif

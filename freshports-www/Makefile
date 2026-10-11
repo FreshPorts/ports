@@ -1,5 +1,5 @@
 PORTNAME=	freshports
-DISTVERSION=	2.16.0
+DISTVERSION=	2.16.1
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -75,6 +75,9 @@ do-install:
 
 # install everything +x, because it's easier
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${WWWDIR})
+
+# shown in the page source by freshports_PackageVersionComment()
+	${ECHO_CMD} ${PKGVERSION} > ${STAGEDIR}${WWWDIR}/VERSION
 
 # move configuration files to the right place
 	${MKDIR} ${STAGEDIR}${ETCDIR}
