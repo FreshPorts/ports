@@ -32,7 +32,6 @@ etc/cron.d/freshports-compare-daily-index
 %%FP_LIBEXEC%%/Jail/upgrade-jail-via-replace.sh
 @mode 444
 %%FP_LIBEXEC%%/README.md
-%%FP_LIBEXEC%%/README.txt
 @mode
 %%FP_LIBEXEC%%/add-new-abi.sh
 %%FP_LIBEXEC%%/announce.pl
