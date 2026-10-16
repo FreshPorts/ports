@@ -160,6 +160,7 @@
 %%WWWDIR%%/include/redirect-back.php
 %%WWWDIR%%/include/search-gate.php
 %%WWWDIR%%/include/spam-filter-information.php
+%%WWWDIR%%/include/system-status-page.php
 %%WWWDIR%%/include/watch-lists.php
 %%WWWDIR%%/locale/README.md
 %%WWWDIR%%/locale/freshports.pot
@@ -168,7 +169,6 @@
 %%WWWDIR%%/locale/pt_BR/LC_MESSAGES/freshports.po
 %%WWWDIR%%/locale/tr_TR/LC_MESSAGES/freshports.po
 %%WWWDIR%%/locale/zh_CN/LC_MESSAGES/freshports.po
-%%WWWDIR%%/rewrite/functions.php
 %%WWWDIR%%/rewrite/missing-category.php
 %%WWWDIR%%/rewrite/missing-non-port.php
 %%WWWDIR%%/rewrite/missing-port.php
