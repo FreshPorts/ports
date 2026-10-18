@@ -108,6 +108,7 @@ etc/cron.d/freshports-compare-daily-index
 %%FP_LIBEXEC%%/test_port_save.pl
 %%FP_LIBEXEC%%/test_split.pl
 %%FP_LIBEXEC%%/unrefreshed.pl
+%%FP_LIBEXEC%%/watchers_also_watched_rebuild.pl
 %%FP_LIBEXEC%%/vuln_latest.pl
 
 %%FP_JAIL_PATH%%/cat-descr.sh

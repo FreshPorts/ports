@@ -173,7 +173,7 @@
 %%WWWDIR%%/rewrite/missing-non-port.php
 %%WWWDIR%%/rewrite/missing-port.php
 %%WWWDIR%%/rewrite/missing.php
-%%WWWDIR%%/rewrite/new-url-parsing.php
+%%WWWDIR%%/rewrite/url-parser.php
 %%WWWDIR%%/scripts/cache-clear-all.sh
 %%WWWDIR%%/scripts/i18n-compile.sh
 %%WWWDIR%%/scripts/i18n-extract.sh
@@ -229,10 +229,10 @@
 %%WWWDIR%%/www/.well-known/index.html
 %%WWWDIR%%/www/.well-known/security.txt
 %%WWWDIR%%/www/.well-known/security.txt.sig
-%%WWWDIR%%/www/--/index.php
 %%WWWDIR%%/www/--/forums-gone.php
+%%WWWDIR%%/www/--/index.html
 %%WWWDIR%%/www/--/package-imports.php
-%%WWWDIR%%/www/--/new-url-parsing.php
+%%WWWDIR%%/www/--/url-parser.php
 %%WWWDIR%%/www/DesignContestVoting/A/bacula.html
 %%WWWDIR%%/www/DesignContestVoting/A/categories.html
 %%WWWDIR%%/www/DesignContestVoting/A/index.html
