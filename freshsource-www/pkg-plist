@@ -17,16 +17,20 @@
 %%WWWDIR%%/include/constants.local.php
 %%WWWDIR%%/include/constants.php
 %%WWWDIR%%/include/databaselogin.php
+%%WWWDIR%%/include/fontsize.php
 %%WWWDIR%%/include/footer.php
 %%WWWDIR%%/include/freshports.php
 %%WWWDIR%%/include/getvalues.php
 %%WWWDIR%%/include/htmlify.php
+%%WWWDIR%%/include/i18n.php
 %%WWWDIR%%/include/lib_autolink
 %%WWWDIR%%/include/login.php
 %%WWWDIR%%/include/new-user.php
 %%WWWDIR%%/include/password-reset-via-token.php
+%%WWWDIR%%/include/redirect-back.php
 %%WWWDIR%%/include/side-bars.php
 %%WWWDIR%%/include/spam-filter-information.php
+%%WWWDIR%%/locale
 %%WWWDIR%%/vendor
 %%WWWDIR%%/www/about.php
 %%WWWDIR%%/www/ads/bch_banner_dedicated2.sky.gif
@@ -38,6 +42,7 @@
 %%WWWDIR%%/www/confirmation.php
 %%WWWDIR%%/www/customize.php
 %%WWWDIR%%/www/favicon.ico
+%%WWWDIR%%/www/fontsize.php
 %%WWWDIR%%/www/forgotten-password.php
 %%WWWDIR%%/www/images/annotate.png
 %%WWWDIR%%/www/images/apache_pb.gif
@@ -82,6 +87,7 @@
 %%WWWDIR%%/www/css
 %%WWWDIR%%/www/index.php
 %%WWWDIR%%/www/javascript
+%%WWWDIR%%/www/language.php
 %%WWWDIR%%/www/legal.php
 %%WWWDIR%%/www/login.php
 %%WWWDIR%%/www/logout.php

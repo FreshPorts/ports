@@ -9,7 +9,8 @@
 #
 
 PORTNAME=	freshsource
-PORTVERSION=	2.3.12
+DISTVERSIONPREFIX=	freshsource-
+DISTVERSION=	2.3.13
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -17,7 +18,7 @@ PKGNAMESUFFIX=	-www
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
-WWW=		https://github.com/FreshPorts/
+WWW=		https://github.com/FreshPorts/freshsource
 
 RUN_DEPENDS=	freshports-www>0:freshports/freshports-www \
 		nginx>0:www/nginx
@@ -26,6 +27,9 @@ NO_BUILD=	YES
 
 WANT_PGSQL=	client
 USES=		perl5 php
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	FreshPorts
 
 SUB_FILES=	freshsource-www.conf.newsyslog.conf
 
@@ -46,6 +50,9 @@ do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/nginx/includes
 	${MKDIR} ${STAGEDIR}${ETCDIR}
+
+# we don't need this in here.
+	${RM} ${WRKSRC}/README.md
 
 # install everything +x, because it's easier
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${WWWDIR})
@@ -80,13 +87,21 @@ do-install:
 	${LN} -sf ${FP_WWWDIR}/www/images/captcha ${STAGEDIR}${WWWDIR}/www/images
 	${LN} -sf ${FP_WWWDIR}/www/css            ${STAGEDIR}${WWWDIR}/www
 	${LN} -sf ${FP_WWWDIR}/www/javascript     ${STAGEDIR}${WWWDIR}/www
+	${LN} -sf ${FP_WWWDIR}/www/fontsize.php   ${STAGEDIR}${WWWDIR}/www
+	${LN} -sf ${FP_WWWDIR}/www/language.php   ${STAGEDIR}${WWWDIR}/www
 
 	${LN} -sf ${FP_WWWDIR}/include/constants.local.php          ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/constants.php                ${STAGEDIR}${WWWDIR}/include
+	${LN} -sf ${FP_WWWDIR}/include/fontsize.php                 ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/htmlify.php                  ${STAGEDIR}${WWWDIR}/include
+	${LN} -sf ${FP_WWWDIR}/include/i18n.php                     ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/lib_autolink                 ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/new-user.php                 ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/password-reset-via-token.php ${STAGEDIR}${WWWDIR}/include
+	${LN} -sf ${FP_WWWDIR}/include/redirect-back.php            ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/spam-filter-information.php  ${STAGEDIR}${WWWDIR}/include
+
+# translations, read by include/i18n.php from ../locale
+	${LN} -sf ${FP_WWWDIR}/locale ${STAGEDIR}${WWWDIR}
 
 .include <bsd.port.post.mk>
