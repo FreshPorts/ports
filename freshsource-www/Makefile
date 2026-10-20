@@ -9,8 +9,7 @@
 #
 
 PORTNAME=	freshsource
-DISTVERSIONPREFIX=	freshsource-
-DISTVERSION=	2.3.13
+DISTVERSION=	2.3.14
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -23,11 +22,11 @@ WWW=		https://github.com/FreshPorts/freshsource
 RUN_DEPENDS=	freshports-www>0:freshports/freshports-www \
 		nginx>0:www/nginx
 
+USES=		perl5 php
+
 NO_BUILD=	YES
 
 WANT_PGSQL=	client
-USES=		perl5 php
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	FreshPorts
 
