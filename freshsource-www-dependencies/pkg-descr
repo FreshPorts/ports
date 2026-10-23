@@ -1,0 +1,2 @@
+Symlinks needed by a FreshSource dev instance, where the website
+itself is a git checkout in /usr/local/www/freshsource.

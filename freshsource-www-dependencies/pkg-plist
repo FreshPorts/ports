@@ -1,0 +1,16 @@
+%%WWWDIR%%/classes
+%%WWWDIR%%/configuration/database.php
+%%WWWDIR%%/configuration/freshports.conf.php
+%%WWWDIR%%/include/constants.local.php
+%%WWWDIR%%/include/constants.php
+%%WWWDIR%%/include/fontsize.php
+%%WWWDIR%%/include/htmlify.php
+%%WWWDIR%%/include/i18n.php
+%%WWWDIR%%/include/lib_autolink
+%%WWWDIR%%/include/new-user.php
+%%WWWDIR%%/include/password-reset-via-token.php
+%%WWWDIR%%/include/spam-filter-information.php
+%%WWWDIR%%/vendor
+%%WWWDIR%%/www/css
+%%WWWDIR%%/www/images/captcha
+%%WWWDIR%%/www/javascript
