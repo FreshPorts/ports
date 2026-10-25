@@ -50,13 +50,11 @@ etc/cron.d/freshports-compare-daily-index
 %%FP_LIBEXEC%%/daily_stats.pl
 %%FP_LIBEXEC%%/delete-depcreated-abi.sh
 %%FP_LIBEXEC%%/fetch-cvs-file.sh
-%%FP_LIBEXEC%%/fetch-refresh-ports.pl
 %%FP_LIBEXEC%%/fetch-svn-file.sh
 %%FP_LIBEXEC%%/get-list-of-current-categories.sh
 %%FP_LIBEXEC%%/git-checkout.sh
 %%FP_LIBEXEC%%/hourly_stats.pl
 %%FP_LIBEXEC%%/job-waiting.pl
-%%FP_LIBEXEC%%/launch-refreshes.sh
 %%FP_LIBEXEC%%/load_xml_into_db.pl
 %%FP_LIBEXEC%%/missing-port-categories.sh
 %%FP_LIBEXEC%%/most-active-users.sh
@@ -80,9 +78,6 @@ etc/cron.d/freshports-compare-daily-index
 %%FP_LIBEXEC%%/refresh-abi.sh
 %%FP_LIBEXEC%%/refresh-each-port.pl
 %%FP_LIBEXEC%%/refresh-each-port-of-commit.pl
-%%FP_LIBEXEC%%/refresh-one-port.pl
-%%FP_LIBEXEC%%/refresh-ports.pl
-%%FP_LIBEXEC%%/refresh-ports.sh
 %%FP_LIBEXEC%%/report-new-ports.pl
 %%FP_LIBEXEC%%/report-notification.pl
 %%FP_LIBEXEC%%/report-notification-packages.pl
