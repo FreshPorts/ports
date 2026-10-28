@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	helper_scripts
-DISTVERSION=	0.0.6
+DISTVERSION=	0.0.7
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	https://git.langille.org/FreshPorts/helper_scripts/archive/${DISTVERSION}${EXTRACT_SUFX}?dummy=/

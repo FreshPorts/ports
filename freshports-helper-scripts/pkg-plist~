@@ -1,0 +1,14 @@
+%%LIBEXECDIR%%/check_for_git_commits.sh
+%%LIBEXECDIR%%/commit-raw-find-by-message-id.sh
+%%LIBEXECDIR%%/commit-raw-find-by-revision.sh
+%%LIBEXECDIR%%/commit-raw-find.sh
+%%LIBEXECDIR%%/commit-raw-reinject-raw-file.sh
+%%LIBEXECDIR%%/commit-raw-reinject.sh
+%%LIBEXECDIR%%/create-symlinks-amongst-dev-source-directories
+%%LIBEXECDIR%%/git-range-of-commits.sh
+%%LIBEXECDIR%%/git-single-commit.sh
+%%LIBEXECDIR%%/inject-retry-raw.sh
+%%LIBEXECDIR%%/inject-recent-errors.sh
+%%LIBEXECDIR%%/inject-recent-list-of-commits.sh
+%%LIBEXECDIR%%/set_hourly_flags.sh
+@sample %%LIBEXECDIR%%/website-clear-all-cache.sample

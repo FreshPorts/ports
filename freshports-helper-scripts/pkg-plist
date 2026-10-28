@@ -11,4 +11,6 @@
 %%LIBEXECDIR%%/inject-recent-errors.sh
 %%LIBEXECDIR%%/inject-recent-list-of-commits.sh
 %%LIBEXECDIR%%/set_hourly_flags.sh
+libexec/freshports/helper_scripts/git-snapshots-for-backup.sh
+libexec/freshports/helper_scripts/svn-snapshots-for-backup.sh
 @sample %%LIBEXECDIR%%/website-clear-all-cache.sample
