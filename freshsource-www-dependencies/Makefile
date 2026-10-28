@@ -1,6 +1,6 @@
 PORTNAME=	freshsource
 PORTVERSION=	1.0.0
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www-dependencies
@@ -20,6 +20,15 @@ CONFLICTS_INSTALL=	freshsource-www
 NO_BUILD=	YES
 NO_ARCH=	YES
 
+# icons linked from the <head> emitted by FreshPorts include/freshports.php
+# and from www/manifest.json; FreshSource has none of its own
+ICON_FILES=	android-icon-144x144.png android-icon-192x192.png \
+		android-icon-36x36.png android-icon-48x48.png \
+		android-icon-72x72.png android-icon-96x96.png \
+		favicon-16x16.png favicon-32x32.png favicon-96x96.png \
+		ms-icon-144x144.png ms-icon-150x150.png \
+		ms-icon-310x310.png ms-icon-70x70.png
+
 FP_WWWDIR=	${PREFIX}/www/freshports
 
 do-install:
@@ -35,6 +44,9 @@ do-install:
 	${LN} -sf ${FP_WWWDIR}/configuration/freshports.conf.php ${STAGEDIR}${WWWDIR}/configuration
 
 	${LN} -sf ${FP_WWWDIR}/www/images/captcha ${STAGEDIR}${WWWDIR}/www/images
+.for _icon in ${ICON_FILES}
+	${LN} -sf ${FP_WWWDIR}/www/images/${_icon} ${STAGEDIR}${WWWDIR}/www/images
+.endfor
 	${LN} -sf ${FP_WWWDIR}/www/css            ${STAGEDIR}${WWWDIR}/www
 	${LN} -sf ${FP_WWWDIR}/www/javascript     ${STAGEDIR}${WWWDIR}/www
 
