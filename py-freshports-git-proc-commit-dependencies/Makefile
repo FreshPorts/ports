@@ -10,10 +10,11 @@
 
 PORTNAME=	freshports-git-proc-commit
 PORTVERSION=	0.0.4
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	-dependencies
 DISTFILES=	# none
 EXTRACT_ONLY=	# none
 
@@ -27,7 +28,7 @@ NO_BUILD=	YES
 NO_INSTALL=	YES
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pygit2>=1.15.0:devel/py-pygit2@${PY_FLAVOR} \
 		git-lite>0:devel/git@lite
 
 .include <bsd.port.mk>
