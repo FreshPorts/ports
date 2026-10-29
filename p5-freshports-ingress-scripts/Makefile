@@ -1,5 +1,5 @@
 PORTNAME=	freshports-ingress-scripts
-PORTVERSION=	2.3.4
+PORTVERSION=	2.3.5
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -15,6 +15,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	FreshPorts
 GH_PROJECT=	ingress-scripts
 
+CONFLICTS_INSTALL=	freshports-helper_scripts
+
 NO_BUILD=	YES
 
 SHEBANG_FILES=	index_pkgversions.py process_vuxml_import_temp_file.py
@@ -24,7 +26,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pygit2>0:devel/py-pygit2 \
 		logcheck>0:security/logcheck \
 		p5-DBD-Pg>0:databases/p5-DBD-Pg \
 		p5-File-Temp>0:devel/p5-File-Temp \
-		p5-freshports-ingress-modules>=2.0.0:freshports/p5-freshports-ingress-modules \
+		p5-freshports-ingress-modules>=2.3.4:freshports/p5-freshports-ingress-modules \
 		p5-IO-String>0:devel/p5-IO-String \
 		p5-Text-Wrapper>0:textproc/p5-Text-Wrapper \
 		p5-XML-DOM-XPath>=0:textproc/p5-XML-DOM-XPath \

@@ -1,6 +1,6 @@
 PORTNAME=	freshports-daemon-ingress
 DISTVERSION=	2.0.4
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 
@@ -16,8 +16,7 @@ GH_ACCOUNT=	FreshPorts
 GH_PROJECT=	daemon-ingress
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-git-proc-commit>0:freshports/py-freshports-git-proc-commit \
-		freshports-helper_scripts>=0.0.1:freshports/freshports-helper-scripts \
-		p5-freshports-ingress-scripts>=2.0.0:freshports/p5-freshports-ingress-scripts
+		p5-freshports-ingress-scripts>=2.3.5:freshports/p5-freshports-ingress-scripts
 
 NO_BUILD=	YES
 
