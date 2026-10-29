@@ -2,7 +2,7 @@
 #
 # Install the perl scripts used to run one-off task.
 #
-# Copyright (c) 2002-2021 DVL Software Limited
+# Copyright (c) 2002-2026 Dan Langille
 #
 
 PORTNAME=	freshports-ingress-verify

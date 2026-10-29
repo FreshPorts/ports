@@ -3,7 +3,7 @@
 #
 # Install the ports needed by FreshPorts in an ingress site
 #
-# Copyright (c) 2002-2020 Dan Langille
+# Copyright (c) 2002-2026 Dan Langille
 #
 
 PORTNAME=	freshports-ingress-metaport

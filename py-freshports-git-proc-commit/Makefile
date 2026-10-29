@@ -2,7 +2,7 @@
 #
 # Install the scripts needed by FreshPorts ingress - for git processing
 #
-# Copyright (c) 2002-2023 Dan Langille
+# Copyright (c) 2002-2026 Dan Langille
 #
 
 PORTNAME=	freshports-git-proc-commit

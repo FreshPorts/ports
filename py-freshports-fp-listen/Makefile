@@ -3,7 +3,7 @@
 # fp-listen listens for PostgreSQL NOTIFY events
 # and clears cache.
 #
-# Copyright (c) 2002-2021 Dan Langille
+# Copyright (c) 2002-2026 Dan Langille
 #
 
 PORTNAME=	freshports-fp-listen

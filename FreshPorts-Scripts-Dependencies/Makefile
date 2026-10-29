@@ -2,7 +2,7 @@
 #
 # Install the ports needed by FreshPorts
 #
-# Copyright (c) 2002-2006 DVL Software Limited
+# Copyright (c) 2002-2026 Dan Langille
 #
 
 PORTNAME=	FreshPorts-Scripts-Dependencies

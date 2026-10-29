@@ -4,7 +4,7 @@
 #
 # Install the scripts needed by FreshPorts ingress for handling packages
 #
-# Copyright (c) 2002-2006 DVL Software Limited
+# Copyright (c) 2002-2026 Dan Langille
 #
 
 PORTNAME=	packages-import
