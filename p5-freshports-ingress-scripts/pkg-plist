@@ -76,7 +76,6 @@ etc/cron.d/freshports-compare-daily-index
 %%FP_LIBEXEC%%/page-loads-last-five-minutes.pl
 %%FP_LIBEXEC%%/ports_categories-populate.pl
 %%FP_LIBEXEC%%/ports_tree_file_count.pl
-%%FP_LIBEXEC%%/process_default_versions.pl
 %%FP_LIBEXEC%%/process_mail.pl
 %%FP_LIBEXEC%%/process_moved.pl
 %%FP_LIBEXEC%%/process_moved.sh
