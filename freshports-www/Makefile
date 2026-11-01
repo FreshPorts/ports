@@ -1,5 +1,5 @@
 PORTNAME=	freshports
-DISTVERSION=	2.16.20
+DISTVERSION=	2.16.21
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -61,6 +61,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=1.0.2:freshports/py-f
 		nginx:www/nginx \
 		php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2 \
 		php${PHP_VER}-pear-Pager>0:devel/pear-Pager \
+		${PHP_PKGNAMEPREFIX}laminas-feed>=2.26:www/php-laminas-feed@${PHP_FLAVOR} \
 		phpmailer6>0:mail/phpmailer6 \
 		UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 

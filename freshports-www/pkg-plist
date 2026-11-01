@@ -45,6 +45,7 @@
 %%WWWDIR%%/classes/commits_my_flagged.php
 %%WWWDIR%%/classes/display_commit.php
 %%WWWDIR%%/classes/element_record.php
+%%WWWDIR%%/classes/feed.php
 %%WWWDIR%%/classes/files-display.php
 %%WWWDIR%%/classes/files.php
 %%WWWDIR%%/classes/latest_commits.php
@@ -234,6 +235,9 @@
 %%WWWDIR%%/www/--/index.html
 %%WWWDIR%%/www/--/package-imports.php
 %%WWWDIR%%/www/--/url-parser.php
+%%WWWDIR%%/www/--/feeds/commits.php
+%%WWWDIR%%/www/--/feeds/index.php
+%%WWWDIR%%/www/--/feeds/watch-list.php
 %%WWWDIR%%/www/DesignContestVoting/A/bacula.html
 %%WWWDIR%%/www/DesignContestVoting/A/categories.html
 %%WWWDIR%%/www/DesignContestVoting/A/index.html
