@@ -1,11 +1,9 @@
 PORTNAME=	freshports
-DISTVERSION=	2.16.21
+DISTVERSION=	2.16.22
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www
-
-
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
@@ -34,16 +32,9 @@ SUB_FILES=	freshports-www.conf.newsyslog freshports-www.conf.syslog \
 
 FP_LOGDIR=	/var/log/freshports
 
-
-
-
 SUB_LIST+=	FP_LOGDIR=${FP_LOGDIR}
 
-
 SUB_LIST+=	LOGCHECK_GROUP=logcheck
-
-
-
 
 # having these configuration files in different directories.. perhaps they should be consolidated.
 # In the DISTFILE, these files will have a .sample extension. Leaving that suffix off here helps us create
@@ -55,13 +46,14 @@ INC_FILES=	common.php constants.local.php
 NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php \
 		rss0.91.php rss1.0.php rss2.0.php
 
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=1.0.2:freshports/py-freshports-fp-listen@${PY_FLAVOR} \
+RUN_DEPENDS+=	${PHP_PKGNAMEPREFIX}laminas-feed>=2.26:www/php-laminas-feed@${PHP_FLAVOR} \
+		${PHP_PKGNAMEPREFIX}url-highlight>=4.0.1:www/php-url-highlight@${PHP_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=1.0.2:freshports/py-freshports-fp-listen@${PY_FLAVOR} \
 		gettext-tools>0:devel/gettext-tools \
 		libucl>0:textproc/libucl \
 		nginx:www/nginx \
 		php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2 \
 		php${PHP_VER}-pear-Pager>0:devel/pear-Pager \
-		${PHP_PKGNAMEPREFIX}laminas-feed>=2.26:www/php-laminas-feed@${PHP_FLAVOR} \
 		phpmailer6>0:mail/phpmailer6 \
 		UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
 

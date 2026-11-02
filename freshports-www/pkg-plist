@@ -347,6 +347,7 @@
 %%WWWDIR%%/www/help.php
 %%WWWDIR%%/www/how-big-is-it.php
 %%WWWDIR%%/www/htmlify-test.php
+%%WWWDIR%%/www/htmlify-test-port.php
 %%WWWDIR%%/www/images/android-icon-144x144.png
 %%WWWDIR%%/www/images/android-icon-192x192.png
 %%WWWDIR%%/www/images/android-icon-36x36.png
