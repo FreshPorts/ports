@@ -1,0 +1,19 @@
+[
+{ type: [install, upgrade]
+  message: <<EOM
+The translations are installed as .po files only. The website offers a
+language once its compiled .mo file exists, so build them after every
+install or upgrade, then reload php-fpm, which caches .mo files:
+
+  # /usr/local/www/freshports/scripts/i18n-compile.sh
+  # service php_fpm reload
+
+i18n-compile.sh rebuilds only the .mo files whose translation changed, and
+removes the cached pages for those languages. If the cache is not in
+/var/db/freshports/cache, set FRESHPORTS_CACHE_DIRECTORY first.
+
+Until this is run, a new language is not offered, and a changed one still
+shows its old text.
+EOM
+}
+]
