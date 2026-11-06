@@ -40,6 +40,7 @@ etc/cron.d/freshports-compare-daily-index
 %%FP_LIBEXEC%%/archive-messages.sh
 %%FP_LIBEXEC%%/categories_rebuild_search_html.sh
 %%FP_LIBEXEC%%/categories_update_descriptions.pl
+%%FP_LIBEXEC%%/category_history_update.pl
 %%FP_LIBEXEC%%/check_report_logs.pl
 %%FP_LIBEXEC%%/checkaddress.pl
 %%FP_LIBEXEC%%/checkout-branch
