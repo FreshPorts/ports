@@ -1,5 +1,5 @@
 PORTNAME=	freshports-ingress-scripts
-PORTVERSION=	2.3.6
+PORTVERSION=	2.3.7
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
