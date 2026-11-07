@@ -302,6 +302,7 @@
 %%WWWDIR%%/www/bouncing.php
 %%WWWDIR%%/www/browserconfig.xml
 %%WWWDIR%%/www/categories.php
+%%WWWDIR%%/www/category-history.php
 %%WWWDIR%%/www/category-maintenance.php
 %%WWWDIR%%/www/commit-flag.php
 %%WWWDIR%%/www/commit.php
