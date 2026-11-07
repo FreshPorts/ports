@@ -150,6 +150,7 @@ etc/cron.d/freshports-compare-daily-index
 %%FP_LIBEXEC%%/index_pkgversions.py
 %%FP_LIBEXEC%%/compare-index.sh
 %%FP_LIBEXEC%%/compare-index-daily.sh
+%%FP_LIBEXEC%%/latest-commits.sh
 %%FP_LIBEXEC%%/refresh-from-index.sh
 %%FP_LIBEXEC%%/refresh-listed-ports.pl
 %%FP_LIBEXEC%%/set-pkgversion-build-run-depends.pl
