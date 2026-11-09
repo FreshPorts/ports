@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-git-proc-commit
-PORTVERSION=	0.2.5
+PORTVERSION=	0.2.6
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -29,7 +29,7 @@ GH_ACCOUNT=	FreshPorts
 GH_PROJECT=	git_proc_commit
 
 SHEBANG_FILES=	git-to-freshports/git-to-freshports-xml.py
-SCRIPTS=	check_git.sh git-last-processed-tags.sh git-delta.sh \
+SCRIPTS=	check_git.sh git-delta.sh \
 		git-range-of-commits.sh git-single-commit.sh \
 		git-to-freshports-xml.py
 
