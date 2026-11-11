@@ -130,6 +130,7 @@
 %%WWWDIR%%/include/ads-phppgads.php
 %%WWWDIR%%/include/ads.php
 %%WWWDIR%%/include/adsense.php
+%%WWWDIR%%/include/bot-gate.php
 %%WWWDIR%%/include/burstmedia.php
 %%WWWDIR%%/include/common.php
 %%WWWDIR%%/include/common.php.sample
@@ -159,7 +160,6 @@
 %%WWWDIR%%/include/new-user.php
 %%WWWDIR%%/include/password-reset-via-token.php
 %%WWWDIR%%/include/redirect-back.php
-%%WWWDIR%%/include/search-gate.php
 %%WWWDIR%%/include/spam-filter-information.php
 %%WWWDIR%%/include/system-status-page.php
 %%WWWDIR%%/include/watch-lists.php
@@ -299,6 +299,7 @@
 %%WWWDIR%%/www/backend/newsfeeds.php
 %%WWWDIR%%/www/backend/status.php
 %%WWWDIR%%/www/backend/watch-list.php
+%%WWWDIR%%/www/bot-gate.php
 %%WWWDIR%%/www/bouncing.php
 %%WWWDIR%%/www/browserconfig.xml
 %%WWWDIR%%/www/categories.php
@@ -515,7 +516,6 @@
 %%WWWDIR%%/www/report-subscriptions.php
 %%WWWDIR%%/www/sanity_test_failures.php
 %%WWWDIR%%/www/search.php
-%%WWWDIR%%/www/search-gate.php
 %%WWWDIR%%/www/security-policy.php
 %%WWWDIR%%/www/survey/index.html
 %%WWWDIR%%/www/test-lists.php
