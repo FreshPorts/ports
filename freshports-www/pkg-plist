@@ -126,6 +126,7 @@
 %%WWWDIR%%/configuration/virtualhost-common-ssl.conf
 %%WWWDIR%%/configuration/virtualhost-common-ssl.conf.sample
 %%WWWDIR%%/include/bot-gate.php
+%%WWWDIR%%/include/cache-user.php
 %%WWWDIR%%/include/common.php
 %%WWWDIR%%/include/common.php.sample
 %%WWWDIR%%/include/constants.app.php
@@ -153,6 +154,8 @@
 %%WWWDIR%%/include/login.php
 %%WWWDIR%%/include/new-user.php
 %%WWWDIR%%/include/password-reset-via-token.php
+%%WWWDIR%%/include/pkg_process.inc
+%%WWWDIR%%/include/pkg_utils.inc
 %%WWWDIR%%/include/redirect-back.php
 %%WWWDIR%%/include/spam-filter-information.php
 %%WWWDIR%%/include/system-status-page.php
@@ -432,9 +435,7 @@
 %%WWWDIR%%/www/opensearch.php
 %%WWWDIR%%/www/package.php
 %%WWWDIR%%/www/password-reset-via-token.php
-%%WWWDIR%%/www/pkg_process.inc
 %%WWWDIR%%/www/pkg_upload.php
-%%WWWDIR%%/www/pkg_utils.inc
 %%WWWDIR%%/www/port-watch.php
 %%WWWDIR%%/www/ports-broken.php
 %%WWWDIR%%/www/ports-conflicts.php
