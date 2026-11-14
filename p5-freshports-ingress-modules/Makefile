@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-ingress-modules
-PORTVERSION=	2.3.5
+PORTVERSION=	2.3.6
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
