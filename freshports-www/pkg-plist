@@ -34,7 +34,6 @@
 %%WWWDIR%%/classes/commit_flag.php
 %%WWWDIR%%/classes/commit_log_elements.php
 %%WWWDIR%%/classes/commit_log_ports.php
-%%WWWDIR%%/classes/commit_log_ports_ignore.php
 %%WWWDIR%%/classes/commit_log_ports_vuxml.php
 %%WWWDIR%%/classes/commit_ports.php
 %%WWWDIR%%/classes/commit_record.php
@@ -62,7 +61,6 @@
 %%WWWDIR%%/classes/ports_by_pkg_message.php
 %%WWWDIR%%/classes/ports_by_pkg_plist.php
 %%WWWDIR%%/classes/ports_by_uses.php
-%%WWWDIR%%/classes/ports-unrefreshed.php
 %%WWWDIR%%/classes/ports.php
 %%WWWDIR%%/classes/ports_moved.php
 %%WWWDIR%%/classes/ports_updating.php
@@ -127,6 +125,7 @@
 %%WWWDIR%%/configuration/virtualhost-common-ssl.conf.sample
 %%WWWDIR%%/include/bot-gate.php
 %%WWWDIR%%/include/cache-user.php
+%%WWWDIR%%/include/csrf.php
 %%WWWDIR%%/include/common.php
 %%WWWDIR%%/include/common.php.sample
 %%WWWDIR%%/include/constants.app.php
@@ -272,7 +271,6 @@
 %%WWWDIR%%/www/delete-account.php
 %%WWWDIR%%/www/faq.php
 %%WWWDIR%%/www/favicon.ico
-%%WWWDIR%%/www/filter-setup.php
 %%WWWDIR%%/www/filter.php
 %%WWWDIR%%/www/fontsize.php
 %%WWWDIR%%/www/forgotten-password.php
