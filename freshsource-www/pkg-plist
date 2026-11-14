@@ -16,6 +16,7 @@
 %%WWWDIR%%/include/constants.app.php
 %%WWWDIR%%/include/constants.local.php
 %%WWWDIR%%/include/constants.php
+%%WWWDIR%%/include/csrf.php
 %%WWWDIR%%/include/databaselogin.php
 %%WWWDIR%%/include/fontsize.php
 %%WWWDIR%%/include/footer.php

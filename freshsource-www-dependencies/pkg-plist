@@ -3,6 +3,7 @@
 %%WWWDIR%%/configuration/freshports.conf.php
 %%WWWDIR%%/include/constants.local.php
 %%WWWDIR%%/include/constants.php
+%%WWWDIR%%/include/csrf.php
 %%WWWDIR%%/include/fontsize.php
 %%WWWDIR%%/include/htmlify.php
 %%WWWDIR%%/include/i18n.php

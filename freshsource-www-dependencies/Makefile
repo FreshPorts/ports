@@ -1,6 +1,6 @@
 PORTNAME=	freshsource
 PORTVERSION=	1.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www-dependencies
@@ -52,6 +52,7 @@ do-install:
 
 	${LN} -sf ${FP_WWWDIR}/include/constants.local.php          ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/constants.php                ${STAGEDIR}${WWWDIR}/include
+	${LN} -sf ${FP_WWWDIR}/include/csrf.php                     ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/fontsize.php                 ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/htmlify.php                  ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/i18n.php                     ${STAGEDIR}${WWWDIR}/include

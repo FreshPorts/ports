@@ -10,7 +10,7 @@
 
 PORTNAME=	freshsource
 DISTVERSION=	2.3.15.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www
@@ -19,7 +19,7 @@ MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
 WWW=		https://github.com/FreshPorts/freshsource
 
-RUN_DEPENDS=	freshports-www>0:freshports/freshports-www \
+RUN_DEPENDS=	freshports-www>=2.16.33:freshports/freshports-www \
 		nginx>0:www/nginx
 
 USES=		perl5 php
@@ -103,6 +103,7 @@ do-install:
 
 	${LN} -sf ${FP_WWWDIR}/include/constants.local.php          ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/constants.php                ${STAGEDIR}${WWWDIR}/include
+	${LN} -sf ${FP_WWWDIR}/include/csrf.php                     ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/fontsize.php                 ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/htmlify.php                  ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/i18n.php                     ${STAGEDIR}${WWWDIR}/include
