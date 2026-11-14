@@ -28,12 +28,32 @@ load_rc_config $name
 : ${freshports_group:=freshports}
 : ${freshports_syslog_facility:=local5}
 
+#
+# HOME, always.  service(8) starts rc.d scripts with HOME=/, and rc.subr
+# switches to freshports_user with su -m, which keeps it, so the script and
+# everything it starts ran with HOME=/.  psql then looked for /.pgpass and
+# failed with "fe_sendauth: no password supplied" (bugs.langille.org 333,
+# and again in October 2026 on r720-02, x8dtu and prod).  The cd in
+# freshports_prestart changes only the working directory, not HOME.
+#
+# rc.subr runs the command as "env ${freshports_env} ...", and the later of two
+# settings wins, so anything freshports_env sets in rc.conf, HOME included, still
+# applies.
+#
+freshports_env="HOME=/var/db/${freshports_user} ${freshports_env}"
+
 required_files="%%ETCDIR%%/freshports.sh"
 
 start_precmd=freshports_prestart
 
 freshports_prestart()
 {
+	# create the directory for the pid file; /var/run is not kept across
+	# a reboot, and install(1) below fails without it
+	if [ ! -d $(dirname ${pidfile}) ]; then
+		install -d -o ${freshports_user} -g ${freshports_group} $(dirname ${pidfile})
+	fi
+
 	# create the file pid, and directory, with correct permissions
 	if [ ! -e ${pidfile} ]; then
 		install -o ${freshports_user} -g ${freshports_group} /dev/null ${pidfile};
@@ -67,6 +87,15 @@ freshports_prestart()
 	cd /var/db/${freshports_user}
 }
 
-command_args="-P ${pidfile} -t ${name} -T ${name} -l ${freshports_syslog_facility} ${freshports_command}"
+#
+# -f: stdin from /dev/null.  Without it, stdin stayed on the terminal of
+#     whoever ran "service freshports start", and a prompting rm or mv in the
+#     script waited on that terminal, holding up the loop, for as long as
+#     the session stayed open.  Output still goes to syslog through -T/-l.
+# -R 60: if the script stops -- it crashed, or exited because OFFLINE was
+#     set -- start it again a minute later.  Without it the service stayed
+#     down until someone started it by hand.
+#
+command_args="-f -R 60 -P ${pidfile} -t ${name} -T ${name} -l ${freshports_syslog_facility} ${freshports_command}"
 
 run_rc_command "$1"

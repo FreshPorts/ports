@@ -19,7 +19,9 @@ rcvar=${name}_enable
 piddir="/var/run/${name}"
 pidfile="${piddir}/${name}.pid"
 fp_listen_user="freshports"
-fp_listen_command="%%PREFIX%%/bin/python %%FP_SERVICESDIR%%/fp-listen.py"
+# the python this port was built for; %%PREFIX%%/bin/python is lang/python's
+# symlink, which may be missing or point at another version than psycopg2's
+fp_listen_command="%%PYTHON_CMD%% %%FP_SERVICESDIR%%/fp-listen.py"
 command="/usr/sbin/daemon"
 
 load_rc_config $name
@@ -49,6 +51,7 @@ fp_listen_prestart()
 
 }
 
-command_args="-P ${pidfile} -r -t ${name} -T ${name} -l ${fp_listen_syslog_facility} ${fp_listen_command}"
+# -f: stdin from /dev/null, not the terminal of whoever ran "service fp_listen start"
+command_args="-f -P ${pidfile} -r -t ${name} -T ${name} -l ${fp_listen_syslog_facility} ${fp_listen_command}"
 
 run_rc_command "$1"

@@ -28,12 +28,32 @@ load_rc_config $name
 : ${ingress_group:=ingress}
 : ${ingress_syslog_facility:=local4}
 
+#
+# HOME, always.  service(8) starts rc.d scripts with HOME=/, and rc.subr
+# switches to ingress_user with su -m, which keeps it, so the script and
+# everything it starts ran with HOME=/.  psql then looked for /.pgpass and
+# failed with "fe_sendauth: no password supplied" (bugs.langille.org 333,
+# and again in October 2026 on r720-02, x8dtu and prod).  The cd in
+# ingress_prestart changes only the working directory, not HOME.
+#
+# rc.subr runs the command as "env ${ingress_env} ...", and the later of two
+# settings wins, so anything ingress_env sets in rc.conf, HOME included, still
+# applies.
+#
+ingress_env="HOME=/var/db/${ingress_user} ${ingress_env}"
+
 required_files="%%ETCDIR%%/ingress.sh"
 
 start_precmd=ingress_prestart
 
 ingress_prestart()
 {
+	# create the directory for the pid file; /var/run is not kept across
+	# a reboot, and install(1) below fails without it
+	if [ ! -d $(dirname ${pidfile}) ]; then
+		install -d -o ${ingress_user} -g ${ingress_group} $(dirname ${pidfile})
+	fi
+
 	# create the file pid, and directory, with correct permissions
 	if [ ! -e ${pidfile} ]; then
 		install -o ${ingress_user} -g ${ingress_group} /dev/null ${pidfile};
@@ -61,9 +81,20 @@ ingress_prestart()
 		fi
 	done
 
-	cd /var/db/${freshports_user}
+	# ingress_user: freshports_user is not set in this script, so this was
+	# cd /var/db/
+	cd /var/db/${ingress_user}
 }
 
-command_args="-P ${pidfile} -t ${name} -T ${name} -l ${ingress_syslog_facility} ${ingress_command}"
+#
+# -f: stdin from /dev/null.  Without it, stdin stayed on the terminal of
+#     whoever ran "service ingress start", and a prompting rm or mv in the
+#     script waited on that terminal, holding up the loop, for as long as
+#     the session stayed open.  Output still goes to syslog through -T/-l.
+# -R 60: if the script stops -- it crashed, or exited because OFFLINE was
+#     set -- start it again a minute later.  Without it the service stayed
+#     down until someone started it by hand.
+#
+command_args="-f -R 60 -P ${pidfile} -t ${name} -T ${name} -l ${ingress_syslog_facility} ${ingress_command}"
 
 run_rc_command "$1"
