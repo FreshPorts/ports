@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	freshports-git-proc-commit
-PORTVERSION=	0.2.6
+PORTVERSION=	0.2.7
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
