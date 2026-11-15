@@ -1,6 +1,6 @@
 PORTNAME=	freshports-daemon-ingress
-DISTVERSION=	2.0.4
-PORTREVISION=	17
+DISTVERSION=	2.0.5
+PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 
