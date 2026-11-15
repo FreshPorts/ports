@@ -1,6 +1,6 @@
 PORTNAME=	freshports-daemon-freshports
-PORTVERSION=	2.0.16
-PORTREVISION=	1
+PORTVERSION=	2.0.17
+PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 
