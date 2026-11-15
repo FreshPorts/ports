@@ -7,7 +7,6 @@
 %%SITE_PERL%%/FreshPorts/commit_log.pm
 %%SITE_PERL%%/FreshPorts/commit_log_branches.pm
 %%SITE_PERL%%/FreshPorts/commit_log_element.pm
-%%SITE_PERL%%/FreshPorts/commit_log_port_elements.pm
 %%SITE_PERL%%/FreshPorts/commit_log_ports.pm
 %%SITE_PERL%%/FreshPorts/commit_log_ports_elements.pm
 %%SITE_PERL%%/FreshPorts/commit_log_ports_ignore.pm
@@ -27,7 +26,6 @@
 %%SITE_PERL%%/FreshPorts/port_dependencies.pm
 %%SITE_PERL%%/FreshPorts/ports_categories.pm
 %%SITE_PERL%%/FreshPorts/ports_generate_plist.pm
-%%SITE_PERL%%/FreshPorts/port_refresh.pm
 %%SITE_PERL%%/FreshPorts/ports_vulnerable.pm
 %%SITE_PERL%%/FreshPorts/process_cvs_mail.pm
 %%SITE_PERL%%/FreshPorts/process_mail.pm
@@ -43,7 +41,6 @@
 %%SITE_PERL%%/FreshPorts/vuxml_mark_commits.pm
 %%SITE_PERL%%/FreshPorts/vuxml_names.pm
 %%SITE_PERL%%/FreshPorts/vuxml_package.pm
-%%SITE_PERL%%/FreshPorts/vuxml_packages.pm
 %%SITE_PERL%%/FreshPorts/vuxml_parsing.pm
 %%SITE_PERL%%/FreshPorts/vuxml_ranges.pm
 %%SITE_PERL%%/FreshPorts/vuxml_references.pm
