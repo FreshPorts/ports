@@ -8,6 +8,10 @@
 #
 # There are no periodic scripts pertaining to a FreshPorts web node.
 #
+# Each *_watchgoose_url is optional: when set, the periodic script fetches
+# that URL after a successful run, so a missed run can be noticed.
+# Leave it unset to skip the ping.
+#
 
 # stuff mainly for freshports ingress nodes
 
@@ -28,6 +32,7 @@ fp_archive_messages_enable="YES"
 fp_ports_tree_file_count_enable="YES"
 fp_stats_daily_enable="YES"
 fp_purge_old_password_tokens_enable="YES"
+#fp_purge_old_password_tokens_watchgoose_url="https://..."
 fp_daily_rendering_times_enable="YES"
 fp_newusers_enable="YES"
 fp_most_active_users_enable="YES"
@@ -46,16 +51,20 @@ fp_system_status_enable="YES"
 fp_set_hour_flags_enable="YES"
 
 # recreate category cache
-fp_categories_rebuild_search="YES"
+fp_categories_rebuild_search_enable="YES"
 
 # refresh ABI database table based on FreeBSD project
 fp_refresh_abi_enable="YES"
 
 # nightly builds of watchers also watch
 fp_watchers_also_watched_enable="YES"
-fp_watchers_also_watched_watchgoose_url="{{ fp_watchers_also_watched_watchgoose_url }}"
+#fp_watchers_also_watched_watchgoose_url="https://..."
 
 fp_category_history_enable=YES
+
+# nightly refresh of the upstream versions known to portscout
+fp_portscout_upstream_enable="YES"
+#fp_portscout_upstream_watchgoose_url="https://..."
 
 # Stuff only for production hosts
 
