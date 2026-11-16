@@ -7,14 +7,14 @@
 
 PORTNAME=	freshports-ingress-verify
 PORTVERSION=	2.2.0
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
-WWW=		https://svn.int.unixathome.org/viewvc.cgi/freshports-1/ingress/Verify/trunk/
+WWW=		https://github.com/FreshPorts/ingress-verify
 
 USES=		perl5
 

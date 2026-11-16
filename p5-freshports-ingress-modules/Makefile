@@ -7,14 +7,14 @@
 
 PORTNAME=	freshports-ingress-modules
 PORTVERSION=	2.3.7
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dan@langille.org
 COMMENT=	For use by Dan Langille only
-WWW=		
+WWW=		https://github.com/FreshPorts/ingress-modules
 
 NO_BUILD=	YES
 
