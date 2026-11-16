@@ -1,6 +1,6 @@
 PORTNAME=	freshsource
 PORTVERSION=	1.0.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www-dependencies
@@ -49,6 +49,8 @@ do-install:
 .endfor
 	${LN} -sf ${FP_WWWDIR}/www/css            ${STAGEDIR}${WWWDIR}/www
 	${LN} -sf ${FP_WWWDIR}/www/javascript     ${STAGEDIR}${WWWDIR}/www
+	${LN} -sf ${FP_WWWDIR}/www/fontsize.php   ${STAGEDIR}${WWWDIR}/www
+	${LN} -sf ${FP_WWWDIR}/www/language.php   ${STAGEDIR}${WWWDIR}/www
 
 	${LN} -sf ${FP_WWWDIR}/include/constants.local.php          ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/constants.php                ${STAGEDIR}${WWWDIR}/include
@@ -59,6 +61,10 @@ do-install:
 	${LN} -sf ${FP_WWWDIR}/include/lib_autolink                 ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/new-user.php                 ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/password-reset-via-token.php ${STAGEDIR}${WWWDIR}/include
+	${LN} -sf ${FP_WWWDIR}/include/redirect-back.php            ${STAGEDIR}${WWWDIR}/include
 	${LN} -sf ${FP_WWWDIR}/include/spam-filter-information.php  ${STAGEDIR}${WWWDIR}/include
+
+# translations, read by include/i18n.php from ../locale
+	${LN} -sf ${FP_WWWDIR}/locale ${STAGEDIR}${WWWDIR}
 
 .include <bsd.port.mk>

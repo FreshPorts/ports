@@ -10,9 +10,12 @@
 %%WWWDIR%%/include/lib_autolink
 %%WWWDIR%%/include/new-user.php
 %%WWWDIR%%/include/password-reset-via-token.php
+%%WWWDIR%%/include/redirect-back.php
 %%WWWDIR%%/include/spam-filter-information.php
+%%WWWDIR%%/locale
 %%WWWDIR%%/vendor
 %%WWWDIR%%/www/css
+%%WWWDIR%%/www/fontsize.php
 %%WWWDIR%%/www/images/android-icon-144x144.png
 %%WWWDIR%%/www/images/android-icon-192x192.png
 %%WWWDIR%%/www/images/android-icon-36x36.png
@@ -28,3 +31,4 @@
 %%WWWDIR%%/www/images/ms-icon-310x310.png
 %%WWWDIR%%/www/images/ms-icon-70x70.png
 %%WWWDIR%%/www/javascript
+%%WWWDIR%%/www/language.php
