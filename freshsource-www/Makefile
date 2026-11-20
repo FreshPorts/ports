@@ -10,7 +10,7 @@
 
 PORTNAME=	freshsource
 DISTVERSION=	2.3.15.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	freshports
 MASTER_SITES=	# none
 PKGNAMESUFFIX=	-www
@@ -64,6 +64,9 @@ do-install:
 
 # install everything +x, because it's easier
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${WWWDIR})
+
+# shown in FreshPorts other-copyrights.php by freshports_WebserverVersionComments()
+	${ECHO_CMD} ${PKGVERSION} > ${STAGEDIR}${WWWDIR}/VERSION
 
 # move configuration files to the right place
 .for _conf in ${CONF_FILES}

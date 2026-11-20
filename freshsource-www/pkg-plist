@@ -5,6 +5,7 @@
 @sample %%ETCDIR%%/virtualhost-common-ssl.conf.sample
 @sample %%ETCDIR%%/vhosts.conf.sample
 @sample etc/newsyslog.conf.d/freshsource-www.conf.sample
+%%WWWDIR%%/VERSION
 %%WWWDIR%%/classes
 %%WWWDIR%%/configuration/database.php
 %%WWWDIR%%/configuration/freshports.conf.php
