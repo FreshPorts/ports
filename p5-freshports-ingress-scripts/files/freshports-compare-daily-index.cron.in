@@ -1,6 +1,8 @@
 # Compare the database against the ports INDEX and refresh any port whose
 # version has drifted. Builds the INDEX at the commit FreshPorts last
-# processed, so both sides describe the same tree. Mails the result either way.
+# processed, so both sides describe the same tree. Mails only when the run
+# fails or the database and the ports tree disagree about which ports exist;
+# a clean run just logs "nothing to report, no mail sent" to local3.
 
 #minute hour    mday    month   wday    who        command
 4       2       *       *       *       freshports /usr/bin/lockf -t 0 /tmp/.compare-index-daily %%PREFIX%%/libexec/freshports/compare-index-daily.sh
