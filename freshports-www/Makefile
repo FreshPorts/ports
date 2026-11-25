@@ -1,5 +1,5 @@
 PORTNAME=	freshports
-DISTVERSION=	2.16.34
+DISTVERSION=	2.16.35	
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -43,8 +43,6 @@ CONF_FILES=	config.sh database.php freshports.conf.php freshports.net.conf \
 		robots.txt vhosts.conf vhosts.conf.nginx \
 		virtualhost-common.conf virtualhost-common-ssl.conf
 INC_FILES=	common.php constants.local.php
-NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php \
-		rss0.91.php rss1.0.php rss2.0.php
 
 RUN_DEPENDS+=	${PHP_PKGNAMEPREFIX}laminas-feed>=2.26:www/php-laminas-feed@${PHP_FLAVOR} \
 		${PHP_PKGNAMEPREFIX}url-highlight>=4.0.1:www/php-url-highlight@${PHP_FLAVOR} \
@@ -54,8 +52,7 @@ RUN_DEPENDS+=	${PHP_PKGNAMEPREFIX}laminas-feed>=2.26:www/php-laminas-feed@${PHP_
 		nginx:www/nginx \
 		php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2 \
 		php${PHP_VER}-pear-Pager>0:devel/pear-Pager \
-		phpmailer6>0:mail/phpmailer6 \
-		UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
+		phpmailer6>0:mail/phpmailer6
 
 .include <bsd.port.pre.mk>
 
@@ -82,10 +79,6 @@ do-install:
 .for _inc in ${INC_FILES}
 	${INSTALL_SCRIPT} ${WRKSRC}/include/${_inc}.sample ${STAGEDIR}${ETCDIR}
 	${LN} -sf ${ETCDIR}/${_inc} ${STAGEDIR}${WWWDIR}/include/${_inc}
-.endfor
-
-.for _news in ${NEWS_FILES}
-	(cd ${STAGEDIR}${WWWDIR}/www/backend && ${LN} -sf news.php ${_news})
 .endfor
 
 # robots.txt link
