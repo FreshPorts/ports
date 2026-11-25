@@ -1,5 +1,5 @@
 PORTNAME=	freshports
-PORTVERSION=	2.2.2
+PORTVERSION=	2.2.3
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	# none
@@ -52,8 +52,6 @@ CONF_FILES=	config.sh database.php freshports.conf.php freshports.net.conf \
 		robots.txt status-config.php vhosts.conf \
 		virtualhost-common.conf virtualhost-common-ssl.conf
 INC_FILES=	common.php constants.local.php
-NEWS_FILES=	atom0.3.php html.php js.php mbox.php opml.php pie0.1.php \
-		rss0.91.php rss1.0.php rss2.0.php
 
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=1.0.2:freshports/py-freshports-fp-listen@${PY_FLAVOR} \
 		gettext-tools>0:devel/gettext-tools \
@@ -61,8 +59,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}freshports-fp-listen>=1.0.2:freshports/py-f
 		nginx:www/nginx \
 		php${PHP_VER}-pear-HTML_Page2>0:devel/pear-HTML_Page2 \
 		php${PHP_VER}-pear-Pager>0:devel/pear-Pager \
-		phpmailer6>0:mail/phpmailer6 \
-		UniversalFeedCreator>=1.8.3:www/UniversalFeedCreator
+		phpmailer6>0:mail/phpmailer6
 
 # these are useful to have
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2 \
@@ -77,7 +74,7 @@ NO_BUILD=	YES
 
 do-install:
 	@${ECHO} "Installing in ${WWWDIR}"
-	${MKDIR} ${STAGEDIR}${WWWDIR}
+	${MKDIR} ${STAGEDIR}${WWWDIR}/www
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/cache/daily
@@ -90,7 +87,6 @@ do-install:
 
 	${MKDIR} ${STAGEDIR}${WWWDIR}/configuration
 	${MKDIR} ${STAGEDIR}${WWWDIR}/include
-	${MKDIR} ${STAGEDIR}${WWWDIR}/www/backend
 
 # move configuration files to the right place
 	${MKDIR} ${STAGEDIR}${ETCDIR}
@@ -104,11 +100,8 @@ do-install:
 	${LN} -sf ${ETCDIR}/${_inc} ${STAGEDIR}${WWWDIR}/include/${_inc}
 .endfor
 
-.for _news in ${NEWS_FILES}
-	(cd ${STAGEDIR}${WWWDIR}/www/backend && ${LN} -sf news.php ${_news})
-.endfor
-
 # robots.txt link
+	${INSTALL_SCRIPT} ${FILESDIR}/robots.txt.sample ${STAGEDIR}${ETCDIR}/robots.txt
 	${LN} -sf ${ETCDIR}/robots.txt ${STAGEDIR}${WWWDIR}/www/robots.txt
 
 # nginx link

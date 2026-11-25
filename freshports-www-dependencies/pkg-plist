@@ -1,3 +1,4 @@
+%%ETCDIR%%/robots.txt
 etc/newsyslog.conf.d/freshports-www.conf.sample
 etc/nginx/includes/freshports.conf
 etc/syslog.d/freshports-www.conf.sample
@@ -12,15 +13,6 @@ etc/syslog.d/freshports-www.conf.sample
 %%WWWDIR%%/configuration/virtualhost-common.conf
 %%WWWDIR%%/include/common.php
 %%WWWDIR%%/include/constants.local.php
-%%WWWDIR%%/www/backend/atom0.3.php
-%%WWWDIR%%/www/backend/html.php
-%%WWWDIR%%/www/backend/js.php
-%%WWWDIR%%/www/backend/mbox.php
-%%WWWDIR%%/www/backend/opml.php
-%%WWWDIR%%/www/backend/pie0.1.php
-%%WWWDIR%%/www/backend/rss0.91.php
-%%WWWDIR%%/www/backend/rss1.0.php
-%%WWWDIR%%/www/backend/rss2.0.php
 %%WWWDIR%%/www/robots.txt
 @dir %%ETCDIR%%
 @dir /cache/daily

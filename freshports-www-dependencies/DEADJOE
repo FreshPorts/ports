@@ -1,0 +1,46 @@
+
+*** These modified files were found in JOE when it aborted on Wed Nov 25 15:50:50 2026
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+freshports-daemon-ingress
+p5-freshports-ingress-modules
+p5-freshports-ingress-scripts
+p5-freshports-ingress-verify
+fp_listen-%%PORTVERSION%%-py%%PYTHON_VER%%
+r
+%%PYTHON_SITELIBDIR%%/fp_listen-2.0.2-py%%PYTHON_VER%%
+r
+r
+%%
+
+*** File '(Unnamed)'
+/backend/
+NEWS
+DEPENDS
+backend
+%%WWWDIR%%/www/backend
+backend
+backend
+MKDIR
+robots.txt
+sample
+
+*** File '(Unnamed)'
+Makefile
+Makefile
+../freshports-www/Makefile
+Makefile
+pkg-plist
+pkg-plist
+Makefile
+Makefile
+pkg-plist
+pkg-plist
+Makefile
+
+*** File '* Startup Log *'
+Processing '/usr/local/etc/joe/joerc'...
+Processing '/usr/local/etc/joe/ftyperc'...
+Finished processing /usr/local/etc/joe/ftyperc
+Finished processing /usr/local/etc/joe/joerc
