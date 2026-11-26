@@ -7,6 +7,7 @@ etc/periodic/daily/210.fp_purge_old_password_tokens
 etc/periodic/daily/220.fp_daily_rendering_times
 etc/periodic/daily/230.fp_watchers_also_watched
 etc/periodic/daily/235.fp_category_history
+etc/periodic/daily/237.fp_supported_releases
 etc/periodic/daily/236.fp_portscout_upstream
 etc/periodic/daily/260.fp_newusers
 etc/periodic/daily/261.fp_most_active_users
@@ -23,7 +24,6 @@ etc/periodic/hourly/100.fp.set_hour_flags
 etc/periodic/hourly/120.fp_test_master_port_make
 etc/periodic/hourly/140.fp_test_master_port_db
 etc/periodic/hourly/180.fp_stats_hourly
-etc/periodic/hourly/240.fp_missing_port_categories
 etc/periodic/hourly/506.fp_categories_rebuild_search_html
 etc/periodic/hourly/990.refresh_package_imports_page
 etc/periodic/monthly/310.send-report-notices-monthly
