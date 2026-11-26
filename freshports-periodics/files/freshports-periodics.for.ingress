@@ -41,7 +41,6 @@ fp_most_active_users_enable="YES"
 fp_test_master_port_make_enable="YES"
 fp_test_master_port_db_enable="YES"
 fp_stats_hourly_enable="YES"
-fp_missing_port_categories_enable="NO"
 
 fp_check_repos_for_new_builds_enable="YES"
 fp_refresh_package_imports_page_enable="YES"
@@ -65,6 +64,9 @@ fp_category_history_enable=YES
 # nightly refresh of the upstream versions known to portscout
 fp_portscout_upstream_enable="YES"
 #fp_portscout_upstream_watchgoose_url="https://..."
+
+# daily refresh of the supported FreeBSD branches
+fp_supported_releases_enable="YES"
 
 # Stuff only for production hosts
 
