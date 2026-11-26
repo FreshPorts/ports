@@ -101,6 +101,7 @@ etc/cron.d/freshports-compare-daily-index
 %%FP_LIBEXEC%%/searchlog.sh
 %%FP_LIBEXEC%%/show-config.pl
 %%FP_LIBEXEC%%/show-config.sh
+%%FP_LIBEXEC%%/supported_releases_update.pl
 %%FP_LIBEXEC%%/svn-up-file.sh
 %%FP_LIBEXEC%%/system_status.sh
 %%FP_LIBEXEC%%/test-sending-email.pl
