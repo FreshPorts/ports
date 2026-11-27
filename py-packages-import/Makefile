@@ -1,14 +1,5 @@
-# Created by: Dan Langille <dan@langille.org>
-#
-# $Id: Makefile,v 1.4 2011-06-14 17:32:41 dan Exp $
-#
-# Install the scripts needed by FreshPorts ingress for handling packages
-#
-# Copyright (c) 2002-2026 Dan Langille
-#
-
 PORTNAME=	packages-import
-DISTVERSION=	2.8.1
+DISTVERSION=	2.9.0
 PORTREVISION=	0
 CATEGORIES=	freshports
 MASTER_SITES=	GH
@@ -20,9 +11,9 @@ WWW=		https://github.com/FreshPorts/packages-import
 
 NO_BUILD=	YES
 
-RUN_DEPENDS+=	jq>0:textproc/jq
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pyyaml>0:devel/py-pyyaml
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2 \
+		${PYTHON_PKGNAMEPREFIX}pyyaml>0:devel/py-pyyaml \
+		jq>0:textproc/jq
 
 WANT_PGSQL=	client
 USES=		python shebangfix
@@ -35,18 +26,25 @@ GROUPS=		${USERS}
 
 FP_DATADIR=	/var/db/freshports
 
-SCRIPTS=	UpdatePackagesFromRawPackages.py check_repos_for_new_stuff.py fetch-parse-meta.conf get_packagesite.txz_date import_packagesite.py fetch-extract-parse-import-one-abi.sh import-via-copy-packagesite-all-raw-fields.py
+SCRIPTS=	UpdatePackagesFromRawPackages.py check_repos_for_new_stuff.py \
+		fetch-parse-meta.conf get_packagesite.txz_date \
+		import_packagesite.py fetch-extract-parse-import-one-abi.sh \
+		import-via-copy-packagesite-all-raw-fields.py \
+		packages-delete-missing-repos.py
 
-SHEBANG_FILES=	UpdatePackagesFromRawPackages.py check_repos_for_new_stuff.py import_packagesite.py import-via-copy-packagesite-all-raw-fields.py
+SHEBANG_FILES=	check_repos_for_new_stuff.py \
+		import-via-copy-packagesite-all-raw-fields.py \
+		import_packagesite.py packages-delete-missing-repos.py \
+		UpdatePackagesFromRawPackages.py
 
 CACHE_SUBDIRS=	packages
 
 PLIST_SUB+=	FP_DATADIR=${FP_DATADIR}
 
-SUB_LIST+=	FRESHPORTS_USER=freshports
-SUB_LIST+=	FRESHPORTS_GROUP=logcheck
+SUB_LIST+=	FRESHPORTS_GROUP=logcheck \
+		FRESHPORTS_USER=freshports
 
-SUB_FILES=	config.ini.sample 900.freshports-check-repos-for-new-builds
+SUB_FILES=	900.freshports-check-repos-for-new-builds config.ini.sample
 
 .include <bsd.port.pre.mk>
 
@@ -57,7 +55,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/freshports/
 	${MKDIR} ${STAGEDIR}${FP_DATADIR}/packagesite
 
-	# FP_DATADIR is the homedir of the freshports user and will already exist.
+# FP_DATADIR is the homedir of the freshports user and will already exist.
 
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/hourly
 

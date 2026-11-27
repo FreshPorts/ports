@@ -7,5 +7,6 @@ libexec/freshports/fetch-parse-meta.conf
 libexec/freshports/get_packagesite.txz_date
 libexec/freshports/import-via-copy-packagesite-all-raw-fields.py
 libexec/freshports/import_packagesite.py
+libexec/freshports/packages-delete-missing-repos.py
 @dir(freshports,freshports,755) %%FP_DATADIR%%/packagesite
 @dir %%FP_DATADIR%%
